@@ -23,6 +23,7 @@ SOFTWARE.
 ---
 
 The materials under `paper/` (manuscript sources and PDF: main.tex, main.bbl,
-references.bib, DATA_PROVENANCE.md, ConsensusCourt.pdf) are licensed separately
-under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/), consistent with
-the arXiv CC BY license selected at submission time.
+references.bib, DATA_PROVENANCE.md, ConsensusCourt.pdf) are © 2026 Wei Wang,
+All Rights Reserved, matching the arXiv perpetual, non-exclusive license
+selected at submission time. This MIT license covers software only; it does
+not grant any right to redistribute the manuscript.

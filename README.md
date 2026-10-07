@@ -103,4 +103,6 @@ metadata-verified against arXiv/PubMed on 2026-09-21 / 2026-10-07.
 ## License
 
 - Code, tests, data: MIT (see `LICENSE`).
-- Manuscript (`paper/`): CC BY 4.0.
+- Manuscript (`paper/`): © 2026 Wei Wang, All Rights Reserved — consistent
+  with the arXiv perpetual, non-exclusive license selected at submission.
+  Archival redistribution via arXiv itself is of course permitted.
