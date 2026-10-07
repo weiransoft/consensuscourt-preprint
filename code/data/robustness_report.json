@@ -1,0 +1,304 @@
+{
+  "experiment": "§6.5 鲁棒性专项实验（定理 2 顺序无关性 + 定理 1-B n 扫描 + 流式即判对照 + 来源标签噪声）",
+  "benchmark": "DDB-L1 正例（置换/噪声）+ DDB-L1 负例（噪声）+ DDB-L1.5 伪冲突负例（噪声）+ 受控零假设合成案件（n 扫描）",
+  "seed": 42,
+  "order_permutation": {
+    "total_permutations": 1000,
+    "n_positive_cases": 60,
+    "divergent_permutations": 0,
+    "invariant_rate": 1.0,
+    "per_case": [
+      {
+        "case_id": "DDB-L1-0001",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0002",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0003",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0004",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0005",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0006",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0007",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0008",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0009",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      },
+      {
+        "case_id": "DDB-L1-0010",
+        "configs": {
+          "full_v03": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          },
+          "baseline_v02": {
+            "permutations": 17,
+            "mismatches": 0,
+            "invariant": true
+          }
+        }
+      }
+    ]
+  },
+  "n_scan": {
+    "p0_designed": 0.3,
+    "object_pool_size": 4,
+    "keyword_pool_size": 15,
+    "rows": [
+      {
+        "m": 3,
+        "n_pair_opportunities": 3,
+        "trials": 300,
+        "mean_defect_count": 0.8533,
+        "mean_false_pair_base": 0.13,
+        "mean_false_pair_full": 0.01,
+        "mean_ambiguous_full": 0.0,
+        "p0_hat": 0.2844,
+        "q_hat_base": 0.043333,
+        "q_hat_full": 0.003333,
+        "ratio_empirical": 6.5641,
+        "bonferroni_bound": 6.5641,
+        "ratio_over_bound": 1.0
+      },
+      {
+        "m": 5,
+        "n_pair_opportunities": 10,
+        "trials": 300,
+        "mean_defect_count": 1.5233,
+        "mean_false_pair_base": 0.38,
+        "mean_false_pair_full": 0.0533,
+        "mean_ambiguous_full": 0.0,
+        "p0_hat": 0.3047,
+        "q_hat_base": 0.038,
+        "q_hat_full": 0.005333,
+        "ratio_empirical": 4.0088,
+        "bonferroni_bound": 4.0088,
+        "ratio_over_bound": 1.0
+      },
+      {
+        "m": 10,
+        "n_pair_opportunities": 45,
+        "trials": 300,
+        "mean_defect_count": 3.05,
+        "mean_false_pair_base": 1.5433,
+        "mean_false_pair_full": 0.2533,
+        "mean_ambiguous_full": 0.0,
+        "p0_hat": 0.305,
+        "q_hat_base": 0.034296,
+        "q_hat_full": 0.00563,
+        "ratio_empirical": 1.9762,
+        "bonferroni_bound": 1.9762,
+        "ratio_over_bound": 1.0
+      },
+      {
+        "m": 20,
+        "n_pair_opportunities": 190,
+        "trials": 300,
+        "mean_defect_count": 6.2133,
+        "mean_false_pair_base": 6.4733,
+        "mean_false_pair_full": 1.0933,
+        "mean_ambiguous_full": 0.0,
+        "p0_hat": 0.3107,
+        "q_hat_base": 0.03407,
+        "q_hat_full": 0.005754,
+        "ratio_empirical": 0.9598,
+        "bonferroni_bound": 0.9598,
+        "ratio_over_bound": 1.0
+      }
+    ],
+    "scaling": {
+      "slope_false_pairs_vs_Cm2": 0.9417,
+      "slope_ratio_vs_m_minus_1": -0.857,
+      "q_hat_base_pooled": 0.034381,
+      "crossover_m_star": 18.45
+    }
+  },
+  "streaming_disposition": {
+    "total_permutations": 1000,
+    "n_positive_cases": 60,
+    "court_recall": 1.0,
+    "configs": {
+      "k1": {
+        "streak_k": 1,
+        "permutations": 1000,
+        "divergent_permutations": 70,
+        "divergence_rate": 0.07,
+        "affected_cases": 10,
+        "canonical_recall": 0.95,
+        "permuted_recall": 0.924
+      },
+      "k2": {
+        "streak_k": 2,
+        "permutations": 1000,
+        "divergent_permutations": 2,
+        "divergence_rate": 0.002,
+        "affected_cases": 1,
+        "canonical_recall": 1.0,
+        "permuted_recall": 0.998
+      }
+    }
+  },
+  "source_noise": {
+    "noise_ratio": 0.2,
+    "replicates_per_case": 50,
+    "positives": {
+      "cases": 60,
+      "replicates": 3000,
+      "false_gain": 0,
+      "false_gain_rate": 0.0,
+      "false_gain_cases": [],
+      "conviction_lost": 62,
+      "conviction_lost_rate": 0.020667,
+      "pair_set_flip_rate": 0.139,
+      "intensity_flip_rate": 0.141333,
+      "mean_abs_confidence_drift": 0.007553,
+      "max_abs_confidence_drift": 0.578,
+      "noisy_recall": 0.979333
+    },
+    "negatives": {
+      "cases": 148,
+      "replicates": 7400,
+      "false_gain": 0,
+      "false_gain_rate": 0.0,
+      "false_gain_cases": [],
+      "conviction_lost": 0,
+      "conviction_lost_rate": 0.0,
+      "pair_set_flip_rate": 0.0,
+      "intensity_flip_rate": 0.0,
+      "mean_abs_confidence_drift": 0.02414,
+      "max_abs_confidence_drift": 0.094
+    },
+    "negatives_l1": {
+      "cases": 60,
+      "false_gain": 0,
+      "false_gain_rate": 0.0
+    },
+    "negatives_l15": {
+      "cases": 88,
+      "false_gain": 0,
+      "false_gain_rate": 0.0
+    }
+  },
+  "red_line_violations": [],
+  "generated_at": "2026-10-07T23:06:59.984567"
+}

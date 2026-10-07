@@ -1,0 +1,203 @@
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Chowdhury et~al.(2026)Chowdhury, Beg, Khan, Raiyan, Hasan, and
+  Mahmud]{chowdhury2026proclaim}
+Masnun~Nuha Chowdhury, Nusrat~Jahan Beg, Umme~Hunny Khan, Syed~Rifat Raiyan,
+  Md~Kamrul Hasan, and Hasan Mahmud.
+\newblock Courtroom-style multi-agent debate with progressive {RAG} and
+  role-switching for controversial claim verification.
+\newblock \emph{arXiv preprint arXiv:2603.28488}, 2026.
+
+\bibitem[He et~al.(2026)He, Li, Wen, Chen, Cheng, Chen, and
+  Lau]{he2026debatecv}
+Haorui He, Yupeng Li, Dacheng Wen, Yang Chen, Reynold Cheng, Donglong Chen, and
+  Francis C.~M. Lau.
+\newblock Debating truth: Debate-driven claim verification with multiple large
+  language model agents.
+\newblock In \emph{Proceedings of the ACM Web Conference 2026 (WWW)}, 2026.
+\newblock arXiv:2507.19090, DOI 10.1145/3774904.3792993.
+
+\bibitem[Kumar et~al.(2026)Kumar, Kamdar, Hossain, Kumari, Saikh, and
+  Ekbal]{kumar2026when}
+Sandeep Kumar, Yash Kamdar, Abid Hossain, Bharti Kumari, Tanik Saikh, and Asif
+  Ekbal.
+\newblock When reviews disagree: Fine-grained contradiction analysis in
+  scientific peer reviews.
+\newblock \emph{Findings of the Association for Computational Linguistics: ACL
+  2026}, 2026.
+\newblock arXiv:2605.10171.
+
+\bibitem[Cecil and Freedman(2026)]{cecil2026beyond}
+Joe Cecil and Marjorie Freedman.
+\newblock Beyond majority vote: Multi-perspective adjudication for medical
+  hallucination detection.
+\newblock \emph{Findings of the Association for Computational Linguistics:
+  EMNLP 2026}, 2026.
+\newblock arXiv:2609.03953.
+
+\bibitem[{GPTZero}(2026)]{gptzero2026hallucination}
+{GPTZero}.
+\newblock How does {GPTZero}'s hallucination check detector work? {A} technical
+  report.
+\newblock Technical report,
+  \url{https://gptzero.me/news/how-does-gptzeros-hallucination-check-detector-work-a-technical-report/},
+  2026.
+
+\bibitem[Ji et~al.(2023)Ji, Lee, Frieske, Yu, Su, Xu, Ishii, Bang, Madotto, and
+  Fung]{ji2023hallucination}
+Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii,
+  Ye~Jin Bang, Andrea Madotto, and Pascale Fung.
+\newblock Survey of hallucination in natural language generation.
+\newblock \emph{ACM Computing Surveys}, 55\penalty0 (12):\penalty0 1--38, 2023.
+
+\bibitem[Manakul et~al.(2023)Manakul, Liusie, and
+  Gales]{manakul2023selfcheckgpt}
+Potsawee Manakul, Adian Liusie, and Mark J.~F. Gales.
+\newblock {SelfCheckGPT}: Zero-resource black-box hallucination detection for
+  generative large language models.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing (EMNLP)}, 2023.
+\newblock arXiv:2303.08896.
+
+\bibitem[Shinn et~al.(2023)Shinn, Cassano, Berman, Gopinath, Narasimhan, and
+  Yao]{shinn2023reflexion}
+Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik
+  Narasimhan, and Shunyu Yao.
+\newblock Reflexion: Language agents with verbal reinforcement learning.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2023.
+\newblock arXiv:2303.11366.
+
+\bibitem[Yao et~al.(2023)Yao, Yu, Zhao, Shafran, Griffiths, Cao, and
+  Narasimhan]{yao2023tree}
+Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Tom Griffiths, Yuan Cao, and
+  Karthik Narasimhan.
+\newblock Tree of thoughts: Deliberate problem solving with large language
+  models.
+\newblock In \emph{Advances in Neural Information Processing Systems
+  (NeurIPS)}, 2023.
+\newblock arXiv:2305.10601.
+
+\bibitem[Du et~al.(2023)Du, Li, Torralba, Tenenbaum, and
+  Mordatch]{du2023debate}
+Yilun Du, Shuang Li, Antonio Torralba, Joshua~B. Tenenbaum, and Igor Mordatch.
+\newblock Improving factuality and reasoning in language models through
+  multiagent debate.
+\newblock In \emph{Proceedings of the 40th International Conference on Machine
+  Learning (ICML)}, 2023.
+\newblock arXiv:2305.14325.
+
+\bibitem[Wu et~al.(2023)Wu, Bansal, Zhang, Wu, Li, Zhu, Jiang, Zhang, Zhang,
+  Liu, et~al.]{wu2023autogen}
+Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu,
+  Li~Jiang, Xiaoyun Zhang, Shaokun Zhang, Jiale Liu, et~al.
+\newblock {AutoGen}: Enabling next-gen {LLM} applications via multi-agent
+  conversation.
+\newblock \emph{arXiv preprint arXiv:2308.08155}, 2023.
+
+\bibitem[Hong et~al.(2024)Hong, Zhuge, Chen, Zheng, Cheng, Zhang, Wang, Wang,
+  Yau, Lin, et~al.]{hong2023metagpt}
+Sirui Hong, Mingchen Zhuge, Jonathan Chen, Xiawu Zheng, Yuheng Cheng, Ceyao
+  Zhang, Jinlin Wang, Zili Wang, Steven Ka~Shing Yau, Zijuan Lin, et~al.
+\newblock {MetaGPT}: Meta programming for a multi-agent collaborative
+  framework.
+\newblock In \emph{International Conference on Learning Representations
+  (ICLR)}, 2024.
+\newblock arXiv:2308.00352.
+
+\bibitem[Gottweis et~al.(2025)]{gottweis2025coscientist}
+Juraj Gottweis et~al.
+\newblock Towards an {AI} co-scientist.
+\newblock \emph{arXiv preprint arXiv:2502.13164}, 2025.
+
+\bibitem[Kapoor et~al.(2024)Kapoor, Stroebl, Doggle, Ghosh, and
+  Narayanan]{kapoor2024agents}
+Sayash Kapoor, Benedikt Stroebl, Zachary~S. Doggle, Nitya Ghosh, and Arvind
+  Narayanan.
+\newblock {AI} agents that matter.
+\newblock \emph{arXiv preprint arXiv:2407.01502}, 2024.
+
+\bibitem[Bulusu~Venkata et~al.(2026)Bulusu~Venkata, Kakarla, Mohan, and
+  Gaddam]{venkata2026trustagents}
+Gautama~Shastry Bulusu~Venkata, Santhosh Kakarla, Maheedhar~Omtri Mohan, and
+  Aishwarya Gaddam.
+\newblock {TRUST} agents: A collaborative multi-agent framework for fake news
+  detection, explainable verification, and logic-aware claim reasoning.
+\newblock \emph{arXiv preprint arXiv:2604.12184}, 2026.
+
+\bibitem[Saxena et~al.(2024)Saxena, Tilwani, Mohammadi, Raff, Sheth,
+  Parthasarathy, and Gaur]{saxena2024reasons}
+Yash Saxena, Deepa Tilwani, Ali Mohammadi, Edward Raff, Amit Sheth, Srinivasan
+  Parthasarathy, and Manas Gaur.
+\newblock Attribution in scientific literature: New benchmark and methods.
+\newblock \emph{arXiv preprint arXiv:2405.02228}, 2024.
+
+\bibitem[Jumper et~al.(2021)Jumper, Evans, Pritzel, Green, Figurnov,
+  Ronneberger, Tunyasuvunakool, Bates, {\v{Z}}{\'i}dek, Potapenko,
+  et~al.]{jumper2021alphafold}
+John Jumper, Richard Evans, Alexander Pritzel, Tim Green, Michael Figurnov,
+  Olaf Ronneberger, Kathryn Tunyasuvunakool, Russ Bates, Augustin
+  {\v{Z}}{\'i}dek, Anna Potapenko, et~al.
+\newblock Highly accurate protein structure prediction with {AlphaFold}.
+\newblock \emph{Nature}, 596:\penalty0 583--589, 2021.
+
+\bibitem[Abramson et~al.(2024)Abramson, Adler, Dunger, Evans, Green, Pritzel,
+  Ronneberger, Willmore, Ballard, Bambrick, et~al.]{abramson2024alphafold3}
+Josh Abramson, Jonas Adler, Jack Dunger, Richard Evans, Tim Green, Alexander
+  Pritzel, Olaf Ronneberger, Lindsay Willmore, Andrew Ballard, Joshua Bambrick,
+  et~al.
+\newblock Accurate structure prediction of biomolecular interactions with
+  {AlphaFold} 3.
+\newblock \emph{Nature}, 630:\penalty0 493--500, 2024.
+
+\bibitem[Kwon et~al.(2023)Kwon, Li, Zhuang, Sheng, Zheng, Yu, Gonzalez, Zhang,
+  and Stoica]{kwon2023vllm}
+Woosuk Kwon, Zhuohan Li, Siyuan Zhuang, Ying Sheng, Lianmin Zheng, Cody~Hao Yu,
+  Joseph Gonzalez, Hao Zhang, and Ion Stoica.
+\newblock Efficient memory management for large language model serving with
+  {PagedAttention}.
+\newblock In \emph{Proceedings of the 29th Symposium on Operating Systems
+  Principles (SOSP)}, 2023.
+
+\bibitem[Chen et~al.(2026)Chen, Liu, Zhu, Dou, Jiang, Li, Guo, Chen, and
+  Zhang]{chen2026redagentbench}
+Zixing Chen, Xingyuan Liu, Jie Zhu, Huaixia Dou, Shuo Jiang, Junhui Li, Lifan
+  Guo, Feng Chen, and Chi Zhang.
+\newblock {REDAgentBench}: Executable red teaming and faithful measurement of
+  {LLM} agent systems.
+\newblock \emph{arXiv preprint arXiv:2608.10669}, 2026.
+
+\bibitem[Qian et~al.(2026)Qian, Wang, Chen, Wu, and
+  Stathopoulos]{qian2026atomcite}
+Chen Qian, Yimeng Wang, Yu~Chen, Lingfei Wu, and Andreas Stathopoulos.
+\newblock {AtomCite}: Verification and correction of supplied page-level
+  citations in multi-page documents.
+\newblock \emph{arXiv preprint arXiv:2609.05802}, 2026.
+
+\bibitem[Jia et~al.(2016)Jia, Yun, Park, Ercan, Manik, Hartjoana, Guan, Liang,
+  and Janne]{jia2016eai045}
+Yun Jia, Cai-Hong Yun, Eunhee Park, Dalia Ercan, Manisha Manik, Juergen
+  Hartjoana, Rong Guan, Carla Liang, and Pasi~A. Janne.
+\newblock Overcoming {EGFR}(t790m) and {EGFR}(c797s) resistance with
+  mutant-selective allosteric inhibitors.
+\newblock \emph{Nature}, 534:\penalty0 129--132, 2016.
+\newblock PMID: 27251290.
+
+\bibitem[Soria et~al.(2018)Soria, Ohe, Vansteenkiste, Reungwetwattana,
+  Chewaskulyong, Lee, Dechaphunkul, Imamura, Nogami, Kurata,
+  et~al.]{soria2018osimertinib}
+Jean-Charles Soria, Yuichiro Ohe, Johan Vansteenkiste, Thanyanan
+  Reungwetwattana, Buncha Chewaskulyong, Ki~Hyeong Lee, Arthid Dechaphunkul,
+  Fumio Imamura, Nobuyuki Nogami, Takayasu Kurata, et~al.
+\newblock Osimertinib in untreated {EGFR}-mutated advanced non-small-cell lung
+  cancer.
+\newblock \emph{New England Journal of Medicine}, 378\penalty0 (2):\penalty0
+  113--125, 2018.
+\newblock PMID: 29151359.
+
+\end{thebibliography}

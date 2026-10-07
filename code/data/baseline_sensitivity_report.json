@@ -1,0 +1,5773 @@
+{
+  "experiment": "§6.2 基线阈值敏感性扫描（49 格点 Pareto，评审 P1-6b）",
+  "benchmark": "DDB-L1（60×2）+ DDB-L1.5（88 例），与主对比同池同评分",
+  "seed": 42,
+  "grid": [
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "n_grid_points": 49,
+  "pool_composition": {
+    "n_positive": 60,
+    "n_negative": 148
+  },
+  "method": "决策原语重放：majority=计票阈值映射 / elo=角色加权均分三档映射 / single=最高分三档映射；映射逻辑与 baseline_arbiter 逐字同口径，仅阈值参数化；生产代码零改动",
+  "court_reference": {
+    "n": 208,
+    "n_positive": 60,
+    "n_negative": 148,
+    "recall": 1.0,
+    "fpr": 0.0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall_ci95": [
+      0.9398,
+      1.0
+    ],
+    "fpr_ci95": [
+      0.0,
+      0.0253
+    ]
+  },
+  "baseline_optimum_reaches_court_profile": false,
+  "systems": {
+    "majority_vote": {
+      "grid_points": [
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.027,
+            "accuracy": 0.6923,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0106,
+              0.0674
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0473,
+            "accuracy": 0.6779,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0231,
+              0.0944
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.1014,
+            "accuracy": 0.6394,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0624,
+              0.1605
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0167,
+            "fpr": 0.277,
+            "accuracy": 0.5192,
+            "precision": 0.0238,
+            "recall_ci95": [
+              0.0029,
+              0.0886
+            ],
+            "fpr_ci95": [
+              0.2113,
+              0.3541
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0833,
+            "fpr": 0.4459,
+            "accuracy": 0.4183,
+            "precision": 0.0704,
+            "recall_ci95": [
+              0.0361,
+              0.1807
+            ],
+            "fpr_ci95": [
+              0.3682,
+              0.5264
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5541,
+            "accuracy": 0.3702,
+            "precision": 0.1183,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.4736,
+              0.6318
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0833,
+            "fpr": 0.4459,
+            "accuracy": 0.4183,
+            "precision": 0.0704,
+            "recall_ci95": [
+              0.0361,
+              0.1807
+            ],
+            "fpr_ci95": [
+              0.3682,
+              0.5264
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5541,
+            "accuracy": 0.3702,
+            "precision": 0.1183,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.4736,
+              0.6318
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0833,
+            "fpr": 0.4459,
+            "accuracy": 0.4183,
+            "precision": 0.0704,
+            "recall_ci95": [
+              0.0361,
+              0.1807
+            ],
+            "fpr_ci95": [
+              0.3682,
+              0.5264
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5541,
+            "accuracy": 0.3702,
+            "precision": 0.1183,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.4736,
+              0.6318
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0833,
+            "fpr": 0.4459,
+            "accuracy": 0.4183,
+            "precision": 0.0704,
+            "recall_ci95": [
+              0.0361,
+              0.1807
+            ],
+            "fpr_ci95": [
+              0.3682,
+              0.5264
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5541,
+            "accuracy": 0.3702,
+            "precision": 0.1183,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.4736,
+              0.6318
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0833,
+            "fpr": 0.4459,
+            "accuracy": 0.4183,
+            "precision": 0.0704,
+            "recall_ci95": [
+              0.0361,
+              0.1807
+            ],
+            "fpr_ci95": [
+              0.3682,
+              0.5264
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5541,
+            "accuracy": 0.3702,
+            "precision": 0.1183,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.4736,
+              0.6318
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0833,
+            "fpr": 0.4459,
+            "accuracy": 0.4183,
+            "precision": 0.0704,
+            "recall_ci95": [
+              0.0361,
+              0.1807
+            ],
+            "fpr_ci95": [
+              0.3682,
+              0.5264
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5541,
+            "accuracy": 0.3702,
+            "precision": 0.1183,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.4736,
+              0.6318
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.4324,
+            "accuracy": 0.4135,
+            "precision": 0.0303,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.3553,
+              0.513
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.8243,
+            "accuracy": 0.1394,
+            "precision": 0.024,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.755,
+              0.8772
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.15,
+            "fpr": 0.7568,
+            "accuracy": 0.2163,
+            "precision": 0.0744,
+            "recall_ci95": [
+              0.081,
+              0.2611
+            ],
+            "fpr_ci95": [
+              0.6817,
+              0.8188
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8986,
+            "accuracy": 0.1587,
+            "precision": 0.1192,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.8395,
+              0.9376
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3833,
+            "fpr": 0.9122,
+            "accuracy": 0.1731,
+            "precision": 0.1456,
+            "recall_ci95": [
+              0.2709,
+              0.5098
+            ],
+            "fpr_ci95": [
+              0.8555,
+              0.9479
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5333,
+            "fpr": 0.9392,
+            "accuracy": 0.1971,
+            "precision": 0.1871,
+            "recall_ci95": [
+              0.4089,
+              0.6537
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3833,
+            "fpr": 0.9122,
+            "accuracy": 0.1731,
+            "precision": 0.1456,
+            "recall_ci95": [
+              0.2709,
+              0.5098
+            ],
+            "fpr_ci95": [
+              0.8555,
+              0.9479
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5333,
+            "fpr": 0.9392,
+            "accuracy": 0.1971,
+            "precision": 0.1871,
+            "recall_ci95": [
+              0.4089,
+              0.6537
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3833,
+            "fpr": 0.9122,
+            "accuracy": 0.1731,
+            "precision": 0.1456,
+            "recall_ci95": [
+              0.2709,
+              0.5098
+            ],
+            "fpr_ci95": [
+              0.8555,
+              0.9479
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5333,
+            "fpr": 0.9392,
+            "accuracy": 0.1971,
+            "precision": 0.1871,
+            "recall_ci95": [
+              0.4089,
+              0.6537
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3833,
+            "fpr": 0.9122,
+            "accuracy": 0.1731,
+            "precision": 0.1456,
+            "recall_ci95": [
+              0.2709,
+              0.5098
+            ],
+            "fpr_ci95": [
+              0.8555,
+              0.9479
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5333,
+            "fpr": 0.9392,
+            "accuracy": 0.1971,
+            "precision": 0.1871,
+            "recall_ci95": [
+              0.4089,
+              0.6537
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3833,
+            "fpr": 0.9122,
+            "accuracy": 0.1731,
+            "precision": 0.1456,
+            "recall_ci95": [
+              0.2709,
+              0.5098
+            ],
+            "fpr_ci95": [
+              0.8555,
+              0.9479
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5333,
+            "fpr": 0.9392,
+            "accuracy": 0.1971,
+            "precision": 0.1871,
+            "recall_ci95": [
+              0.4089,
+              0.6537
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1,
+            "fpr": 0.5338,
+            "accuracy": 0.3606,
+            "precision": 0.0706,
+            "recall_ci95": [
+              0.0466,
+              0.2015
+            ],
+            "fpr_ci95": [
+              0.4536,
+              0.6123
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3333,
+            "fpr": 0.9189,
+            "accuracy": 0.1538,
+            "precision": 0.1282,
+            "recall_ci95": [
+              0.2273,
+              0.4594
+            ],
+            "fpr_ci95": [
+              0.8636,
+              0.953
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3167,
+            "fpr": 0.8311,
+            "accuracy": 0.2115,
+            "precision": 0.1338,
+            "recall_ci95": [
+              0.2131,
+              0.4423
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5667,
+            "fpr": 0.9527,
+            "accuracy": 0.1971,
+            "precision": 0.1943,
+            "recall_ci95": [
+              0.441,
+              0.6843
+            ],
+            "fpr_ci95": [
+              0.9056,
+              0.9769
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.5833,
+            "fpr": 0.9527,
+            "accuracy": 0.2019,
+            "precision": 0.1989,
+            "recall_ci95": [
+              0.4573,
+              0.6994
+            ],
+            "fpr_ci95": [
+              0.9056,
+              0.9769
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.7667,
+            "fpr": 0.9865,
+            "accuracy": 0.2308,
+            "precision": 0.2396,
+            "recall_ci95": [
+              0.6456,
+              0.8556
+            ],
+            "fpr_ci95": [
+              0.9521,
+              0.9963
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.75,
+            "fpr": 0.9797,
+            "accuracy": 0.2308,
+            "precision": 0.2368,
+            "recall_ci95": [
+              0.6277,
+              0.8422
+            ],
+            "fpr_ci95": [
+              0.9421,
+              0.9931
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8167,
+            "fpr": 0.9865,
+            "accuracy": 0.2452,
+            "precision": 0.2513,
+            "recall_ci95": [
+              0.7008,
+              0.8944
+            ],
+            "fpr_ci95": [
+              0.9521,
+              0.9963
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.75,
+            "fpr": 0.9797,
+            "accuracy": 0.2308,
+            "precision": 0.2368,
+            "recall_ci95": [
+              0.6277,
+              0.8422
+            ],
+            "fpr_ci95": [
+              0.9421,
+              0.9931
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8167,
+            "fpr": 0.9865,
+            "accuracy": 0.2452,
+            "precision": 0.2513,
+            "recall_ci95": [
+              0.7008,
+              0.8944
+            ],
+            "fpr_ci95": [
+              0.9521,
+              0.9963
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.75,
+            "fpr": 0.9797,
+            "accuracy": 0.2308,
+            "precision": 0.2368,
+            "recall_ci95": [
+              0.6277,
+              0.8422
+            ],
+            "fpr_ci95": [
+              0.9421,
+              0.9931
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8167,
+            "fpr": 0.9865,
+            "accuracy": 0.2452,
+            "precision": 0.2513,
+            "recall_ci95": [
+              0.7008,
+              0.8944
+            ],
+            "fpr_ci95": [
+              0.9521,
+              0.9963
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.75,
+            "fpr": 0.9797,
+            "accuracy": 0.2308,
+            "precision": 0.2368,
+            "recall_ci95": [
+              0.6277,
+              0.8422
+            ],
+            "fpr_ci95": [
+              0.9421,
+              0.9931
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8167,
+            "fpr": 0.9865,
+            "accuracy": 0.2452,
+            "precision": 0.2513,
+            "recall_ci95": [
+              0.7008,
+              0.8944
+            ],
+            "fpr_ci95": [
+              0.9521,
+              0.9963
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.1833,
+            "fpr": 0.5811,
+            "accuracy": 0.351,
+            "precision": 0.1134,
+            "recall_ci95": [
+              0.1056,
+              0.2992
+            ],
+            "fpr_ci95": [
+              0.5005,
+              0.6575
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8667,
+            "fpr": 0.9662,
+            "accuracy": 0.274,
+            "precision": 0.2667,
+            "recall_ci95": [
+              0.7583,
+              0.9309
+            ],
+            "fpr_ci95": [
+              0.9234,
+              0.9855
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.55,
+            "fpr": 0.8784,
+            "accuracy": 0.2452,
+            "precision": 0.2025,
+            "recall_ci95": [
+              0.4249,
+              0.6691
+            ],
+            "fpr_ci95": [
+              0.8159,
+              0.9217
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8833,
+            "fpr": 0.9932,
+            "accuracy": 0.2596,
+            "precision": 0.265,
+            "recall_ci95": [
+              0.7782,
+              0.9423
+            ],
+            "fpr_ci95": [
+              0.9627,
+              0.9988
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8667,
+            "fpr": 0.9932,
+            "accuracy": 0.2548,
+            "precision": 0.2613,
+            "recall_ci95": [
+              0.7583,
+              0.9309
+            ],
+            "fpr_ci95": [
+              0.9627,
+              0.9988
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9,
+            "fpr": 0.9932,
+            "accuracy": 0.2644,
+            "precision": 0.2687,
+            "recall_ci95": [
+              0.7985,
+              0.9534
+            ],
+            "fpr_ci95": [
+              0.9627,
+              0.9988
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9833,
+            "fpr": 1.0,
+            "accuracy": 0.2837,
+            "precision": 0.285,
+            "recall_ci95": [
+              0.9114,
+              0.9971
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9833,
+            "fpr": 1.0,
+            "accuracy": 0.2837,
+            "precision": 0.285,
+            "recall_ci95": [
+              0.9114,
+              0.9971
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9833,
+            "fpr": 1.0,
+            "accuracy": 0.2837,
+            "precision": 0.285,
+            "recall_ci95": [
+              0.9114,
+              0.9971
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.2167,
+            "fpr": 0.5946,
+            "accuracy": 0.351,
+            "precision": 0.1287,
+            "recall_ci95": [
+              0.1312,
+              0.3362
+            ],
+            "fpr_ci95": [
+              0.5141,
+              0.6703
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.6,
+            "fpr": 0.9054,
+            "accuracy": 0.2404,
+            "precision": 0.2118,
+            "recall_ci95": [
+              0.4737,
+              0.7143
+            ],
+            "fpr_ci95": [
+              0.8475,
+              0.9428
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.2167,
+            "fpr": 0.5946,
+            "accuracy": 0.351,
+            "precision": 0.1287,
+            "recall_ci95": [
+              0.1312,
+              0.3362
+            ],
+            "fpr_ci95": [
+              0.5141,
+              0.6703
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.6,
+            "fpr": 0.9054,
+            "accuracy": 0.2404,
+            "precision": 0.2118,
+            "recall_ci95": [
+              0.4737,
+              0.7143
+            ],
+            "fpr_ci95": [
+              0.8475,
+              0.9428
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        }
+      ],
+      "pareto_frontier_reject": [
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.3,
+          "recall": 0.0,
+          "fpr": 0.027
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.3,
+          "recall": 0.0333,
+          "fpr": 0.4324
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.4,
+          "recall": 0.0833,
+          "fpr": 0.4459
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.3,
+          "recall": 0.1,
+          "fpr": 0.5338
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.3,
+          "recall": 0.1833,
+          "fpr": 0.5811
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.3,
+          "recall": 0.2167,
+          "fpr": 0.5946
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.4,
+          "recall": 0.3167,
+          "fpr": 0.8311
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.4,
+          "recall": 0.55,
+          "fpr": 0.8784
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.4,
+          "recall": 0.6,
+          "fpr": 0.9054
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.6,
+          "recall": 0.75,
+          "fpr": 0.9797
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.6,
+          "recall": 0.9,
+          "fpr": 0.9932
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.6,
+          "recall": 1.0,
+          "fpr": 1.0
+        }
+      ]
+    },
+    "elo_arbiter": {
+      "grid_points": [
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0338,
+            "accuracy": 0.6875,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0145,
+              0.0766
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.05,
+            "fpr": 0.6284,
+            "accuracy": 0.2788,
+            "precision": 0.0312,
+            "recall_ci95": [
+              0.0171,
+              0.137
+            ],
+            "fpr_ci95": [
+              0.5482,
+              0.7021
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.4667,
+            "fpr": 0.9459,
+            "accuracy": 0.1731,
+            "precision": 0.1667,
+            "recall_ci95": [
+              0.3463,
+              0.5911
+            ],
+            "fpr_ci95": [
+              0.897,
+              0.9724
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.9167,
+            "fpr": 1.0,
+            "accuracy": 0.2644,
+            "precision": 0.2709,
+            "recall_ci95": [
+              0.8193,
+              0.9639
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        }
+      ],
+      "pareto_frontier_reject": [
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.3,
+          "recall": 0.0,
+          "fpr": 0.0338
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.4,
+          "recall": 0.05,
+          "fpr": 0.6284
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.5,
+          "recall": 0.4667,
+          "fpr": 0.9459
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.7,
+          "recall": 1.0,
+          "fpr": 1.0
+        }
+      ]
+    },
+    "single_judge": {
+      "grid_points": [
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.4,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.3,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0,
+            "accuracy": 0.7115,
+            "precision": null,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.0,
+              0.0253
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.4,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0,
+            "fpr": 0.0743,
+            "accuracy": 0.6587,
+            "precision": 0.0,
+            "recall_ci95": [
+              0.0,
+              0.0602
+            ],
+            "fpr_ci95": [
+              0.042,
+              0.1282
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.5,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.0333,
+            "fpr": 0.6689,
+            "accuracy": 0.2452,
+            "precision": 0.0198,
+            "recall_ci95": [
+              0.0092,
+              0.1136
+            ],
+            "fpr_ci95": [
+              0.5897,
+              0.7396
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.6,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.3,
+            "fpr": 0.8311,
+            "accuracy": 0.2067,
+            "precision": 0.1277,
+            "recall_ci95": [
+              0.199,
+              0.4251
+            ],
+            "fpr_ci95": [
+              0.7625,
+              0.8829
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.7,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 0.8333,
+            "fpr": 0.9392,
+            "accuracy": 0.2837,
+            "precision": 0.2646,
+            "recall_ci95": [
+              0.7197,
+              0.9069
+            ],
+            "fpr_ci95": [
+              0.8885,
+              0.9677
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.8,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        },
+        {
+          "t_sup": 0.9,
+          "t_rej": 0.9,
+          "reject": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          },
+          "non_support": {
+            "n": 208,
+            "n_positive": 60,
+            "n_negative": 148,
+            "recall": 1.0,
+            "fpr": 1.0,
+            "accuracy": 0.2885,
+            "precision": 0.2885,
+            "recall_ci95": [
+              0.9398,
+              1.0
+            ],
+            "fpr_ci95": [
+              0.9747,
+              1.0
+            ]
+          }
+        }
+      ],
+      "pareto_frontier_reject": [
+        {
+          "t_sup": 0.3,
+          "t_rej": 0.3,
+          "recall": 0.0,
+          "fpr": 0.0
+        },
+        {
+          "t_sup": 0.5,
+          "t_rej": 0.5,
+          "recall": 0.0333,
+          "fpr": 0.6689
+        },
+        {
+          "t_sup": 0.6,
+          "t_rej": 0.6,
+          "recall": 0.3,
+          "fpr": 0.8311
+        },
+        {
+          "t_sup": 0.7,
+          "t_rej": 0.7,
+          "recall": 0.8333,
+          "fpr": 0.9392
+        },
+        {
+          "t_sup": 0.8,
+          "t_rej": 0.8,
+          "recall": 1.0,
+          "fpr": 1.0
+        }
+      ]
+    }
+  },
+  "red_line_violations": [],
+  "generated_at": "2026-10-07T23:06:30.707542",
+  "note": "RL1 默认阈值(0.7,0.4)与 baseline_comparison_report.json 互锁；RL2 统计量型基线 FPR 对驳回阈值单调不减；RL3 法庭参考点互锁（阈值无关性由原语只算一次构造保证）。baseline_optimum_reaches_court_profile 为诚实报告项（非红线）。"
+}

@@ -1,0 +1,192 @@
+{
+  "experiment": "§5.3/§6.5 定理 1-A 优势分解标定（P(S)/P(M\\D)/q_K/κ）",
+  "benchmark": "DDB-L1 负例 + DDB-L1.5 伪冲突负例（C=∅ 底空间）+ 受控零假设合成案件",
+  "seed": 42,
+  "pool": {
+    "l1_per_polarity": 60,
+    "l1_defect_only": 30,
+    "l1_clean": 30,
+    "l15": 88,
+    "total": 148
+  },
+  "decomposition": {
+    "full_v03": {
+      "n": 148,
+      "cells": {
+        "d_and_m": 0,
+        "s": 30,
+        "m_without_d": 0,
+        "neither": 118
+      },
+      "P(D)_fpr_guilty": 0.202703,
+      "P(M)_fpr_abp": 0.0,
+      "P(S)": 0.202703,
+      "P(M_without_D)": 0.0,
+      "closure": {
+        "lhs_PD_minus_PM": 0.202703,
+        "rhs_PS_minus_PMD": 0.202703,
+        "residual": 0.0
+      },
+      "critical_evidence_count": 0,
+      "by_stratum": {
+        "l1_defect_only": {
+          "n": 30,
+          "d_and_m": 0,
+          "s": 30,
+          "m_without_d": 0,
+          "neither": 0,
+          "P(D)": 1.0,
+          "P(M)": 0.0,
+          "P(S)": 1.0,
+          "P(M\\D)": 0.0
+        },
+        "l1_clean": {
+          "n": 30,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 0,
+          "neither": 30,
+          "P(D)": 0.0,
+          "P(M)": 0.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 0.0
+        },
+        "l15_cross_aspect": {
+          "n": 40,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 0,
+          "neither": 40,
+          "P(D)": 0.0,
+          "P(M)": 0.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 0.0
+        },
+        "l15_ambiguous_reference": {
+          "n": 24,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 0,
+          "neither": 24,
+          "P(D)": 0.0,
+          "P(M)": 0.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 0.0
+        },
+        "l15_different_object_gate": {
+          "n": 24,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 0,
+          "neither": 24,
+          "P(D)": 0.0,
+          "P(M)": 0.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 0.0
+        }
+      }
+    },
+    "baseline_v02": {
+      "n": 148,
+      "cells": {
+        "d_and_m": 0,
+        "s": 30,
+        "m_without_d": 88,
+        "neither": 30
+      },
+      "P(D)_fpr_guilty": 0.202703,
+      "P(M)_fpr_abp": 0.594595,
+      "P(S)": 0.202703,
+      "P(M_without_D)": 0.594595,
+      "closure": {
+        "lhs_PD_minus_PM": -0.391892,
+        "rhs_PS_minus_PMD": -0.391892,
+        "residual": 0.0
+      },
+      "critical_evidence_count": 0,
+      "by_stratum": {
+        "l1_defect_only": {
+          "n": 30,
+          "d_and_m": 0,
+          "s": 30,
+          "m_without_d": 0,
+          "neither": 0,
+          "P(D)": 1.0,
+          "P(M)": 0.0,
+          "P(S)": 1.0,
+          "P(M\\D)": 0.0
+        },
+        "l1_clean": {
+          "n": 30,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 0,
+          "neither": 30,
+          "P(D)": 0.0,
+          "P(M)": 0.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 0.0
+        },
+        "l15_cross_aspect": {
+          "n": 40,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 40,
+          "neither": 0,
+          "P(D)": 0.0,
+          "P(M)": 1.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 1.0
+        },
+        "l15_ambiguous_reference": {
+          "n": 24,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 24,
+          "neither": 0,
+          "P(D)": 0.0,
+          "P(M)": 1.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 1.0
+        },
+        "l15_different_object_gate": {
+          "n": 24,
+          "d_and_m": 0,
+          "s": 0,
+          "m_without_d": 24,
+          "neither": 0,
+          "P(D)": 0.0,
+          "P(M)": 1.0,
+          "P(S)": 0.0,
+          "P(M\\D)": 1.0
+        }
+      }
+    }
+  },
+  "null_calibration": {
+    "full_v03": {
+      "m": 20,
+      "trials": 300,
+      "pair_opportunities": 57000,
+      "mismatch_events": 332,
+      "q_K": 0.005825,
+      "adjacent_pairs": 1026000,
+      "joint_events": 86,
+      "P_joint": 8.382e-05,
+      "kappa": 2.4707
+    },
+    "baseline_v02": {
+      "m": 20,
+      "trials": 300,
+      "pair_opportunities": 57000,
+      "mismatch_events": 2021,
+      "q_K": 0.035456,
+      "adjacent_pairs": 1026000,
+      "joint_events": 1829,
+      "P_joint": 0.00178265,
+      "kappa": 1.418
+    }
+  },
+  "red_line_violations": [],
+  "generated_at": "2026-10-07T23:07:10.963576"
+}

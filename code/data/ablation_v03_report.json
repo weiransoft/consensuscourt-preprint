@@ -1,0 +1,955 @@
+{
+  "experiment": "v0.3 三机制消融冒烟（Aspect 约束 / ValidityGate / 强度分级）",
+  "benchmark": "DDB-L1（tests/ddb/l1_generator.py 合成争议基准）",
+  "seed": 42,
+  "cases_per_polarity": 60,
+  "recall_tolerance": 0.05,
+  "configs": {
+    "baseline_v02": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "score_ablation": null,
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "2": 128
+      },
+      "avg_weighted_confidence": 0.9,
+      "avg_pass_confidence": 0.4994,
+      "missed_positives": []
+    },
+    "aspect_only": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "score_ablation": null,
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "2": 128
+      },
+      "avg_weighted_confidence": 0.9,
+      "avg_pass_confidence": 0.4994,
+      "missed_positives": []
+    },
+    "gate_only": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": true,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "score_ablation": null,
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "2": 128
+      },
+      "avg_weighted_confidence": 0.9,
+      "avg_pass_confidence": 0.4994,
+      "missed_positives": []
+    },
+    "position_only": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": true
+      },
+      "score_ablation": null,
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "2": 128
+      },
+      "avg_weighted_confidence": 0.8129,
+      "avg_pass_confidence": 0.4994,
+      "missed_positives": []
+    },
+    "full_v03": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": false
+      },
+      "score_ablation": null,
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "3": 91,
+        "2": 37
+      },
+      "avg_weighted_confidence": 0.9,
+      "avg_pass_confidence": 0.4994,
+      "missed_positives": []
+    },
+    "full_v04": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": true
+      },
+      "score_ablation": null,
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "3": 91,
+        "2": 37
+      },
+      "avg_weighted_confidence": 0.8129,
+      "avg_pass_confidence": 0.4994,
+      "missed_positives": []
+    }
+  },
+  "l15_configs": {
+    "baseline_v02": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "n_negative": 88,
+      "fpr": 1.0,
+      "ambiguous_negative_rate": 0.0,
+      "by_category": {
+        "cross_aspect": {
+          "n": 40,
+          "convicted": 40,
+          "ambiguous": 0,
+          "fpr": 1.0
+        },
+        "ambiguous_reference": {
+          "n": 24,
+          "convicted": 24,
+          "ambiguous": 0,
+          "fpr": 1.0
+        },
+        "different_object_gate": {
+          "n": 24,
+          "convicted": 24,
+          "ambiguous": 0,
+          "fpr": 1.0
+        }
+      },
+      "convicted_ids": [
+        "DDB-L15-0001",
+        "DDB-L15-0002",
+        "DDB-L15-0003",
+        "DDB-L15-0004",
+        "DDB-L15-0005",
+        "DDB-L15-0006",
+        "DDB-L15-0007",
+        "DDB-L15-0008",
+        "DDB-L15-0009",
+        "DDB-L15-0010",
+        "DDB-L15-0011",
+        "DDB-L15-0012",
+        "DDB-L15-0013",
+        "DDB-L15-0014",
+        "DDB-L15-0015",
+        "DDB-L15-0016",
+        "DDB-L15-0017",
+        "DDB-L15-0018",
+        "DDB-L15-0019",
+        "DDB-L15-0020"
+      ]
+    },
+    "aspect_only": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "n_negative": 88,
+      "fpr": 0.5455,
+      "ambiguous_negative_rate": 0.0,
+      "by_category": {
+        "cross_aspect": {
+          "n": 40,
+          "convicted": 0,
+          "ambiguous": 0,
+          "fpr": 0.0
+        },
+        "ambiguous_reference": {
+          "n": 24,
+          "convicted": 24,
+          "ambiguous": 0,
+          "fpr": 1.0
+        },
+        "different_object_gate": {
+          "n": 24,
+          "convicted": 24,
+          "ambiguous": 0,
+          "fpr": 1.0
+        }
+      },
+      "convicted_ids": [
+        "DDB-L15-0002",
+        "DDB-L15-0004",
+        "DDB-L15-0005",
+        "DDB-L15-0011",
+        "DDB-L15-0013",
+        "DDB-L15-0014",
+        "DDB-L15-0019",
+        "DDB-L15-0021",
+        "DDB-L15-0022",
+        "DDB-L15-0023",
+        "DDB-L15-0024",
+        "DDB-L15-0025",
+        "DDB-L15-0027",
+        "DDB-L15-0029",
+        "DDB-L15-0031",
+        "DDB-L15-0032",
+        "DDB-L15-0033",
+        "DDB-L15-0037",
+        "DDB-L15-0039",
+        "DDB-L15-0040"
+      ]
+    },
+    "gate_only": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": true,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "n_negative": 88,
+      "fpr": 0.4545,
+      "ambiguous_negative_rate": 0.2727,
+      "by_category": {
+        "cross_aspect": {
+          "n": 40,
+          "convicted": 40,
+          "ambiguous": 0,
+          "fpr": 1.0
+        },
+        "ambiguous_reference": {
+          "n": 24,
+          "convicted": 0,
+          "ambiguous": 24,
+          "fpr": 0.0
+        },
+        "different_object_gate": {
+          "n": 24,
+          "convicted": 0,
+          "ambiguous": 0,
+          "fpr": 0.0
+        }
+      },
+      "convicted_ids": [
+        "DDB-L15-0001",
+        "DDB-L15-0003",
+        "DDB-L15-0006",
+        "DDB-L15-0007",
+        "DDB-L15-0008",
+        "DDB-L15-0009",
+        "DDB-L15-0010",
+        "DDB-L15-0012",
+        "DDB-L15-0015",
+        "DDB-L15-0016",
+        "DDB-L15-0017",
+        "DDB-L15-0018",
+        "DDB-L15-0020",
+        "DDB-L15-0026",
+        "DDB-L15-0028",
+        "DDB-L15-0030",
+        "DDB-L15-0034",
+        "DDB-L15-0035",
+        "DDB-L15-0036",
+        "DDB-L15-0038"
+      ]
+    },
+    "position_only": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": true
+      },
+      "n_negative": 88,
+      "fpr": 1.0,
+      "ambiguous_negative_rate": 0.0,
+      "by_category": {
+        "cross_aspect": {
+          "n": 40,
+          "convicted": 40,
+          "ambiguous": 0,
+          "fpr": 1.0
+        },
+        "ambiguous_reference": {
+          "n": 24,
+          "convicted": 24,
+          "ambiguous": 0,
+          "fpr": 1.0
+        },
+        "different_object_gate": {
+          "n": 24,
+          "convicted": 24,
+          "ambiguous": 0,
+          "fpr": 1.0
+        }
+      },
+      "convicted_ids": [
+        "DDB-L15-0001",
+        "DDB-L15-0002",
+        "DDB-L15-0003",
+        "DDB-L15-0004",
+        "DDB-L15-0005",
+        "DDB-L15-0006",
+        "DDB-L15-0007",
+        "DDB-L15-0008",
+        "DDB-L15-0009",
+        "DDB-L15-0010",
+        "DDB-L15-0011",
+        "DDB-L15-0012",
+        "DDB-L15-0013",
+        "DDB-L15-0014",
+        "DDB-L15-0015",
+        "DDB-L15-0016",
+        "DDB-L15-0017",
+        "DDB-L15-0018",
+        "DDB-L15-0019",
+        "DDB-L15-0020"
+      ]
+    },
+    "full_v03": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": false
+      },
+      "n_negative": 88,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.2727,
+      "by_category": {
+        "cross_aspect": {
+          "n": 40,
+          "convicted": 0,
+          "ambiguous": 0,
+          "fpr": 0.0
+        },
+        "ambiguous_reference": {
+          "n": 24,
+          "convicted": 0,
+          "ambiguous": 24,
+          "fpr": 0.0
+        },
+        "different_object_gate": {
+          "n": 24,
+          "convicted": 0,
+          "ambiguous": 0,
+          "fpr": 0.0
+        }
+      },
+      "convicted_ids": []
+    },
+    "full_v04": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": true
+      },
+      "n_negative": 88,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.2727,
+      "by_category": {
+        "cross_aspect": {
+          "n": 40,
+          "convicted": 0,
+          "ambiguous": 0,
+          "fpr": 0.0
+        },
+        "ambiguous_reference": {
+          "n": 24,
+          "convicted": 0,
+          "ambiguous": 24,
+          "fpr": 0.0
+        },
+        "different_object_gate": {
+          "n": 24,
+          "convicted": 0,
+          "ambiguous": 0,
+          "fpr": 0.0
+        }
+      },
+      "convicted_ids": []
+    }
+  },
+  "l4_configs": {
+    "baseline_v02": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "n_total": 256,
+      "n_convicted": 256,
+      "n_misses": 0,
+      "n_mismatches": 192,
+      "recall": 1.0,
+      "intensity_match_rate": 0.25,
+      "intensity_match_by_category": {
+        "gap_unknown": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "gap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "nogap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        }
+      },
+      "intensity_distribution": {
+        "2": 64
+      },
+      "misses_sample": [],
+      "mismatches_sample": [
+        "DDB-L4-0001 强度不一致: gold=3 输出=2",
+        "DDB-L4-0002 强度不一致: gold=3 输出=2",
+        "DDB-L4-0003 强度不一致: gold=3 输出=2",
+        "DDB-L4-0004 强度不一致: gold=3 输出=2",
+        "DDB-L4-0005 强度不一致: gold=3 输出=2",
+        "DDB-L4-0006 强度不一致: gold=3 输出=2",
+        "DDB-L4-0007 强度不一致: gold=3 输出=2",
+        "DDB-L4-0008 强度不一致: gold=3 输出=2",
+        "DDB-L4-0013 强度不一致: gold=3 输出=2",
+        "DDB-L4-0014 强度不一致: gold=3 输出=2"
+      ]
+    },
+    "aspect_only": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "n_total": 256,
+      "n_convicted": 256,
+      "n_misses": 0,
+      "n_mismatches": 192,
+      "recall": 1.0,
+      "intensity_match_rate": 0.25,
+      "intensity_match_by_category": {
+        "gap_unknown": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "gap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "nogap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        }
+      },
+      "intensity_distribution": {
+        "2": 64
+      },
+      "misses_sample": [],
+      "mismatches_sample": [
+        "DDB-L4-0001 强度不一致: gold=3 输出=2",
+        "DDB-L4-0002 强度不一致: gold=3 输出=2",
+        "DDB-L4-0003 强度不一致: gold=3 输出=2",
+        "DDB-L4-0004 强度不一致: gold=3 输出=2",
+        "DDB-L4-0005 强度不一致: gold=3 输出=2",
+        "DDB-L4-0006 强度不一致: gold=3 输出=2",
+        "DDB-L4-0007 强度不一致: gold=3 输出=2",
+        "DDB-L4-0008 强度不一致: gold=3 输出=2",
+        "DDB-L4-0013 强度不一致: gold=3 输出=2",
+        "DDB-L4-0014 强度不一致: gold=3 输出=2"
+      ]
+    },
+    "gate_only": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": true,
+        "enable_intensity": false,
+        "enable_position_weighting": false
+      },
+      "n_total": 256,
+      "n_convicted": 256,
+      "n_misses": 0,
+      "n_mismatches": 192,
+      "recall": 1.0,
+      "intensity_match_rate": 0.25,
+      "intensity_match_by_category": {
+        "gap_unknown": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "gap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "nogap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        }
+      },
+      "intensity_distribution": {
+        "2": 64
+      },
+      "misses_sample": [],
+      "mismatches_sample": [
+        "DDB-L4-0001 强度不一致: gold=3 输出=2",
+        "DDB-L4-0002 强度不一致: gold=3 输出=2",
+        "DDB-L4-0003 强度不一致: gold=3 输出=2",
+        "DDB-L4-0004 强度不一致: gold=3 输出=2",
+        "DDB-L4-0005 强度不一致: gold=3 输出=2",
+        "DDB-L4-0006 强度不一致: gold=3 输出=2",
+        "DDB-L4-0007 强度不一致: gold=3 输出=2",
+        "DDB-L4-0008 强度不一致: gold=3 输出=2",
+        "DDB-L4-0013 强度不一致: gold=3 输出=2",
+        "DDB-L4-0014 强度不一致: gold=3 输出=2"
+      ]
+    },
+    "position_only": {
+      "switches": {
+        "enable_aspect": false,
+        "enable_validity_gate": false,
+        "enable_intensity": false,
+        "enable_position_weighting": true
+      },
+      "n_total": 256,
+      "n_convicted": 256,
+      "n_misses": 0,
+      "n_mismatches": 192,
+      "recall": 1.0,
+      "intensity_match_rate": 0.25,
+      "intensity_match_by_category": {
+        "gap_unknown": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "gap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        },
+        "nogap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_same": {
+          "n": 64,
+          "match": 0,
+          "mismatch": 64
+        }
+      },
+      "intensity_distribution": {
+        "2": 64
+      },
+      "misses_sample": [],
+      "mismatches_sample": [
+        "DDB-L4-0001 强度不一致: gold=3 输出=2",
+        "DDB-L4-0002 强度不一致: gold=3 输出=2",
+        "DDB-L4-0003 强度不一致: gold=3 输出=2",
+        "DDB-L4-0004 强度不一致: gold=3 输出=2",
+        "DDB-L4-0005 强度不一致: gold=3 输出=2",
+        "DDB-L4-0006 强度不一致: gold=3 输出=2",
+        "DDB-L4-0007 强度不一致: gold=3 输出=2",
+        "DDB-L4-0008 强度不一致: gold=3 输出=2",
+        "DDB-L4-0013 强度不一致: gold=3 输出=2",
+        "DDB-L4-0014 强度不一致: gold=3 输出=2"
+      ]
+    },
+    "full_v03": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": false
+      },
+      "n_total": 256,
+      "n_convicted": 256,
+      "n_misses": 0,
+      "n_mismatches": 0,
+      "recall": 1.0,
+      "intensity_match_rate": 1.0,
+      "intensity_match_by_category": {
+        "gap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "gap_same": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_same": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        }
+      },
+      "intensity_distribution": {
+        "3": 192,
+        "2": 64
+      },
+      "misses_sample": [],
+      "mismatches_sample": []
+    },
+    "full_v04": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": true
+      },
+      "n_total": 256,
+      "n_convicted": 256,
+      "n_misses": 0,
+      "n_mismatches": 0,
+      "recall": 1.0,
+      "intensity_match_rate": 1.0,
+      "intensity_match_by_category": {
+        "gap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "gap_same": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_unknown": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        },
+        "nogap_same": {
+          "n": 64,
+          "match": 64,
+          "mismatch": 0
+        }
+      },
+      "intensity_distribution": {
+        "3": 192,
+        "2": 64
+      },
+      "misses_sample": [],
+      "mismatches_sample": []
+    }
+  },
+  "court_configs": {
+    "court_full": {
+      "mode": "court_full",
+      "mode_description": "完整法庭（参照行：ABP rubric + 独立评审 + Human BOSS）",
+      "conviction": {
+        "recall": 1.0,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "escalation": {
+        "recall": 1.0,
+        "fpr": 1.0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "decision_distribution": {
+        "有条件支持": 104,
+        "驳回提案": 16
+      },
+      "evidence_filtered_by_legacy_screen": 82
+    },
+    "court_no_abp": {
+      "mode": "court_no_abp",
+      "mode_description": "去掉 ABP（不运行矛盾对 rubric；仅留逐证据 CRITICAL 硬约束）",
+      "conviction": {
+        "recall": 0.0,
+        "fpr": 0.0,
+        "accuracy": 0.5,
+        "precision": null,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "escalation": {
+        "recall": 1.0,
+        "fpr": 1.0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "decision_distribution": {
+        "有条件支持": 104,
+        "驳回提案": 16
+      },
+      "evidence_filtered_by_legacy_screen": 82
+    },
+    "court_no_reviewer": {
+      "mode": "court_no_reviewer",
+      "mode_description": "去掉独立评审（reviewer_notes 置空，条款 4/6 信号消失）",
+      "conviction": {
+        "recall": 1.0,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "escalation": {
+        "recall": 1.0,
+        "fpr": 1.0,
+        "accuracy": 0.5,
+        "precision": 0.5,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "decision_distribution": {
+        "有条件支持": 104,
+        "驳回提案": 16
+      },
+      "evidence_filtered_by_legacy_screen": 82
+    },
+    "court_no_boss": {
+      "mode": "court_no_boss",
+      "mode_description": "去掉 Human BOSS（override_items 不参与 escalated）",
+      "conviction": {
+        "recall": 1.0,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "escalation": {
+        "recall": 0.7333,
+        "fpr": 0.8,
+        "accuracy": 0.4667,
+        "precision": 0.4783,
+        "n_positive": 60,
+        "n_negative": 60
+      },
+      "decision_distribution": {
+        "有条件支持": 104,
+        "驳回提案": 16
+      },
+      "evidence_filtered_by_legacy_screen": 82
+    }
+  },
+  "court_l15_configs": {
+    "court_full": {
+      "mode": "court_full",
+      "mode_description": "完整法庭（参照行：ABP rubric + 独立评审 + Human BOSS）",
+      "conviction": {
+        "recall": null,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": null,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "escalation": {
+        "recall": null,
+        "fpr": 1.0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "decision_distribution": {
+        "驳回提案": 74,
+        "有条件支持": 14
+      },
+      "evidence_filtered_by_legacy_screen": 0
+    },
+    "court_no_abp": {
+      "mode": "court_no_abp",
+      "mode_description": "去掉 ABP（不运行矛盾对 rubric；仅留逐证据 CRITICAL 硬约束）",
+      "conviction": {
+        "recall": null,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": null,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "escalation": {
+        "recall": null,
+        "fpr": 1.0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "decision_distribution": {
+        "驳回提案": 74,
+        "有条件支持": 14
+      },
+      "evidence_filtered_by_legacy_screen": 0
+    },
+    "court_no_reviewer": {
+      "mode": "court_no_reviewer",
+      "mode_description": "去掉独立评审（reviewer_notes 置空，条款 4/6 信号消失）",
+      "conviction": {
+        "recall": null,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": null,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "escalation": {
+        "recall": null,
+        "fpr": 1.0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "decision_distribution": {
+        "驳回提案": 74,
+        "有条件支持": 14
+      },
+      "evidence_filtered_by_legacy_screen": 0
+    },
+    "court_no_boss": {
+      "mode": "court_no_boss",
+      "mode_description": "去掉 Human BOSS（override_items 不参与 escalated）",
+      "conviction": {
+        "recall": null,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": null,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "escalation": {
+        "recall": null,
+        "fpr": 1.0,
+        "accuracy": 0.0,
+        "precision": 0.0,
+        "n_positive": 0,
+        "n_negative": 88
+      },
+      "decision_distribution": {
+        "驳回提案": 74,
+        "有条件支持": 14
+      },
+      "evidence_filtered_by_legacy_screen": 0
+    }
+  },
+  "scorer_ablation_configs": {
+    "no_source_pedigree": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": false
+      },
+      "score_ablation": "no_source_pedigree",
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "3": 91,
+        "2": 37
+      },
+      "avg_weighted_confidence": 0.9,
+      "avg_pass_confidence": 0.5248,
+      "missed_positives": []
+    },
+    "no_recency": {
+      "switches": {
+        "enable_aspect": true,
+        "enable_validity_gate": true,
+        "enable_intensity": true,
+        "enable_position_weighting": false
+      },
+      "score_ablation": "no_recency",
+      "n_positive": 60,
+      "n_negative": 60,
+      "recall": 1.0,
+      "fpr": 0.0,
+      "ambiguous_negative_rate": 0.0,
+      "intensity_distribution": {
+        "3": 91,
+        "2": 37
+      },
+      "avg_weighted_confidence": 0.9,
+      "avg_pass_confidence": 0.625,
+      "missed_positives": []
+    }
+  },
+  "scorer_ablation_uniform_source_score": 0.775,
+  "red_line_violations": [],
+  "generated_at": "2026-10-07T23:06:20.902276",
+  "note": "冒烟级（60×2）；正式 13 项消融（600×2 全组合 + 显著性检验）在第 3 月主实验运行，同管线 --cases 300 放大即可。L1.5（--l15）：负例对照层 FPR=0 红线 + 分机制一阶效应。L4（--l4）：强度判定表全分支可达性 + 全开一致性 + 强度一阶效应。v0.4.5 扩展：position 维度（EvidencePositionWeighter）作为第四自变量，position_only / full_v04 两格点验证位置加权一阶效应（full_v04 定罪置信度折扣 < full_v03）。v0.4.11 扩展：--court 法院组件消融（§6.4 第 9-11 项可纯代码落地子集），court_full 参照 + no_abp/no_reviewer/no_boss，度量 hold_court 定罪层（矛盾对通道必要性）与升级层（评审/BOSS 升级信号一阶效应，含 §6.3 precision@escalation）。v0.4.15 扩展：--scorer-ablation scorer 级消融（§6.4 第 4/8 行），机制全开不变、评分输出实验侧后处理（生产代码零改动）——no_source_pedigree 来源等权（统一中值 0.775）+ no_recency 时效衰减关闭（recency=1.0），可观测效应在通过案例置信度通道（overall 与定罪通道解耦是 ABP 结构性设计）。"
+}

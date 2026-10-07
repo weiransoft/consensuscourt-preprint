@@ -1,0 +1,6292 @@
+[
+  {
+    "case_id": "DDB-L15-0001",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0001-EV01",
+        "source": "llm",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-5392423"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0001-EV04",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "assay-scientist",
+        "timestamp": "2021-12-01T05:16:15.213377",
+        "reference_ids": [
+          "EXP-6800828"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0001-EV03",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "agent",
+        "timestamp": "2021-07-29T05:16:15.213302",
+        "reference_ids": [
+          "CHEMBL-4543951"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0001-EV05",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "computational-chemist",
+        "timestamp": "2025-09-13T05:16:15.213431",
+        "reference_ids": [
+          "PMID-1939607"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0001-EV02",
+        "source": "uniprot",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-9615702"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0002",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0002-EV03",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "antibody-engineer",
+        "timestamp": "2021-08-19T05:16:15.217313",
+        "reference_ids": [
+          "PMID-4518934"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0002-EV01",
+        "source": "experiment",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "pi-agent",
+        "timestamp": "2021-06-21T05:16:15.217248",
+        "reference_ids": [
+          "EXP-4318028"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0002-EV04",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "assay-scientist",
+        "timestamp": "2023-05-17T05:16:15.217358",
+        "reference_ids": [
+          "EXP-3437174"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0002-EV02",
+        "source": "pubmed",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "assay-scientist",
+        "timestamp": "2026-08-04T05:16:15.217260",
+        "reference_ids": [
+          "PMID-9108867"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0003",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0003-EV03",
+        "source": "agent_opinion",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "structural-biologist",
+        "timestamp": "2025-12-11T05:16:15.218591",
+        "reference_ids": [
+          "EXP-2209911"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0003-EV02",
+        "source": "agent_opinion",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "reviewer",
+        "timestamp": "2023-04-10T05:16:15.218538",
+        "reference_ids": [
+          "CHEMBL-1071823"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0003-EV01",
+        "source": "experiment",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "drug-researcher",
+        "timestamp": "2021-03-29T05:16:15.218532",
+        "reference_ids": [
+          "PMID-1976828"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0004",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0004-EV05",
+        "source": "agent_opinion",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-4772073"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0004-EV01",
+        "source": "experiment",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "antibody-engineer",
+        "timestamp": "2021-12-22T05:16:15.219225",
+        "reference_ids": [
+          "CHEMBL-9147886"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0004-EV03",
+        "source": "pubmed",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-9970182"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0004-EV02",
+        "source": "chembl",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "synthetic-chemist",
+        "timestamp": "2022-03-31T05:16:15.219233",
+        "reference_ids": [
+          "UNI-7450099"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0004-EV04",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-3941005"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0005",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0005-EV03",
+        "source": "uniprot",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "drug-researcher",
+        "timestamp": "2025-08-13T05:16:15.219989",
+        "reference_ids": [
+          "PMID-6854864"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0005-EV02",
+        "source": "experiment",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-6044126"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0005-EV01",
+        "source": "llm",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "medicinal-chemist",
+        "timestamp": "2021-06-01T05:16:15.219917",
+        "reference_ids": [
+          "DRUGBANK-3294548"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0005-EV04",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-9097381"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0006",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0006-EV03",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "agent",
+        "timestamp": "2022-03-23T05:16:15.220577",
+        "reference_ids": [
+          "PMID-2862152"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0006-EV01",
+        "source": "chembl",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-7534500"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0006-EV02",
+        "source": "uniprot",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-347595"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0007",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0007-EV04",
+        "source": "agent_opinion",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-1444047"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0007-EV01",
+        "source": "drugbank",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8264991"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0007-EV03",
+        "source": "drugbank",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8099183"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0007-EV02",
+        "source": "uniprot",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-1081186"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0007-EV05",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "structural-biologist",
+        "timestamp": "2024-01-31T05:16:15.221257",
+        "reference_ids": [
+          "DRUGBANK-2111363"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0008",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0008-EV04",
+        "source": "agent_opinion",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-8587336"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0008-EV02",
+        "source": "pubmed",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-03-14T05:16:15.221821",
+        "reference_ids": [
+          "CHEMBL-4556272"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0008-EV01",
+        "source": "experiment",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "pi-agent",
+        "timestamp": "2020-11-09T05:16:15.221818",
+        "reference_ids": [
+          "UNI-4474922"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0008-EV03",
+        "source": "experiment",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "antibody-engineer",
+        "timestamp": "2025-11-27T05:16:15.221865",
+        "reference_ids": [
+          "PMID-7788755"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0009",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0009-EV01",
+        "source": "pubmed",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-9213685"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0009-EV02",
+        "source": "chembl",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "antibody-engineer",
+        "timestamp": "2020-10-15T05:16:15.222521",
+        "reference_ids": [
+          "PMID-9404682"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0009-EV04",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-3515796"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0009-EV03",
+        "source": "pubmed",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-9381552"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0010",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0010-EV02",
+        "source": "pubmed",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "reviewer",
+        "timestamp": "2023-10-14T05:16:15.223164",
+        "reference_ids": [
+          "CHEMBL-7512769"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0010-EV01",
+        "source": "uniprot",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "structural-biologist",
+        "timestamp": "2023-08-14T05:16:15.223161",
+        "reference_ids": [
+          "PMID-159486"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0010-EV05",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "drug-researcher",
+        "timestamp": "2024-05-13T05:16:15.223312",
+        "reference_ids": [
+          "CHEMBL-1824590"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0010-EV04",
+        "source": "llm",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "medicinal-chemist",
+        "timestamp": "2021-11-25T05:16:15.223264",
+        "reference_ids": [
+          "CHEMBL-801771"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0010-EV03",
+        "source": "uniprot",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-9253486"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0011",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0011-EV02",
+        "source": "agent_opinion",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "pi-agent",
+        "timestamp": "2023-12-09T05:16:15.223900",
+        "reference_ids": [
+          "UNI-2770896"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0011-EV05",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": "2023-08-04T05:16:15.224035",
+        "reference_ids": [
+          "UNI-8646409"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0011-EV01",
+        "source": "chembl",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "computational-chemist",
+        "timestamp": "2026-06-11T05:16:15.223896",
+        "reference_ids": [
+          "CHEMBL-5673147"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0011-EV03",
+        "source": "uniprot",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "drug-researcher",
+        "timestamp": "2024-03-23T05:16:15.223945",
+        "reference_ids": [
+          "CHEMBL-7822606"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0011-EV04",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-6785149"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0012",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0012-EV02",
+        "source": "chembl",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "medicinal-chemist",
+        "timestamp": "2023-03-16T05:16:15.224400",
+        "reference_ids": [
+          "DRUGBANK-8680255"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0012-EV01",
+        "source": "uniprot",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "medicinal-chemist",
+        "timestamp": "2023-09-29T05:16:15.224397",
+        "reference_ids": [
+          "PMID-1918692"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0012-EV03",
+        "source": "llm",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-128374"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0013",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0013-EV01",
+        "source": "uniprot",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "structural-biologist",
+        "timestamp": "2023-01-07T05:16:15.225008",
+        "reference_ids": [
+          "EXP-5366630"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0013-EV05",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-02-09T05:16:15.225131",
+        "reference_ids": [
+          "DRUGBANK-7511939"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0013-EV03",
+        "source": "chembl",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "antibody-engineer",
+        "timestamp": "2024-07-27T05:16:15.225053",
+        "reference_ids": [
+          "DRUGBANK-6461002"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0013-EV02",
+        "source": "drugbank",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "structural-biologist",
+        "timestamp": "2023-05-09T05:16:15.225011",
+        "reference_ids": [
+          "EXP-5288935"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0013-EV04",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "computational-chemist",
+        "timestamp": "2023-05-07T05:16:15.225093",
+        "reference_ids": [
+          "DRUGBANK-9292860"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0014",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0014-EV02",
+        "source": "llm",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "structural-biologist",
+        "timestamp": "2024-02-01T05:16:15.225540",
+        "reference_ids": [
+          "UNI-3868844"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0014-EV01",
+        "source": "agent_opinion",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "computational-chemist",
+        "timestamp": "2023-07-16T05:16:15.225537",
+        "reference_ids": [
+          "EXP-5723525"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0014-EV03",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "synthetic-chemist",
+        "timestamp": "2025-11-26T05:16:15.225584",
+        "reference_ids": [
+          "DRUGBANK-7053166"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0015",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0015-EV03",
+        "source": "drugbank",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "structural-biologist",
+        "timestamp": "2021-07-05T05:16:15.226030",
+        "reference_ids": [
+          "EXP-9477210"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0015-EV02",
+        "source": "agent_opinion",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "structural-biologist",
+        "timestamp": "2024-04-07T05:16:15.225979",
+        "reference_ids": [
+          "CHEMBL-8789889"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0015-EV01",
+        "source": "llm",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "pi-agent",
+        "timestamp": "2023-12-26T05:16:15.225976",
+        "reference_ids": [
+          "CHEMBL-193026"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0015-EV04",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "agent",
+        "timestamp": "2021-01-22T05:16:15.226070",
+        "reference_ids": [
+          "DRUGBANK-9291766"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0016",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0016-EV03",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-3979923"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0016-EV01",
+        "source": "drugbank",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-08-12T05:16:15.226634",
+        "reference_ids": [
+          "EXP-8230188"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0016-EV02",
+        "source": "uniprot",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-4893722"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0017",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0017-EV03",
+        "source": "pubmed",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "medicinal-chemist",
+        "timestamp": "2026-08-27T05:16:15.227265",
+        "reference_ids": [
+          "UNI-5109888"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0017-EV04",
+        "source": "llm",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "pi-agent",
+        "timestamp": "2024-03-31T05:16:15.227307",
+        "reference_ids": [
+          "DRUGBANK-3781284"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0017-EV05",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "drug-researcher",
+        "timestamp": "2022-03-09T05:16:15.227352",
+        "reference_ids": [
+          "CHEMBL-7941505"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0017-EV01",
+        "source": "llm",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "structural-biologist",
+        "timestamp": "2023-01-04T05:16:15.227223",
+        "reference_ids": [
+          "EXP-7916912"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0017-EV02",
+        "source": "chembl",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-6634336"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0018",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0018-EV02",
+        "source": "llm",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-3651070"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0018-EV04",
+        "source": "uniprot",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-3861823"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0018-EV03",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-4332413"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0018-EV01",
+        "source": "pubmed",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-3148907"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0019",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0019-EV03",
+        "source": "experiment",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-2021542"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0019-EV02",
+        "source": "pubmed",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-9561839"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0019-EV01",
+        "source": "agent_opinion",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-2656551"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0020",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0020-EV01",
+        "source": "pubmed",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "drug-researcher",
+        "timestamp": "2022-07-06T05:16:15.229426",
+        "reference_ids": [
+          "DRUGBANK-3427421"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0020-EV05",
+        "source": "uniprot",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "reviewer",
+        "timestamp": "2021-07-25T05:16:15.229556",
+        "reference_ids": [
+          "CHEMBL-7406261"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0020-EV04",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "assay-scientist",
+        "timestamp": "2026-07-31T05:16:15.229517",
+        "reference_ids": [
+          "DRUGBANK-8324219"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0020-EV03",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "medicinal-chemist",
+        "timestamp": "2022-10-29T05:16:15.229477",
+        "reference_ids": [
+          "EXP-7286990"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0020-EV02",
+        "source": "experiment",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "structural-biologist",
+        "timestamp": "2023-12-31T05:16:15.229431",
+        "reference_ids": [
+          "PMID-5159717"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0021",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0021-EV01",
+        "source": "drugbank",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-1553962"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0021-EV04",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "antibody-engineer",
+        "timestamp": "2023-08-16T05:16:15.230210",
+        "reference_ids": [
+          "EXP-270307"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0021-EV03",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "drug-researcher",
+        "timestamp": "2023-01-28T05:16:15.230168",
+        "reference_ids": [
+          "CHEMBL-8279730"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0021-EV02",
+        "source": "agent_opinion",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "antibody-engineer",
+        "timestamp": "2023-12-27T05:16:15.230121",
+        "reference_ids": [
+          "DRUGBANK-9660490"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0021-EV05",
+        "source": "agent_opinion",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-8296976"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0022",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0022-EV02",
+        "source": "agent_opinion",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-12-29T05:16:15.230663",
+        "reference_ids": [
+          "UNI-9856883"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0022-EV04",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-5394016"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0022-EV03",
+        "source": "drugbank",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "reviewer",
+        "timestamp": "2023-01-05T05:16:15.230704",
+        "reference_ids": [
+          "UNI-7712582"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0022-EV01",
+        "source": "llm",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "agent",
+        "timestamp": "2026-07-12T05:16:15.230660",
+        "reference_ids": [
+          "PMID-5036453"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0023",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0023-EV04",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "drug-researcher",
+        "timestamp": "2025-04-21T05:16:15.231314",
+        "reference_ids": [
+          "DRUGBANK-1821135"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0023-EV02",
+        "source": "agent_opinion",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-3356752"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0023-EV03",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "antibody-engineer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-2223709"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0023-EV01",
+        "source": "chembl",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8901946"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0024",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0024-EV02",
+        "source": "agent_opinion",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "structural-biologist",
+        "timestamp": "2022-03-24T05:16:15.231733",
+        "reference_ids": [
+          "DRUGBANK-1342892"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0024-EV04",
+        "source": "agent_opinion",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "structural-biologist",
+        "timestamp": "2022-01-20T05:16:15.231874",
+        "reference_ids": [
+          "EXP-3886401"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0024-EV05",
+        "source": "uniprot",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-7294570"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0024-EV01",
+        "source": "drugbank",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "agent",
+        "timestamp": "2026-02-22T05:16:15.231731",
+        "reference_ids": [
+          "UNI-8114965"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0024-EV03",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-5197514"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0025",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0025-EV01",
+        "source": "agent_opinion",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-2734980"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0025-EV02",
+        "source": "chembl",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-2726181"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0025-EV03",
+        "source": "uniprot",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "medicinal-chemist",
+        "timestamp": "2026-05-10T05:16:15.232447",
+        "reference_ids": [
+          "CHEMBL-4933597"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0026",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0026-EV02",
+        "source": "drugbank",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-2599627"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0026-EV03",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "computational-chemist",
+        "timestamp": "2023-06-26T05:16:15.232887",
+        "reference_ids": [
+          "DRUGBANK-2186308"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0026-EV01",
+        "source": "llm",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "structural-biologist",
+        "timestamp": "2023-10-03T05:16:15.232840",
+        "reference_ids": [
+          "EXP-3418855"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0026-EV04",
+        "source": "experiment",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "pi-agent",
+        "timestamp": "2021-02-09T05:16:15.232929",
+        "reference_ids": [
+          "EXP-8384509"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0027",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0027-EV01",
+        "source": "drugbank",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "reviewer",
+        "timestamp": "2026-06-07T05:16:15.233476",
+        "reference_ids": [
+          "PMID-3940714"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0027-EV02",
+        "source": "llm",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "medicinal-chemist",
+        "timestamp": "2026-06-28T05:16:15.233479",
+        "reference_ids": [
+          "UNI-9767820"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0027-EV03",
+        "source": "uniprot",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "agent",
+        "timestamp": "2024-09-07T05:16:15.233522",
+        "reference_ids": [
+          "EXP-7412936"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0028",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0028-EV01",
+        "source": "pubmed",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "reviewer",
+        "timestamp": "2023-02-13T05:16:15.233915",
+        "reference_ids": [
+          "PMID-2798193"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0028-EV05",
+        "source": "uniprot",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "medicinal-chemist",
+        "timestamp": "2021-10-06T05:16:15.234041",
+        "reference_ids": [
+          "PMID-3515140"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0028-EV04",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "drug-researcher",
+        "timestamp": "2021-07-16T05:16:15.233999",
+        "reference_ids": [
+          "DRUGBANK-1009393"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0028-EV02",
+        "source": "drugbank",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "reviewer",
+        "timestamp": "2021-03-01T05:16:15.233918",
+        "reference_ids": [
+          "UNI-6818473"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0028-EV03",
+        "source": "uniprot",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-6880932"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0029",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0029-EV02",
+        "source": "drugbank",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-9365241"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0029-EV01",
+        "source": "llm",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-4114745"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0029-EV03",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "structural-biologist",
+        "timestamp": "2025-05-27T05:16:15.234673",
+        "reference_ids": [
+          "CHEMBL-8461353"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0029-EV04",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "antibody-engineer",
+        "timestamp": "2021-04-23T05:16:15.234714",
+        "reference_ids": [
+          "DRUGBANK-4189126"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0030",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0030-EV04",
+        "source": "uniprot",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "reviewer",
+        "timestamp": "2022-06-28T05:16:15.235172",
+        "reference_ids": [
+          "DRUGBANK-5498528"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0030-EV01",
+        "source": "drugbank",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "medicinal-chemist",
+        "timestamp": "2025-03-10T05:16:15.235086",
+        "reference_ids": [
+          "PMID-4734662"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0030-EV03",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "medicinal-chemist",
+        "timestamp": "2021-03-25T05:16:15.235133",
+        "reference_ids": [
+          "CHEMBL-7591822"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0030-EV02",
+        "source": "chembl",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "pi-agent",
+        "timestamp": "2021-01-10T05:16:15.235088",
+        "reference_ids": [
+          "UNI-143037"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0031",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0031-EV01",
+        "source": "experiment",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "synthetic-chemist",
+        "timestamp": "2022-02-11T05:16:15.235737",
+        "reference_ids": [
+          "PMID-5438112"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0031-EV03",
+        "source": "pubmed",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "medicinal-chemist",
+        "timestamp": "2025-08-05T05:16:15.235879",
+        "reference_ids": [
+          "DRUGBANK-1772884"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0031-EV02",
+        "source": "drugbank",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "agent",
+        "timestamp": "2022-06-12T05:16:15.235812",
+        "reference_ids": [
+          "DRUGBANK-2651903"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0031-EV04",
+        "source": "agent_opinion",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "drug-researcher",
+        "timestamp": "2022-02-14T05:16:15.235924",
+        "reference_ids": [
+          "CHEMBL-1355409"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0032",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0032-EV02",
+        "source": "llm",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "reviewer",
+        "timestamp": "2021-04-01T05:16:15.236512",
+        "reference_ids": [
+          "EXP-702286"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0032-EV01",
+        "source": "experiment",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "pi-agent",
+        "timestamp": "2023-01-14T05:16:15.236506",
+        "reference_ids": [
+          "EXP-6475499"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0032-EV03",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "antibody-engineer",
+        "timestamp": "2025-09-15T05:16:15.236557",
+        "reference_ids": [
+          "DRUGBANK-1751601"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0032-EV04",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "structural-biologist",
+        "timestamp": "2023-05-13T05:16:15.236598",
+        "reference_ids": [
+          "PMID-871600"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0032-EV05",
+        "source": "llm",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "antibody-engineer",
+        "timestamp": "2021-11-21T05:16:15.236644",
+        "reference_ids": [
+          "CHEMBL-4196953"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0033",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0033-EV01",
+        "source": "chembl",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "structural-biologist",
+        "timestamp": "2022-06-07T05:16:15.237037",
+        "reference_ids": [
+          "EXP-4140453"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0033-EV02",
+        "source": "agent_opinion",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "agent",
+        "timestamp": "2025-02-11T05:16:15.237042",
+        "reference_ids": [
+          "CHEMBL-7836811"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0033-EV05",
+        "source": "llm",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "synthetic-chemist",
+        "timestamp": "2021-04-20T05:16:15.237175",
+        "reference_ids": [
+          "PMID-4079651"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0033-EV03",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "drug-researcher",
+        "timestamp": "2021-07-03T05:16:15.237092",
+        "reference_ids": [
+          "UNI-9270395"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0033-EV04",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "reviewer",
+        "timestamp": "2023-05-14T05:16:15.237134",
+        "reference_ids": [
+          "DRUGBANK-4295951"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0034",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0034-EV04",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "computational-chemist",
+        "timestamp": "2026-04-12T05:16:15.237635",
+        "reference_ids": [
+          "UNI-7495785"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0034-EV02",
+        "source": "uniprot",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "medicinal-chemist",
+        "timestamp": "2026-03-04T05:16:15.237554",
+        "reference_ids": [
+          "EXP-8433700"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0034-EV03",
+        "source": "drugbank",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-4304819"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0034-EV01",
+        "source": "llm",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "drug-researcher",
+        "timestamp": "2022-04-13T05:16:15.237551",
+        "reference_ids": [
+          "UNI-235861"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0035",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0035-EV02",
+        "source": "chembl",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-6238070"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0035-EV05",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "pi-agent",
+        "timestamp": "2022-08-14T05:16:15.238298",
+        "reference_ids": [
+          "PMID-6719862"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0035-EV04",
+        "source": "llm",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "structural-biologist",
+        "timestamp": "2025-11-16T05:16:15.238259",
+        "reference_ids": [
+          "CHEMBL-3885186"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0035-EV03",
+        "source": "agent_opinion",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-5051651"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0035-EV01",
+        "source": "llm",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "structural-biologist",
+        "timestamp": "2023-01-21T05:16:15.238175",
+        "reference_ids": [
+          "DRUGBANK-3046751"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0036",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0036-EV02",
+        "source": "uniprot",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-5603032"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0036-EV01",
+        "source": "drugbank",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "antibody-engineer",
+        "timestamp": "2022-07-22T05:16:15.238829",
+        "reference_ids": [
+          "PMID-4022880"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0036-EV03",
+        "source": "experiment",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "agent",
+        "timestamp": "2023-05-02T05:16:15.238872",
+        "reference_ids": [
+          "DRUGBANK-2057497"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0036-EV04",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-2048178"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0036-EV05",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-6324540"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0037",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0037-EV03",
+        "source": "agent_opinion",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "reviewer",
+        "timestamp": "2022-09-12T05:16:15.239573",
+        "reference_ids": [
+          "PMID-6779674"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0037-EV02",
+        "source": "llm",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-4061312"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0037-EV04",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": "2021-08-15T05:16:15.239619",
+        "reference_ids": [
+          "PMID-3658545"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0037-EV01",
+        "source": "drugbank",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "structural-biologist",
+        "timestamp": "2022-02-22T05:16:15.239525",
+        "reference_ids": [
+          "UNI-648888"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0038",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0038-EV02",
+        "source": "agent_opinion",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-5612314"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0038-EV01",
+        "source": "chembl",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-3575523"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0038-EV03",
+        "source": "pubmed",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "computational-chemist",
+        "timestamp": "2023-11-29T05:16:15.240134",
+        "reference_ids": [
+          "CHEMBL-1944258"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0039",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0039-EV05",
+        "source": "experiment",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-6838019"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0039-EV03",
+        "source": "drugbank",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "structural-biologist",
+        "timestamp": "2022-08-30T05:16:15.240742",
+        "reference_ids": [
+          "EXP-1929622"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0039-EV02",
+        "source": "pubmed",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-2226655"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0039-EV01",
+        "source": "chembl",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "reviewer",
+        "timestamp": "2024-01-20T05:16:15.240698",
+        "reference_ids": [
+          "EXP-5531983"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0039-EV04",
+        "source": "uniprot",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-5160517"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0040",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0040-EV01",
+        "source": "pubmed",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "reviewer",
+        "timestamp": "2025-12-25T05:16:15.241233",
+        "reference_ids": [
+          "CHEMBL-4714002"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0040-EV03",
+        "source": "uniprot",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-9349870"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0040-EV02",
+        "source": "agent_opinion",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "medicinal-chemist",
+        "timestamp": "2023-01-28T05:16:15.241236",
+        "reference_ids": [
+          "DRUGBANK-9001266"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0040-EV04",
+        "source": "llm",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "pi-agent",
+        "timestamp": "2024-02-28T05:16:15.241340",
+        "reference_ids": [
+          "DRUGBANK-5786328"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0041",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0041-EV04",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "structural-biologist",
+        "timestamp": "2021-12-23T05:16:15.241824",
+        "reference_ids": [
+          "PMID-4925620"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0041-EV01",
+        "source": "llm",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "reviewer",
+        "timestamp": "2023-11-11T05:16:15.241740",
+        "reference_ids": [
+          "UNI-2660856"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0041-EV02",
+        "source": "pubmed",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-1664141"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0041-EV03",
+        "source": "experiment",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "reviewer",
+        "timestamp": "2026-01-18T05:16:15.241783",
+        "reference_ids": [
+          "EXP-9521856"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0042",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0042-EV01",
+        "source": "experiment",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-3862204"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0042-EV03",
+        "source": "llm",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "assay-scientist",
+        "timestamp": "2026-06-05T05:16:15.242249",
+        "reference_ids": [
+          "EXP-4587028"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0042-EV04",
+        "source": "pubmed",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "antibody-engineer",
+        "timestamp": "2022-10-14T05:16:15.242287",
+        "reference_ids": [
+          "PMID-3143480"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0042-EV02",
+        "source": "agent_opinion",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "structural-biologist",
+        "timestamp": "2022-08-07T05:16:15.242206",
+        "reference_ids": [
+          "PMID-4773599"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0042-EV05",
+        "source": "drugbank",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-1639438"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0043",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0043-EV03",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "pi-agent",
+        "timestamp": "2021-10-06T05:16:15.242911",
+        "reference_ids": [
+          "DRUGBANK-4682979"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0043-EV05",
+        "source": "experiment",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-1019088"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0043-EV04",
+        "source": "experiment",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "structural-biologist",
+        "timestamp": "2025-06-23T05:16:15.242951",
+        "reference_ids": [
+          "UNI-8264342"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0043-EV02",
+        "source": "uniprot",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-934876"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0043-EV01",
+        "source": "drugbank",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "computational-chemist",
+        "timestamp": "2023-01-31T05:16:15.242869",
+        "reference_ids": [
+          "EXP-1525342"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0044",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0044-EV01",
+        "source": "agent_opinion",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "antibody-engineer",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-229686"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0044-EV04",
+        "source": "pubmed",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "drug-researcher",
+        "timestamp": "2025-11-06T05:16:15.243448",
+        "reference_ids": [
+          "UNI-9759635"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0044-EV05",
+        "source": "drugbank",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-449914"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0044-EV02",
+        "source": "chembl",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "agent",
+        "timestamp": "2024-10-01T05:16:15.243367",
+        "reference_ids": [
+          "CHEMBL-6478822"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0044-EV03",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "assay-scientist",
+        "timestamp": "2022-10-01T05:16:15.243408",
+        "reference_ids": [
+          "PMID-6761748"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0045",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0045-EV03",
+        "source": "chembl",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "reviewer",
+        "timestamp": "2025-11-12T05:16:15.244082",
+        "reference_ids": [
+          "EXP-2013049"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0045-EV01",
+        "source": "agent_opinion",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-4182173"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0045-EV04",
+        "source": "uniprot",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "reviewer",
+        "timestamp": "2025-01-24T05:16:15.244154",
+        "reference_ids": [
+          "CHEMBL-1824773"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0045-EV02",
+        "source": "llm",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "pi-agent",
+        "timestamp": "2020-11-04T05:16:15.244035",
+        "reference_ids": [
+          "PMID-6739863"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0046",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0046-EV03",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": "2023-04-29T05:16:15.244952",
+        "reference_ids": [
+          "UNI-1042411"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0046-EV04",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "antibody-engineer",
+        "timestamp": "2026-04-19T05:16:15.244998",
+        "reference_ids": [
+          "PMID-6286390"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0046-EV02",
+        "source": "experiment",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "agent",
+        "timestamp": "2021-09-08T05:16:15.244900",
+        "reference_ids": [
+          "EXP-5522534"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0046-EV01",
+        "source": "chembl",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "computational-chemist",
+        "timestamp": "2025-11-16T05:16:15.244895",
+        "reference_ids": [
+          "CHEMBL-8389908"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0046-EV05",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": "2021-01-13T05:16:15.245044",
+        "reference_ids": [
+          "DRUGBANK-7863013"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0047",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0047-EV01",
+        "source": "uniprot",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "agent",
+        "timestamp": "2026-01-10T05:16:15.245516",
+        "reference_ids": [
+          "DRUGBANK-1836473"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0047-EV03",
+        "source": "experiment",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "agent",
+        "timestamp": "2024-12-09T05:16:15.245568",
+        "reference_ids": [
+          "UNI-6355418"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0047-EV02",
+        "source": "experiment",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "reviewer",
+        "timestamp": "2025-10-10T05:16:15.245521",
+        "reference_ids": [
+          "EXP-2995058"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0048",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0048-EV04",
+        "source": "pubmed",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-2263449"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0048-EV03",
+        "source": "llm",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "medicinal-chemist",
+        "timestamp": "2022-12-25T05:16:15.246241",
+        "reference_ids": [
+          "PMID-9876746"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0048-EV02",
+        "source": "uniprot",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-4867195"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0048-EV01",
+        "source": "drugbank",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-1205817"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0049",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0049-EV03",
+        "source": "agent_opinion",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-2699548"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0049-EV02",
+        "source": "uniprot",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "assay-scientist",
+        "timestamp": "2022-08-27T05:16:15.246829",
+        "reference_ids": [
+          "UNI-3124309"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0049-EV01",
+        "source": "llm",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "computational-chemist",
+        "timestamp": "2020-10-25T05:16:15.246827",
+        "reference_ids": [
+          "PMID-7203580"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0050",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0050-EV01",
+        "source": "agent_opinion",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "assay-scientist",
+        "timestamp": "2020-10-25T05:16:15.247289",
+        "reference_ids": [
+          "PMID-5749968"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0050-EV03",
+        "source": "llm",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "medicinal-chemist",
+        "timestamp": "2024-11-11T05:16:15.247337",
+        "reference_ids": [
+          "DRUGBANK-833037"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0050-EV02",
+        "source": "pubmed",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-2687931"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0051",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0051-EV03",
+        "source": "agent_opinion",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "agent",
+        "timestamp": "2023-07-24T05:16:15.247968",
+        "reference_ids": [
+          "DRUGBANK-8537374"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0051-EV01",
+        "source": "llm",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-07-11T05:16:15.247920",
+        "reference_ids": [
+          "DRUGBANK-4025917"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0051-EV02",
+        "source": "agent_opinion",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-3355051"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0051-EV04",
+        "source": "uniprot",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "computational-chemist",
+        "timestamp": "2025-03-03T05:16:15.248009",
+        "reference_ids": [
+          "UNI-975431"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0052",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0052-EV03",
+        "source": "llm",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "drug-researcher",
+        "timestamp": "2022-04-11T05:16:15.248458",
+        "reference_ids": [
+          "EXP-6374032"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0052-EV02",
+        "source": "experiment",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "agent",
+        "timestamp": "2025-01-25T05:16:15.248415",
+        "reference_ids": [
+          "DRUGBANK-1638698"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0052-EV01",
+        "source": "llm",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-4676678"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0053",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0053-EV03",
+        "source": "experiment",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "agent",
+        "timestamp": "2026-08-30T05:16:15.248961",
+        "reference_ids": [
+          "PMID-418832"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0053-EV04",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "computational-chemist",
+        "timestamp": "2020-10-20T05:16:15.249007",
+        "reference_ids": [
+          "DRUGBANK-1965405"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0053-EV02",
+        "source": "uniprot",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-8026478"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0053-EV05",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-7769093"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0053-EV01",
+        "source": "pubmed",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-5725238"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0054",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0054-EV02",
+        "source": "experiment",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-4135998"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0054-EV04",
+        "source": "uniprot",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "assay-scientist",
+        "timestamp": "2022-05-05T05:16:15.249512",
+        "reference_ids": [
+          "DRUGBANK-830386"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0054-EV05",
+        "source": "uniprot",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-6091041"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0054-EV03",
+        "source": "pubmed",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "structural-biologist",
+        "timestamp": "2022-09-04T05:16:15.249472",
+        "reference_ids": [
+          "PMID-8925812"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0054-EV01",
+        "source": "llm",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-4986733"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0055",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0055-EV04",
+        "source": "pubmed",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-03-08T05:16:15.250030",
+        "reference_ids": [
+          "UNI-8746701"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0055-EV02",
+        "source": "experiment",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "reviewer",
+        "timestamp": "2024-10-03T05:16:15.249939",
+        "reference_ids": [
+          "DRUGBANK-8128420"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0055-EV05",
+        "source": "agent_opinion",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "assay-scientist",
+        "timestamp": "2026-04-24T05:16:15.250071",
+        "reference_ids": [
+          "CHEMBL-4900144"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0055-EV01",
+        "source": "agent_opinion",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-9260590"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0055-EV03",
+        "source": "llm",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "structural-biologist",
+        "timestamp": "2021-08-03T05:16:15.249983",
+        "reference_ids": [
+          "PMID-5023149"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0056",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0056-EV05",
+        "source": "drugbank",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-5997979"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0056-EV02",
+        "source": "pubmed",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "reviewer",
+        "timestamp": "2021-02-26T05:16:15.250656",
+        "reference_ids": [
+          "DRUGBANK-6263058"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0056-EV03",
+        "source": "llm",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-3127557"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0056-EV01",
+        "source": "uniprot",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "reviewer",
+        "timestamp": "2022-03-27T05:16:15.250653",
+        "reference_ids": [
+          "DRUGBANK-6586822"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0056-EV04",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-5242147"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0057",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0057-EV02",
+        "source": "drugbank",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "reviewer",
+        "timestamp": "2024-12-04T05:16:15.251124",
+        "reference_ids": [
+          "PMID-2495441"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0057-EV04",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-7648448"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0057-EV01",
+        "source": "experiment",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "antibody-engineer",
+        "timestamp": "2026-01-29T05:16:15.251121",
+        "reference_ids": [
+          "PMID-6915076"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0057-EV05",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": "2020-10-13T05:16:15.251251",
+        "reference_ids": [
+          "UNI-6777903"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0057-EV03",
+        "source": "llm",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-6245971"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0058",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0058-EV05",
+        "source": "llm",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "computational-chemist",
+        "timestamp": "2024-10-07T05:16:15.251754",
+        "reference_ids": [
+          "UNI-8635505"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0058-EV03",
+        "source": "pubmed",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "computational-chemist",
+        "timestamp": "2021-08-26T05:16:15.251668",
+        "reference_ids": [
+          "CHEMBL-7567726"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0058-EV04",
+        "source": "llm",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "reviewer",
+        "timestamp": "2025-12-29T05:16:15.251707",
+        "reference_ids": [
+          "EXP-9196126"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0058-EV01",
+        "source": "pubmed",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "computational-chemist",
+        "timestamp": "2022-05-19T05:16:15.251624",
+        "reference_ids": [
+          "EXP-2075701"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0058-EV02",
+        "source": "llm",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "antibody-engineer",
+        "timestamp": "2021-09-19T05:16:15.251627",
+        "reference_ids": [
+          "CHEMBL-4891184"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0059",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0059-EV03",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "assay-scientist",
+        "timestamp": "2022-02-16T05:16:15.252159",
+        "reference_ids": [
+          "EXP-1337331"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0059-EV04",
+        "source": "agent_opinion",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "structural-biologist",
+        "timestamp": "2020-12-01T05:16:15.252200",
+        "reference_ids": [
+          "UNI-2253097"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0059-EV01",
+        "source": "chembl",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "drug-researcher",
+        "timestamp": "2022-08-01T05:16:15.252116",
+        "reference_ids": [
+          "DRUGBANK-9355099"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0059-EV02",
+        "source": "drugbank",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "computational-chemist",
+        "timestamp": "2025-10-02T05:16:15.252119",
+        "reference_ids": [
+          "PMID-5289037"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0060",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0060-EV02",
+        "source": "pubmed",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "reviewer",
+        "timestamp": "2024-03-11T05:16:15.252773",
+        "reference_ids": [
+          "UNI-8805660"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0060-EV03",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-9050276"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0060-EV04",
+        "source": "uniprot",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "computational-chemist",
+        "timestamp": "2024-12-28T05:16:15.252856",
+        "reference_ids": [
+          "CHEMBL-5764316"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0060-EV01",
+        "source": "experiment",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "structural-biologist",
+        "timestamp": "2023-04-24T05:16:15.252769",
+        "reference_ids": [
+          "CHEMBL-2817354"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0061",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0061-EV03",
+        "source": "agent_opinion",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-5090112"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0061-EV02",
+        "source": "llm",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "pi-agent",
+        "timestamp": "2026-05-19T05:16:15.253484",
+        "reference_ids": [
+          "DRUGBANK-9253271"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0061-EV01",
+        "source": "pubmed",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-9698869"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0061-EV04",
+        "source": "pubmed",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-8224385"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0062",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0062-EV02",
+        "source": "chembl",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "computational-chemist",
+        "timestamp": "2020-12-11T05:16:15.253960",
+        "reference_ids": [
+          "EXP-1881470"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0062-EV04",
+        "source": "agent_opinion",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "medicinal-chemist",
+        "timestamp": "2024-12-05T05:16:15.254047",
+        "reference_ids": [
+          "UNI-9791980"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0062-EV01",
+        "source": "experiment",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "reviewer",
+        "timestamp": "2023-02-21T05:16:15.253957",
+        "reference_ids": [
+          "UNI-6789354"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0062-EV03",
+        "source": "uniprot",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "antibody-engineer",
+        "timestamp": "2025-02-20T05:16:15.254002",
+        "reference_ids": [
+          "PMID-949015"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0063",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0063-EV03",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-7995137"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0063-EV01",
+        "source": "drugbank",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "agent",
+        "timestamp": "2023-04-06T05:16:15.254432",
+        "reference_ids": [
+          "DRUGBANK-488833"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0063-EV02",
+        "source": "experiment",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "structural-biologist",
+        "timestamp": "2021-01-19T05:16:15.254435",
+        "reference_ids": [
+          "DRUGBANK-4138756"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0064",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0064-EV02",
+        "source": "pubmed",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "pi-agent",
+        "timestamp": "2022-03-25T05:16:15.255021",
+        "reference_ids": [
+          "PMID-9667738"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0064-EV01",
+        "source": "agent_opinion",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-6236730"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0064-EV03",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "antibody-engineer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-7655692"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0064-EV04",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "medicinal-chemist",
+        "timestamp": "2025-05-22T05:16:15.255101",
+        "reference_ids": [
+          "CHEMBL-1722046"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0064-EV05",
+        "source": "chembl",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "reviewer",
+        "timestamp": "2022-08-15T05:16:15.255141",
+        "reference_ids": [
+          "CHEMBL-3439637"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0065",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0065-EV04",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "assay-scientist",
+        "timestamp": "2023-05-12T05:16:15.255769",
+        "reference_ids": [
+          "DRUGBANK-379121"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0065-EV01",
+        "source": "pubmed",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "computational-chemist",
+        "timestamp": "2021-05-29T05:16:15.255682",
+        "reference_ids": [
+          "EXP-7766995"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0065-EV05",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": "2023-04-09T05:16:15.255824",
+        "reference_ids": [
+          "PMID-8062302"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0065-EV02",
+        "source": "agent_opinion",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "computational-chemist",
+        "timestamp": "2020-12-09T05:16:15.255685",
+        "reference_ids": [
+          "CHEMBL-5602353"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0065-EV03",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "medicinal-chemist",
+        "timestamp": "2023-05-14T05:16:15.255730",
+        "reference_ids": [
+          "EXP-5743410"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0066",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0066-EV03",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "pi-agent",
+        "timestamp": "2022-02-13T05:16:15.256296",
+        "reference_ids": [
+          "EXP-8012226"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0066-EV01",
+        "source": "experiment",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "computational-chemist",
+        "timestamp": "2022-06-16T05:16:15.256243",
+        "reference_ids": [
+          "CHEMBL-4163384"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0066-EV02",
+        "source": "drugbank",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "drug-researcher",
+        "timestamp": "2025-06-27T05:16:15.256247",
+        "reference_ids": [
+          "CHEMBL-417716"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0066-EV04",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "computational-chemist",
+        "timestamp": "2023-01-28T05:16:15.256337",
+        "reference_ids": [
+          "DRUGBANK-8916043"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0067",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0067-EV01",
+        "source": "drugbank",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "reviewer",
+        "timestamp": "2023-10-04T05:16:15.256890",
+        "reference_ids": [
+          "EXP-8223194"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0067-EV03",
+        "source": "llm",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "synthetic-chemist",
+        "timestamp": "2021-03-28T05:16:15.256939",
+        "reference_ids": [
+          "UNI-8149765"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0067-EV02",
+        "source": "experiment",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "synthetic-chemist",
+        "timestamp": "2023-08-05T05:16:15.256893",
+        "reference_ids": [
+          "EXP-5107984"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0068",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0068-EV04",
+        "source": "experiment",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-4114486"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0068-EV03",
+        "source": "experiment",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-4648852"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0068-EV01",
+        "source": "uniprot",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "medicinal-chemist",
+        "timestamp": "2022-06-18T05:16:15.257317",
+        "reference_ids": [
+          "DRUGBANK-5890398"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0068-EV02",
+        "source": "pubmed",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-1425893"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0069",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0069-EV03",
+        "source": "experiment",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "agent",
+        "timestamp": "2024-06-26T05:16:15.257787",
+        "reference_ids": [
+          "UNI-5488299"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0069-EV01",
+        "source": "llm",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-8025622"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0069-EV02",
+        "source": "chembl",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "structural-biologist",
+        "timestamp": "2025-03-06T05:16:15.257745",
+        "reference_ids": [
+          "PMID-9333383"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0070",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0070-EV03",
+        "source": "agent_opinion",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "antibody-engineer",
+        "timestamp": "2026-08-14T05:16:15.258451",
+        "reference_ids": [
+          "UNI-9628818"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0070-EV02",
+        "source": "pubmed",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "pi-agent",
+        "timestamp": "2024-09-30T05:16:15.258405",
+        "reference_ids": [
+          "PMID-6760463"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0070-EV01",
+        "source": "agent_opinion",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-3037099"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0070-EV04",
+        "source": "pubmed",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8896605"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0071",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0071-EV03",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "pi-agent",
+        "timestamp": "2020-12-10T05:16:15.258911",
+        "reference_ids": [
+          "UNI-1555218"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0071-EV01",
+        "source": "uniprot",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "structural-biologist",
+        "timestamp": "2021-07-29T05:16:15.258867",
+        "reference_ids": [
+          "UNI-3223902"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0071-EV02",
+        "source": "chembl",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "drug-researcher",
+        "timestamp": "2023-05-31T05:16:15.258870",
+        "reference_ids": [
+          "EXP-3340708"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0072",
+    "topic": "两个独立项目的激酶方向争议（共价位点占据之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0072-EV02",
+        "source": "agent_opinion",
+        "content": "KRAS Y96D 位点的变构口袋实验显示 GTPase 活性维持激活状态，两个项目的结论各自独立成立",
+        "role": "antibody-engineer",
+        "timestamp": "2021-09-17T05:16:15.259270",
+        "reference_ids": [
+          "UNI-5630194"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0072-EV01",
+        "source": "chembl",
+        "content": "EGFR C797S 位点的共价结合实验显示激酶活性受到抑制，结合动力学读数稳定",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-214590"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0072-EV04",
+        "source": "experiment",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "agent",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-8530894"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0072-EV03",
+        "source": "experiment",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-4064499"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0073",
+    "topic": "双靶点共抑制策略中两条通路的激酶方向之争",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0073-EV04",
+        "source": "experiment",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "structural-biologist",
+        "timestamp": "2025-06-18T05:16:15.259896",
+        "reference_ids": [
+          "PMID-9288029"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0073-EV01",
+        "source": "llm",
+        "content": "EGFR L858R 激酶活性实验显示候选分子对该突变体呈直接抑制，磷酸化水平同步下降",
+        "role": "reviewer",
+        "timestamp": "2024-04-06T05:16:15.259801",
+        "reference_ids": [
+          "CHEMBL-8122561"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0073-EV03",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "synthetic-chemist",
+        "timestamp": "2025-10-20T05:16:15.259856",
+        "reference_ids": [
+          "EXP-7595187"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0073-EV02",
+        "source": "uniprot",
+        "content": "KRAS G12C 结合口袋实验显示 sotorasib 共价结合位点被占据，GTPase 活性检测呈激活状态",
+        "role": "computational-chemist",
+        "timestamp": "2022-07-13T05:16:15.259806",
+        "reference_ids": [
+          "DRUGBANK-9314625"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0074",
+    "topic": "候选分子 WQ-207 的方向之争（工艺放大与科学依据）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0074-EV02",
+        "source": "uniprot",
+        "content": "通路必需性结论判为阴性，冻干工艺收率有待复现，科学依据不足",
+        "role": "structural-biologist",
+        "timestamp": "2021-09-22T05:16:15.260274",
+        "reference_ids": [
+          "PMID-7707331"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0074-EV01",
+        "source": "chembl",
+        "content": "偶联工艺复核判为阳性，遗传学证据不足，DAR 分布收窄、纯化收率可信",
+        "role": "assay-scientist",
+        "timestamp": "2024-06-01T05:16:15.260271",
+        "reference_ids": [
+          "EXP-8301172"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0074-EV03",
+        "source": "uniprot",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-5270227"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0075",
+    "topic": "复核的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0075-EV01",
+        "source": "drugbank",
+        "content": "复核读数提示主要清除途径以原型排泄为主，旁观者效应的贡献存在，定量下限以上的信号可检出",
+        "role": "drug-researcher",
+        "timestamp": "2025-11-25T05:16:15.260963",
+        "reference_ids": [
+          "PMID-7208462"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0075-EV03",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "computational-chemist",
+        "timestamp": "2022-01-03T05:16:15.261042",
+        "reference_ids": [
+          "UNI-6516943"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0075-EV02",
+        "source": "uniprot",
+        "content": "同一供体群在不同给药的复核提示 FcγR 交联依赖的贡献不存在，代偿清除比例低于定量下限",
+        "role": "reviewer",
+        "timestamp": "2026-01-17T05:16:15.260966",
+        "reference_ids": [
+          "PMID-8020040"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0076",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0076-EV04",
+        "source": "chembl",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "synthetic-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-2702504"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0076-EV03",
+        "source": "llm",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "drug-researcher",
+        "timestamp": "2021-07-12T05:16:15.261585",
+        "reference_ids": [
+          "EXP-7215687"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0076-EV01",
+        "source": "drugbank",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-2090334"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0076-EV05",
+        "source": "pubmed",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "DRUGBANK-362492"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0076-EV02",
+        "source": "pubmed",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "computational-chemist",
+        "timestamp": "2022-04-25T05:16:15.261531",
+        "reference_ids": [
+          "EXP-2236529"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0077",
+    "topic": "构效关系的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0077-EV05",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "assay-scientist",
+        "timestamp": "2024-10-03T05:16:15.262375",
+        "reference_ids": [
+          "DRUGBANK-9425626"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0077-EV03",
+        "source": "chembl",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-5479867"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0077-EV02",
+        "source": "pubmed",
+        "content": "同一配体系列在选择性窗口的机制复核提示选择性优势的贡献不存在，低亲和力分子的读数低于定量下限",
+        "role": "pi-agent",
+        "timestamp": "2024-04-14T05:16:15.262241",
+        "reference_ids": [
+          "PMID-2451084"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0077-EV01",
+        "source": "experiment",
+        "content": "构效系列的复核读数提示内化速率相关的贡献存在，高亲和力分子的信号可检出",
+        "role": "agent",
+        "timestamp": "2026-03-05T05:16:15.262238",
+        "reference_ids": [
+          "CHEMBL-842169"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0077-EV04",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "computational-chemist",
+        "timestamp": "2020-11-15T05:16:15.262330",
+        "reference_ids": [
+          "CHEMBL-7038388"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0078",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0078-EV03",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "computational-chemist",
+        "timestamp": "2026-01-27T05:16:15.262802",
+        "reference_ids": [
+          "EXP-7023579"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0078-EV01",
+        "source": "agent_opinion",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "reviewer",
+        "timestamp": "2022-02-21T05:16:15.262758",
+        "reference_ids": [
+          "CHEMBL-5131294"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0078-EV02",
+        "source": "experiment",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "pi-agent",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8044327"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0079",
+    "topic": "候选药 WQ-066 的方向之争（筛选判读与转录组复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0079-EV02",
+        "source": "chembl",
+        "content": "同一苗头的转录组复核判为阴性，差异基因的富集未越过显著性阈值，关联有待复核",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-964641"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0079-EV04",
+        "source": "experiment",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "assay-scientist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-5686214"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0079-EV01",
+        "source": "drugbank",
+        "content": "高通量筛选判为阳性，苗头化合物的剂量曲线单调，构效关系清晰",
+        "role": "antibody-engineer",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-7646170"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0079-EV03",
+        "source": "experiment",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "medicinal-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-3256856"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0080",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0080-EV04",
+        "source": "pubmed",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "agent",
+        "timestamp": "2023-02-17T05:16:15.263853",
+        "reference_ids": [
+          "CHEMBL-6319396"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0080-EV01",
+        "source": "chembl",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "structural-biologist",
+        "timestamp": "2021-05-08T05:16:15.263768",
+        "reference_ids": [
+          "CHEMBL-3531161"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0080-EV02",
+        "source": "llm",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "pi-agent",
+        "timestamp": "2023-02-11T05:16:15.263771",
+        "reference_ids": [
+          "UNI-6486444"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0080-EV03",
+        "source": "experiment",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "antibody-engineer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8442928"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0081",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0081-EV02",
+        "source": "chembl",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "medicinal-chemist",
+        "timestamp": "2023-05-30T05:16:15.264503",
+        "reference_ids": [
+          "CHEMBL-3391551"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0081-EV03",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "synthetic-chemist",
+        "timestamp": "2022-12-08T05:16:15.264550",
+        "reference_ids": [
+          "UNI-8297701"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0081-EV01",
+        "source": "experiment",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-9898429"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0081-EV04",
+        "source": "experiment",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "agent",
+        "timestamp": "2022-10-09T05:16:15.264591",
+        "reference_ids": [
+          "CHEMBL-2448114"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0082",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0082-EV01",
+        "source": "experiment",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "structural-biologist",
+        "timestamp": "2026-03-06T05:16:15.265272",
+        "reference_ids": [
+          "PMID-7018793"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0082-EV02",
+        "source": "pubmed",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "computational-chemist",
+        "timestamp": "2024-02-16T05:16:15.265277",
+        "reference_ids": [
+          "PMID-2633857"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0082-EV03",
+        "source": "uniprot",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "reviewer",
+        "timestamp": null,
+        "reference_ids": [
+          "EXP-8206820"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0083",
+    "topic": "两个独立项目的生物标志物质控复核（队列基线之争）",
+    "polarity": "no_contradiction",
+    "category": "different_object_gate",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0083-EV03",
+        "source": "uniprot",
+        "content": "知情同意流程符合伦理批件要求，随访计划按期执行",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "PMID-8897727"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0083-EV02",
+        "source": "agent_opinion",
+        "content": "CD276（B7-H3）在配对队列中呈低表达，流式复核结果集中，另一项目的标志物基线数据独立完整",
+        "role": "antibody-engineer",
+        "timestamp": "2023-07-04T05:16:15.265780",
+        "reference_ids": [
+          "PMID-8525786"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0083-EV04",
+        "source": "chembl",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "medicinal-chemist",
+        "timestamp": "2022-09-30T05:16:15.265864",
+        "reference_ids": [
+          "UNI-6758817"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0083-EV05",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "pi-agent",
+        "timestamp": "2023-12-29T05:16:15.265904",
+        "reference_ids": [
+          "CHEMBL-5132739"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0083-EV01",
+        "source": "pubmed",
+        "content": "HER2 在入组队列中呈高表达，IHC 3+ 占比与既往文献一致，质控结论通过",
+        "role": "assay-scientist",
+        "timestamp": "2026-08-03T05:16:15.265776",
+        "reference_ids": [
+          "PMID-8982154"
+        ],
+        "metadata": {
+          "category": "different_object_gate"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0084",
+    "topic": "联合策略的读数讨论",
+    "polarity": "no_contradiction",
+    "category": "ambiguous_reference",
+    "evidence_type": "clean",
+    "evidence_count": 5,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0084-EV01",
+        "source": "drugbank",
+        "content": "联合给药的复核读数提示耐药机制的驱动成分存在，单药臂的信号可检出",
+        "role": "assay-scientist",
+        "timestamp": "2026-08-13T05:16:15.266353",
+        "reference_ids": [
+          "CHEMBL-1487242"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0084-EV05",
+        "source": "drugbank",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "pi-agent",
+        "timestamp": "2023-05-14T05:16:15.266483",
+        "reference_ids": [
+          "CHEMBL-9561648"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0084-EV03",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "medicinal-chemist",
+        "timestamp": "2026-03-14T05:16:15.266403",
+        "reference_ids": [
+          "PMID-4803878"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0084-EV04",
+        "source": "drugbank",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-362699"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0084-EV02",
+        "source": "agent_opinion",
+        "content": "同一方案在选择性窗口的机制复核提示选择性优势的贡献不存在，单药臂的读数低于定量下限",
+        "role": "agent",
+        "timestamp": "2023-01-03T05:16:15.266358",
+        "reference_ids": [
+          "EXP-1699906"
+        ],
+        "metadata": {
+          "category": "ambiguous_reference"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "validity_gate",
+      "expected_full": "pending_ambiguous",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0085",
+    "topic": "候选分子 WQ-101 的方向之争（冻干处方与心脏安全性）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0085-EV03",
+        "source": "llm",
+        "content": "文库的质检指标满足建库要求，重复性达到放行限度",
+        "role": "medicinal-chemist",
+        "timestamp": "2023-01-23T05:16:15.266886",
+        "reference_ids": [
+          "PMID-4685666"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0085-EV02",
+        "source": "llm",
+        "content": "同一制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "drug-researcher",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-1375374"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0085-EV01",
+        "source": "drugbank",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "computational-chemist",
+        "timestamp": "2025-11-03T05:16:15.266843",
+        "reference_ids": [
+          "EXP-5902559"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0085-EV04",
+        "source": "uniprot",
+        "content": "动物设施的环境监测数据处于规定范围，福利审查通过",
+        "role": "reviewer",
+        "timestamp": "2022-07-06T05:16:15.266927",
+        "reference_ids": [
+          "DRUGBANK-3216163"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0086",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 3,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0086-EV02",
+        "source": "chembl",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "computational-chemist",
+        "timestamp": "2023-03-03T05:16:15.267473",
+        "reference_ids": [
+          "UNI-1887627"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0086-EV03",
+        "source": "agent_opinion",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "agent",
+        "timestamp": "2023-09-12T05:16:15.267513",
+        "reference_ids": [
+          "PMID-2323098"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0086-EV01",
+        "source": "agent_opinion",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "structural-biologist",
+        "timestamp": null,
+        "reference_ids": [
+          "CHEMBL-6475341"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0087",
+    "topic": "候选抗体 WQ-118 的心脏安全性之争（冻干处方与 hERG 复核）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0087-EV02",
+        "source": "agent_opinion",
+        "content": "同一抗体制剂的 hERG 复核显示心肌细胞不激活，制剂安全性与冻干处方评估意见均为风险可控",
+        "role": "structural-biologist",
+        "timestamp": "2025-09-04T05:16:15.268107",
+        "reference_ids": [
+          "EXP-5543037"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0087-EV03",
+        "source": "chembl",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "pi-agent",
+        "timestamp": "2023-12-31T05:16:15.268147",
+        "reference_ids": [
+          "EXP-8842683"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0087-EV01",
+        "source": "drugbank",
+        "content": "冻干处方筛选确认辅料的激活效应可控，纯化工艺参数全部可控",
+        "role": "assay-scientist",
+        "timestamp": "2022-02-22T05:16:15.268105",
+        "reference_ids": [
+          "PMID-540601"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0087-EV04",
+        "source": "experiment",
+        "content": "筛选平台的加样精度校准在验收标准之内，板间效应可控",
+        "role": "computational-chemist",
+        "timestamp": null,
+        "reference_ids": [
+          "UNI-4603118"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  },
+  {
+    "case_id": "DDB-L15-0088",
+    "topic": "候选肽 WQ-450 的方向之争（合成路线与给药方案）",
+    "polarity": "no_contradiction",
+    "category": "cross_aspect",
+    "evidence_type": "clean",
+    "evidence_count": 4,
+    "defect_flags": [],
+    "evidences": [
+      {
+        "evidence_id": "DDB-L15-0088-EV01",
+        "source": "chembl",
+        "content": "合成路线复核确认片段的激活效应可控，纯化工艺参数一致",
+        "role": "antibody-engineer",
+        "timestamp": "2021-04-16T05:16:15.268928",
+        "reference_ids": [
+          "PMID-6158670"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0088-EV03",
+        "source": "pubmed",
+        "content": "该项目的台账经过双人复核，样品溯源记录完整",
+        "role": "drug-researcher",
+        "timestamp": "2022-12-30T05:16:15.268982",
+        "reference_ids": [
+          "EXP-6473495"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0088-EV04",
+        "source": "uniprot",
+        "content": "组内复核意见与项目周会记录保持一致，待补充的原始数据已列入下周计划",
+        "role": "pi-agent",
+        "timestamp": "2025-03-12T05:16:15.269028",
+        "reference_ids": [
+          "UNI-5479868"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      },
+      {
+        "evidence_id": "DDB-L15-0088-EV02",
+        "source": "drugbank",
+        "content": "同一给药方案的读数复核显示该片段不激活，合成路线与工艺收率一致",
+        "role": "antibody-engineer",
+        "timestamp": "2021-02-28T05:16:15.268934",
+        "reference_ids": [
+          "EXP-3380754"
+        ],
+        "metadata": {
+          "category": "cross_aspect"
+        }
+      }
+    ],
+    "ground_truth": {
+      "has_true_contradiction": false,
+      "defect_only": false,
+      "mechanism": "aspect",
+      "expected_full": "no_conviction",
+      "expected_v02": "convicted"
+    }
+  }
+]

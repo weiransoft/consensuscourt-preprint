@@ -1,0 +1,179 @@
+{
+  "experiment": "§6.2 对照基线端到端对比（Tab.3 冒烟数据）",
+  "benchmark": "DDB-L1（合成争议）+ DDB-L1.5（负例对照 88 例）",
+  "seed": 42,
+  "cases_per_polarity_l1": 60,
+  "pool_composition": {
+    "n_positive": 60,
+    "n_negative": 148
+  },
+  "prediction_mapping": {
+    "consensus_court_full": "AsymmetricRubric 三机制全开，定罪=not verdict.passed",
+    "baselines_reject": "arbitrate 裁决 == '驳回提案'",
+    "baselines_non_support": "arbitrate 裁决 != '支持提案'（敏感性分析）"
+  },
+  "systems": {
+    "consensus_court_full": {
+      "reject": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall_ci95": [
+          0.9398,
+          1.0
+        ],
+        "fpr_ci95": [
+          0.0,
+          0.0253
+        ]
+      },
+      "non_support": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 1.0,
+        "fpr": 0.0,
+        "accuracy": 1.0,
+        "precision": 1.0,
+        "recall_ci95": [
+          0.9398,
+          1.0
+        ],
+        "fpr_ci95": [
+          0.0,
+          0.0253
+        ]
+      },
+      "decision_distribution": {}
+    },
+    "majority_vote": {
+      "reject": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 0.55,
+        "fpr": 0.8784,
+        "accuracy": 0.2452,
+        "precision": 0.2025,
+        "recall_ci95": [
+          0.4249,
+          0.6691
+        ],
+        "fpr_ci95": [
+          0.8159,
+          0.9217
+        ]
+      },
+      "non_support": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 0.8833,
+        "fpr": 0.9932,
+        "accuracy": 0.2596,
+        "precision": 0.265,
+        "recall_ci95": [
+          0.7782,
+          0.9423
+        ],
+        "fpr_ci95": [
+          0.9627,
+          0.9988
+        ]
+      },
+      "decision_distribution": {
+        "支持提案": 8,
+        "有条件支持": 37,
+        "驳回提案": 163
+      }
+    },
+    "elo_arbiter": {
+      "reject": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 0.05,
+        "fpr": 0.6284,
+        "accuracy": 0.2788,
+        "precision": 0.0312,
+        "recall_ci95": [
+          0.0171,
+          0.137
+        ],
+        "fpr_ci95": [
+          0.5482,
+          0.7021
+        ]
+      },
+      "non_support": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 1.0,
+        "fpr": 1.0,
+        "accuracy": 0.2885,
+        "precision": 0.2885,
+        "recall_ci95": [
+          0.9398,
+          1.0
+        ],
+        "fpr_ci95": [
+          0.9747,
+          1.0
+        ]
+      },
+      "decision_distribution": {
+        "有条件支持": 112,
+        "驳回提案": 96
+      }
+    },
+    "single_judge": {
+      "reject": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 0.0,
+        "fpr": 0.0743,
+        "accuracy": 0.6587,
+        "precision": 0.0,
+        "recall_ci95": [
+          0.0,
+          0.0602
+        ],
+        "fpr_ci95": [
+          0.042,
+          0.1282
+        ]
+      },
+      "non_support": {
+        "n": 208,
+        "n_positive": 60,
+        "n_negative": 148,
+        "recall": 0.8333,
+        "fpr": 0.9392,
+        "accuracy": 0.2837,
+        "precision": 0.2646,
+        "recall_ci95": [
+          0.7197,
+          0.9069
+        ],
+        "fpr_ci95": [
+          0.8885,
+          0.9677
+        ]
+      },
+      "decision_distribution": {
+        "支持提案": 19,
+        "有条件支持": 178,
+        "驳回提案": 11
+      }
+    }
+  },
+  "red_line_violations": [],
+  "generated_at": "2026-10-07T23:06:25.510641",
+  "note": "冒烟级（L1 60×2 + L1.5 88）；主实验 --cases 300 放大即可。四系统复用同一批 EvidenceScorer 评分，唯一变量为裁决逻辑。"
+}

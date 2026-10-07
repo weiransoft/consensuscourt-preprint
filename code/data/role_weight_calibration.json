@@ -1,0 +1,390 @@
+{
+  "experiment": "§6.5 十三角色权重校准（单角色 ±20% 扰动决策翻转率）",
+  "benchmark": "DDB-L1（合成争议双极性）+ DDB-L1.5（伪冲突负例对照）",
+  "seed": 42,
+  "paper_13_roles": [
+    "pi-agent",
+    "drug-researcher",
+    "structural-biologist",
+    "computational-chemist",
+    "synthetic-chemist",
+    "antibody-engineer",
+    "peptide-designer",
+    "data-specialist",
+    "qc-inspector",
+    "knowledge-engineer",
+    "reflexion-agent",
+    "project-coordinator",
+    "report-expert"
+  ],
+  "perturb_factors": {
+    "down_0.8": 0.8,
+    "up_1.2": 1.2
+  },
+  "n_cases": 208,
+  "role_coverage": {
+    "pi-agent": 55,
+    "drug-researcher": 27,
+    "structural-biologist": 33,
+    "computational-chemist": 45,
+    "synthetic-chemist": 39,
+    "antibody-engineer": 45,
+    "peptide-designer": 35,
+    "data-specialist": 44,
+    "qc-inspector": 43,
+    "knowledge-engineer": 47,
+    "reflexion-agent": 38,
+    "project-coordinator": 48,
+    "report-expert": 47
+  },
+  "base_weights": {
+    "pi-agent": 1.0,
+    "drug-researcher": 0.9,
+    "structural-biologist": 0.9,
+    "computational-chemist": 0.85,
+    "synthetic-chemist": 0.8,
+    "antibody-engineer": 0.8,
+    "peptide-designer": 0.75,
+    "data-specialist": 0.75,
+    "qc-inspector": 0.7,
+    "knowledge-engineer": 0.65,
+    "reflexion-agent": 0.6,
+    "project-coordinator": 0.6,
+    "report-expert": 0.5,
+    "reviewer": 0.7,
+    "agent": 0.5
+  },
+  "pi_agent_arbiter": {
+    "pi-agent": {
+      "down_0.8": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "drug-researcher": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "structural-biologist": {
+      "down_0.8": {
+        "flips": 3,
+        "n": 208,
+        "flip_rate": 0.014423
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "computational-chemist": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      }
+    },
+    "synthetic-chemist": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      }
+    },
+    "antibody-engineer": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "peptide-designer": {
+      "down_0.8": {
+        "flips": 3,
+        "n": 208,
+        "flip_rate": 0.014423
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "data-specialist": {
+      "down_0.8": {
+        "flips": 4,
+        "n": 208,
+        "flip_rate": 0.019231
+      },
+      "up_1.2": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      }
+    },
+    "qc-inspector": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "knowledge-engineer": {
+      "down_0.8": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "reflexion-agent": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "project-coordinator": {
+      "down_0.8": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "report-expert": {
+      "down_0.8": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    }
+  },
+  "elo_arbiter": {
+    "pi-agent": {
+      "down_0.8": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "drug-researcher": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "structural-biologist": {
+      "down_0.8": {
+        "flips": 3,
+        "n": 208,
+        "flip_rate": 0.014423
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "computational-chemist": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      }
+    },
+    "synthetic-chemist": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      }
+    },
+    "antibody-engineer": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "peptide-designer": {
+      "down_0.8": {
+        "flips": 3,
+        "n": 208,
+        "flip_rate": 0.014423
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "data-specialist": {
+      "down_0.8": {
+        "flips": 4,
+        "n": 208,
+        "flip_rate": 0.019231
+      },
+      "up_1.2": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      }
+    },
+    "qc-inspector": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "knowledge-engineer": {
+      "down_0.8": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "reflexion-agent": {
+      "down_0.8": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      },
+      "up_1.2": {
+        "flips": 2,
+        "n": 208,
+        "flip_rate": 0.009615
+      }
+    },
+    "project-coordinator": {
+      "down_0.8": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    },
+    "report-expert": {
+      "down_0.8": {
+        "flips": 1,
+        "n": 208,
+        "flip_rate": 0.004808
+      },
+      "up_1.2": {
+        "flips": 0,
+        "n": 208,
+        "flip_rate": 0.0
+      }
+    }
+  },
+  "max_flip_rate_observed": {
+    "pi_agent_arbiter": 0.019231,
+    "elo_arbiter": 0.019231
+  },
+  "red_line_thresholds": {
+    "min_role_coverage": 5,
+    "max_flip_rate": 0.05,
+    "positive_control_factor": 0.1,
+    "min_positive_control_flips": 1
+  },
+  "positive_control_flips": {
+    "pi-agent": 7,
+    "drug-researcher": 6,
+    "report-expert": 6
+  },
+  "red_line_violations": [],
+  "generated_at": "2026-10-07T23:07:15.287551"
+}

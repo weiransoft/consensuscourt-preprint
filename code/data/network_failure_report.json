@@ -1,0 +1,255 @@
+{
+  "meta": {
+    "experiment": "network_failure_discrimination_v0414",
+    "outline_section": "§6.5 网络失败区分实验（P0-2 核心，Fig.4 数据源）",
+    "seed": 42,
+    "n_clean": 60,
+    "n_invalid": 20,
+    "failure_rates": [
+      0.0,
+      0.3,
+      0.5,
+      1.0
+    ],
+    "policies": {
+      "three_state_resilient": "三态+重试3+跨案缓存，生产 HallucinationDetector 定罪路径",
+      "two_state_direct": "二态直拒（社区现状对照，实验侧实现）：1 次尝试、无跨案缓存、非 valid 即定罪"
+    },
+    "generated_at": "2026-10-07T23:07:19.546260"
+  },
+  "cells": [
+    {
+      "policy": "three_state_resilient",
+      "failure_rate": 0.0,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.0,
+      "recall_invalid": 1.0,
+      "convicted_clean": 0,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.0,
+      "network_failed_rate": 0.0,
+      "cache_hits": 133,
+      "transport_total_requests": 79,
+      "transport_failed_requests": 0,
+      "verdict_distribution": {
+        "convicted": 20,
+        "acquitted": 60
+      }
+    },
+    {
+      "policy": "three_state_resilient",
+      "failure_rate": 0.3,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.0,
+      "recall_invalid": 1.0,
+      "convicted_clean": 0,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.3254716981132075,
+      "network_failed_rate": 0.018867924528301886,
+      "cache_hits": 133,
+      "transport_total_requests": 103,
+      "transport_failed_requests": 26,
+      "verdict_distribution": {
+        "convicted": 20,
+        "acquitted": 60
+      }
+    },
+    {
+      "policy": "three_state_resilient",
+      "failure_rate": 0.5,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.0,
+      "recall_invalid": 0.9,
+      "convicted_clean": 0,
+      "convicted_invalid": 18,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.75,
+      "network_failed_rate": 0.09905660377358491,
+      "cache_hits": 133,
+      "transport_total_requests": 142,
+      "transport_failed_requests": 75,
+      "verdict_distribution": {
+        "convicted": 18,
+        "acquitted": 62
+      }
+    },
+    {
+      "policy": "three_state_resilient",
+      "failure_rate": 1.0,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.0,
+      "recall_invalid": 0.0,
+      "convicted_clean": 0,
+      "convicted_invalid": 0,
+      "total_ref_lookups": 212,
+      "avg_attempts": 3.0,
+      "network_failed_rate": 1.0,
+      "cache_hits": 133,
+      "transport_total_requests": 237,
+      "transport_failed_requests": 237,
+      "verdict_distribution": {
+        "convicted": 0,
+        "acquitted": 80
+      }
+    },
+    {
+      "policy": "two_state_direct",
+      "failure_rate": 0.0,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.0,
+      "recall_invalid": 1.0,
+      "convicted_clean": 0,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.0,
+      "network_failed_rate": 0.0,
+      "cache_hits": 0,
+      "transport_total_requests": 212,
+      "transport_failed_requests": 0,
+      "verdict_distribution": {
+        "convicted": 20,
+        "acquitted": 60
+      }
+    },
+    {
+      "policy": "two_state_direct",
+      "failure_rate": 0.3,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.6666666666666666,
+      "recall_invalid": 1.0,
+      "convicted_clean": 40,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.0,
+      "network_failed_rate": 0.3160377358490566,
+      "cache_hits": 0,
+      "transport_total_requests": 212,
+      "transport_failed_requests": 67,
+      "verdict_distribution": {
+        "convicted": 60,
+        "acquitted": 20
+      }
+    },
+    {
+      "policy": "two_state_direct",
+      "failure_rate": 0.5,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.8333333333333334,
+      "recall_invalid": 1.0,
+      "convicted_clean": 50,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.0,
+      "network_failed_rate": 0.49528301886792453,
+      "cache_hits": 0,
+      "transport_total_requests": 212,
+      "transport_failed_requests": 105,
+      "verdict_distribution": {
+        "convicted": 70,
+        "acquitted": 10
+      }
+    },
+    {
+      "policy": "two_state_direct",
+      "failure_rate": 1.0,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 1.0,
+      "recall_invalid": 1.0,
+      "convicted_clean": 60,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.0,
+      "network_failed_rate": 1.0,
+      "cache_hits": 0,
+      "transport_total_requests": 212,
+      "transport_failed_requests": 212,
+      "verdict_distribution": {
+        "convicted": 80,
+        "acquitted": 0
+      }
+    },
+    {
+      "policy": "three_state_resilient（复跑）",
+      "failure_rate": 0.5,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.0,
+      "recall_invalid": 0.9,
+      "convicted_clean": 0,
+      "convicted_invalid": 18,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.75,
+      "network_failed_rate": 0.09905660377358491,
+      "cache_hits": 133,
+      "transport_total_requests": 142,
+      "transport_failed_requests": 75,
+      "verdict_distribution": {
+        "convicted": 18,
+        "acquitted": 62
+      }
+    },
+    {
+      "policy": "two_state_direct（复跑）",
+      "failure_rate": 0.5,
+      "n_clean": 60,
+      "n_invalid": 20,
+      "fpr_clean": 0.8333333333333334,
+      "recall_invalid": 1.0,
+      "convicted_clean": 50,
+      "convicted_invalid": 20,
+      "total_ref_lookups": 212,
+      "avg_attempts": 1.0,
+      "network_failed_rate": 0.49528301886792453,
+      "cache_hits": 0,
+      "transport_total_requests": 212,
+      "transport_failed_requests": 105,
+      "verdict_distribution": {
+        "convicted": 70,
+        "acquitted": 10
+      }
+    }
+  ],
+  "red_lines": [
+    {
+      "name": "RL1-three-state-fpr-zero",
+      "passed": true,
+      "detail": "全部格点 FPR=0"
+    },
+    {
+      "name": "RL2-three-state-recall-profile",
+      "passed": true,
+      "detail": "p=0 召回 1.0 / p=0.3 ≥0.9 / p=1.0 弃权 0 全部满足"
+    },
+    {
+      "name": "RL3-two-state-fpr-pollution-curve",
+      "passed": true,
+      "detail": "FPR 序列 [0.0, 0.6666666666666666, 0.8333333333333334, 1.0] 满足单调/0.3>0/1.0=1.0"
+    },
+    {
+      "name": "RL4-two-state-recall-always-one",
+      "passed": true,
+      "detail": "全部格点召回=1.0"
+    },
+    {
+      "name": "RL5-determinism-rerun",
+      "passed": true,
+      "detail": "p=0.5 双跑逐字段相等"
+    },
+    {
+      "name": "RL6-cache-effect",
+      "passed": true,
+      "detail": "缓存命中 133 次 > 0"
+    }
+  ],
+  "all_passed": true
+}

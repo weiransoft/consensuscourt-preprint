@@ -1,0 +1,132 @@
+{
+  "experiment": "§8 登记项 1：LLM 仲裁器消融（qwen-flash 替代规则 PI 仲裁器）",
+  "benchmark": "DDB-L1（合成争议 60×2）+ DDB-L1.5（负例对照 88 例），seed=42",
+  "model": "qwen-flash",
+  "models_present": [
+    "qwen-flash"
+  ],
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 2048,
+  "max_tokens_deviation": "预注册计划 §2 为 300；实测 qwen-flash 经网关默认启用思考模式，300 上限被推理内容耗尽导致正文恒空，登记偏离为 2048",
+  "cases_per_polarity_l1": 60,
+  "pool_composition": {
+    "n_positive": 60,
+    "n_negative": 148
+  },
+  "prediction_mapping": {
+    "llm_reject": "LLM 裁决 == \"reject\"（与基线\"驳回提案\"同口径）",
+    "llm_non_support": "LLM 裁决 != \"support\"（敏感性口径）",
+    "parse_failure_conservative": "解析失败案：reject 口径计未拦下、non_support 口径保守计拦下"
+  },
+  "frozen_court_reference": {
+    "source": "tests/ddb/baseline_comparison_report.json#systems.consensus_court_full.reject",
+    "n": 208,
+    "n_positive": 60,
+    "n_negative": 148,
+    "recall": 1.0,
+    "fpr": 0.0,
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall_ci95": [
+      0.9398,
+      1.0
+    ],
+    "fpr_ci95": [
+      0.0,
+      0.0253
+    ]
+  },
+  "llm_arbiter": {
+    "reject": {
+      "n": 208,
+      "n_positive": 60,
+      "n_negative": 148,
+      "recall": 0.9833,
+      "fpr": 0.5,
+      "accuracy": 0.6394,
+      "precision": 0.4436,
+      "recall_ci95": [
+        0.9114,
+        0.9971
+      ],
+      "fpr_ci95": [
+        0.4205,
+        0.5795
+      ]
+    },
+    "non_support": {
+      "n": 208,
+      "n_positive": 60,
+      "n_negative": 148,
+      "recall": 1.0,
+      "fpr": 0.9797,
+      "accuracy": 0.3029,
+      "precision": 0.2927,
+      "recall_ci95": [
+        0.9398,
+        1.0
+      ],
+      "fpr_ci95": [
+        0.9421,
+        0.9931
+      ]
+    },
+    "decision_distribution": {
+      "support": 3,
+      "conditional": 72,
+      "reject": 133,
+      "parse_failure": 0,
+      "call_failure": 0
+    }
+  },
+  "deltas_vs_court_reject": {
+    "recall": -0.0167,
+    "fpr": 0.5
+  },
+  "sensitivity_exclude_unparsed": {
+    "description": "剔除调用失败与解析失败案后的敏感性分析（防御保守口径推高 FPR 的口径选择性质疑）",
+    "n_cases": 208,
+    "reject": {
+      "n": 208,
+      "n_positive": 60,
+      "n_negative": 148,
+      "recall": 0.9833,
+      "fpr": 0.5,
+      "accuracy": 0.6394,
+      "precision": 0.4436,
+      "recall_ci95": [
+        0.9114,
+        0.9971
+      ],
+      "fpr_ci95": [
+        0.4205,
+        0.5795
+      ]
+    },
+    "non_support": {
+      "n": 208,
+      "n_positive": 60,
+      "n_negative": 148,
+      "recall": 1.0,
+      "fpr": 0.9797,
+      "accuracy": 0.3029,
+      "precision": 0.2927,
+      "recall_ci95": [
+        0.9398,
+        1.0
+      ],
+      "fpr_ci95": [
+        0.9421,
+        0.9931
+      ]
+    }
+  },
+  "parse_failures": 0,
+  "parse_failure_case_ids": [],
+  "call_failures": 0,
+  "call_failure_case_ids": [],
+  "responses_path": "tests/ddb/llm_arbiter_responses.jsonl",
+  "generated_at": "2026-09-21T04:59:12.285094",
+  "red_line_violations": []
+}

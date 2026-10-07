@@ -1,0 +1,344 @@
+{
+  "experiment": "端到端案例研究（大纲 §6.5，DDB-L2 落地版）",
+  "honesty_note": "案例来自 DDB-L2 文献真实争议层（tests/ddb/l2_cases.py，PMID 已对 NCBI esummary 核验），非平台生产运行；大纲 §6.5 的'群聊 5 轮僵局'环节属平台生产运行叙事，本报告以开庭流水线七环节时间线如实替代，平台真实运行案例（ASFV/犬源疫苗管线等）留待 L3 层（论文 limitation 如实声明）。",
+  "court_mode": "court_full",
+  "seed": 42,
+  "selected_cases": [
+    {
+      "case_id": "DDB-L2-0001",
+      "study_role": "deadlock（僵局型）",
+      "selection_rationale": "A/B 双方均有顶级期刊证据对峙（变构路线：Nature 2016/Cancer Lett 2017；ATP 共价路线：NEJM FLAURA/OS），无形式缺陷（初筛 0 过滤），矛盾只能靠证据交叉裁决——对应大纲 §6.5'群聊多轮僵局后升庭'的典型形态"
+    },
+    {
+      "case_id": "DDB-L2-0005",
+      "study_role": "escalation（升级型）",
+      "selection_rationale": "全部证据命中结构预测工具禁令（v0.4.8 AlphaFold2/3 双禁令）被对称初筛过滤 → 法庭无可裁证据、弃权（decision=无法裁决，confidence=0）→ 整案升级人工复核——对应'升级条款兜底不可裁案件'的典型形态"
+    }
+  ],
+  "case_studies": [
+    {
+      "case_id": "DDB-L2-0001",
+      "study_role": "deadlock（僵局型）",
+      "selection_rationale": "A/B 双方均有顶级期刊证据对峙（变构路线：Nature 2016/Cancer Lett 2017；ATP 共价路线：NEJM FLAURA/OS），无形式缺陷（初筛 0 过滤），矛盾只能靠证据交叉裁决——对应大纲 §6.5'群聊多轮僵局后升庭'的典型形态",
+      "topic": "EGFR 三重突变（L858R/T790M/C797S）抑制剂设计：变构位点还是 ATP 位点共价？",
+      "category": "有效-无效",
+      "dispute_sides": {
+        "A": "变构（back pocket）抑制剂对 C797S 三重突变有效",
+        "B": "ATP 位点共价抑制剂（osimertinib）是临床支柱，变构单药因二聚化无效"
+      },
+      "benchmark_source": "DDB-L2（tests/ddb/l2_cases.py，文献真实争议层）",
+      "timeline": [
+        {
+          "step": "step1_legacy_screen",
+          "component": "对称初筛（RuleEngine.screen）",
+          "output": {
+            "n_filtered": 0,
+            "filtered_audit": []
+          }
+        },
+        {
+          "step": "step2_evidence_scoring",
+          "component": "证据评分（EvidenceScorer，0.4/0.2/0.4）",
+          "output": {
+            "scored_evidence": [
+              "L2-01-EV-01",
+              "L2-01-EV-02",
+              "L2-01-EV-03",
+              "L2-01-EV-04"
+            ]
+          }
+        },
+        {
+          "step": "step3_abp_rubric",
+          "component": "ABP 矛盾对评估（AsymmetricRubric 全开）",
+          "output": {
+            "convicted_by_abp": true,
+            "max_intensity": 3
+          }
+        },
+        {
+          "step": "step4_pi_arbitration",
+          "component": "PI Agent 仲裁（PIAgentArbiter）",
+          "output": {
+            "decision": "有条件支持",
+            "confidence": 0.528
+          }
+        },
+        {
+          "step": "step5_independent_review",
+          "component": "独立评审（IndependentReviewer）",
+          "output": {
+            "reviewer_notes": [
+              "缺少高质量证据支撑，建议补充实验或文献。",
+              "以下证据质量较低，应谨慎采信：['L2-01-EV-01']"
+            ]
+          }
+        },
+        {
+          "step": "step6_boss_override",
+          "component": "Human BOSS 覆盖清单（HumanBOSSOverride）",
+          "output": {
+            "override_items": [
+              "裁决置信度较低（0.53），需要人类确认。",
+              "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+              "独立评审 Agent 提出异议，需要人类复核。",
+              "存在强度 3/3（对抗级）的定罪矛盾对，依据升级条款 5 强制人工复核。"
+            ]
+          }
+        },
+        {
+          "step": "step7_escalation",
+          "component": "升级判定（items or conf<0.6 or intensity>=3）",
+          "output": {
+            "escalated": true,
+            "reasons": [
+              "BOSS 覆盖清单非空",
+              "置信度 < 0.6",
+              "矛盾峰值强度 ≥ 3"
+            ]
+          }
+        }
+      ],
+      "abp_convergence": {
+        "contradictions": [
+          {
+            "evidence_a_id": "L2-01-EV-01",
+            "evidence_b_id": "L2-01-EV-03",
+            "intensity": 3,
+            "severity": "Severity.CRITICAL",
+            "desc": "证据 L2-01-EV-01 含 '有效'，证据 L2-01-EV-03 含 '无效'，在主题 'EGFR 三重突变（L858R/T790M/C797S）抑制剂设计：变构位点还是 ATP 位点共价？' 上存在矛盾——强度 3/3（方向直接相反（对抗））；门禁：双方共享对象键 ['EGFR']，判同一对象"
+          },
+          {
+            "evidence_a_id": "L2-01-EV-02",
+            "evidence_b_id": "L2-01-EV-03",
+            "intensity": 3,
+            "severity": "Severity.CRITICAL",
+            "desc": "证据 L2-01-EV-02 含 '有效'，证据 L2-01-EV-03 含 '无效'，在主题 'EGFR 三重突变（L858R/T790M/C797S）抑制剂设计：变构位点还是 ATP 位点共价？' 上存在矛盾——强度 3/3（方向直接相反（对抗））；门禁：双方共享对象键 ['EGFR']，判同一对象"
+          }
+        ],
+        "max_intensity": 3
+      },
+      "verdict_chain": {
+        "court_mode": "court_full",
+        "convicted": true,
+        "decision": "有条件支持",
+        "confidence": 0.528,
+        "pi_rationale": "PI Agent 基于 4 条证据加权评分，平均加权分 0.43，决定：有条件支持。",
+        "reviewer_notes": [
+          "缺少高质量证据支撑，建议补充实验或文献。",
+          "以下证据质量较低，应谨慎采信：['L2-01-EV-01']"
+        ],
+        "override_items": [
+          "裁决置信度较低（0.53），需要人类确认。",
+          "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+          "独立评审 Agent 提出异议，需要人类复核。",
+          "存在强度 3/3（对抗级）的定罪矛盾对，依据升级条款 5 强制人工复核。"
+        ],
+        "escalated": true
+      },
+      "evidence_scores": [
+        {
+          "evidence_id": "L2-01-EV-01",
+          "source_score": 0.9,
+          "recency_score": 0.005,
+          "relevance_score": 0.0,
+          "overall_score": 0.361,
+          "issues": [
+            "证据时效性较低",
+            "证据与主题相关性弱"
+          ]
+        },
+        {
+          "evidence_id": "L2-01-EV-02",
+          "source_score": 0.9,
+          "recency_score": 0.008,
+          "relevance_score": 0.25,
+          "overall_score": 0.462,
+          "issues": [
+            "证据时效性较低",
+            "证据与主题相关性弱"
+          ]
+        },
+        {
+          "evidence_id": "L2-01-EV-03",
+          "source_score": 0.75,
+          "recency_score": 0.005,
+          "relevance_score": 0.25,
+          "overall_score": 0.401,
+          "issues": [
+            "证据时效性较低",
+            "证据与主题相关性弱"
+          ]
+        },
+        {
+          "evidence_id": "L2-01-EV-04",
+          "source_score": 0.9,
+          "recency_score": 0.012,
+          "relevance_score": 0.5,
+          "overall_score": 0.562,
+          "issues": [
+            "证据时效性较低"
+          ]
+        }
+      ],
+      "filtered_audit": [],
+      "gold_pair_detection": {
+        "gold_pairs": [
+          [
+            "L2-01-EV-02",
+            "L2-01-EV-03"
+          ]
+        ],
+        "detected_gold_pairs": [
+          "L2-01-EV-02/L2-01-EV-03"
+        ],
+        "gold_pair_detected": true
+      }
+    },
+    {
+      "case_id": "DDB-L2-0005",
+      "study_role": "escalation（升级型）",
+      "selection_rationale": "全部证据命中结构预测工具禁令（v0.4.8 AlphaFold2/3 双禁令）被对称初筛过滤 → 法庭无可裁证据、弃权（decision=无法裁决，confidence=0）→ 整案升级人工复核——对应'升级条款兜底不可裁案件'的典型形态",
+      "topic": "AlphaFold3 对蛋白-配体复合物预测：是否真实提升可信度？",
+      "category": "有效-无效",
+      "dispute_sides": {
+        "A": "AF3 扩散架构在蛋白-配体预测上优于 SOTA 对接工具（官方基准）",
+        "B": "第三方系统评测：AF3 对配体定位提升被高估，对新化学型/别构配体几乎无效"
+      },
+      "benchmark_source": "DDB-L2（tests/ddb/l2_cases.py，文献真实争议层）",
+      "timeline": [
+        {
+          "step": "step1_legacy_screen",
+          "component": "对称初筛（RuleEngine.screen）",
+          "output": {
+            "n_filtered": 3,
+            "filtered_audit": [
+              {
+                "evidence_id": "L2-05-EV-01",
+                "screen_issues": [
+                  "违反结构预测工具禁令：检测到 AlphaFold2/3 引用"
+                ]
+              },
+              {
+                "evidence_id": "L2-05-EV-02",
+                "screen_issues": [
+                  "违反结构预测工具禁令：检测到 AlphaFold2/3 引用"
+                ]
+              },
+              {
+                "evidence_id": "L2-05-EV-03",
+                "screen_issues": [
+                  "违反结构预测工具禁令：检测到 AlphaFold2/3 引用"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "step": "step2_evidence_scoring",
+          "component": "证据评分（EvidenceScorer，0.4/0.2/0.4）",
+          "output": {
+            "scored_evidence": []
+          }
+        },
+        {
+          "step": "step3_abp_rubric",
+          "component": "ABP 矛盾对评估（AsymmetricRubric 全开）",
+          "output": {
+            "convicted_by_abp": false,
+            "max_intensity": 0
+          }
+        },
+        {
+          "step": "step4_pi_arbitration",
+          "component": "PI Agent 仲裁（PIAgentArbiter）",
+          "output": {
+            "decision": "无法裁决",
+            "confidence": 0.0
+          }
+        },
+        {
+          "step": "step5_independent_review",
+          "component": "独立评审（IndependentReviewer）",
+          "output": {
+            "reviewer_notes": [
+              "缺少高质量证据支撑，建议补充实验或文献。"
+            ]
+          }
+        },
+        {
+          "step": "step6_boss_override",
+          "component": "Human BOSS 覆盖清单（HumanBOSSOverride）",
+          "output": {
+            "override_items": [
+              "裁决置信度较低（0.00），需要人类确认。",
+              "独立评审 Agent 提出异议，需要人类复核。"
+            ]
+          }
+        },
+        {
+          "step": "step7_escalation",
+          "component": "升级判定（items or conf<0.6 or intensity>=3）",
+          "output": {
+            "escalated": true,
+            "reasons": [
+              "BOSS 覆盖清单非空",
+              "置信度 < 0.6"
+            ]
+          }
+        }
+      ],
+      "abp_convergence": {
+        "contradictions": [],
+        "max_intensity": 0
+      },
+      "verdict_chain": {
+        "court_mode": "court_full",
+        "convicted": false,
+        "decision": "无法裁决",
+        "confidence": 0.0,
+        "pi_rationale": "没有可用证据",
+        "reviewer_notes": [
+          "缺少高质量证据支撑，建议补充实验或文献。"
+        ],
+        "override_items": [
+          "裁决置信度较低（0.00），需要人类确认。",
+          "独立评审 Agent 提出异议，需要人类复核。"
+        ],
+        "escalated": true
+      },
+      "evidence_scores": [],
+      "filtered_audit": [
+        {
+          "evidence_id": "L2-05-EV-01",
+          "screen_issues": [
+            "违反结构预测工具禁令：检测到 AlphaFold2/3 引用"
+          ]
+        },
+        {
+          "evidence_id": "L2-05-EV-02",
+          "screen_issues": [
+            "违反结构预测工具禁令：检测到 AlphaFold2/3 引用"
+          ]
+        },
+        {
+          "evidence_id": "L2-05-EV-03",
+          "screen_issues": [
+            "违反结构预测工具禁令：检测到 AlphaFold2/3 引用"
+          ]
+        }
+      ],
+      "gold_pair_detection": {
+        "gold_pairs": [
+          [
+            "L2-05-EV-01",
+            "L2-05-EV-02"
+          ]
+        ],
+        "detected_gold_pairs": [],
+        "gold_pair_detected": false
+      }
+    }
+  ],
+  "generated_at": "2026-10-07T23:07:23.692225"
+}

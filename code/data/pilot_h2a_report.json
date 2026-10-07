@@ -1,0 +1,60 @@
+{
+  "experiment": "H2a — ABP vs 有罪推定（规则初筛）假阳性对比 pilot",
+  "benchmark": "DDB-L1（tests/ddb/l1_generator.py 合成争议基准）",
+  "strategies": {
+    "guilty_presumption": "consensus_court.RuleEngine.screen()：任一证据形式缺陷 → 案例拒绝",
+    "abp": "rubric_engine.AsymmetricRubric.evaluate()：默认通过，仅检出矛盾对 → 案例拒绝"
+  },
+  "seed": 42,
+  "generated_at": "2026-09-19T23:43:52.609412+08:00",
+  "metrics": {
+    "counts": {
+      "total": 600,
+      "with_contradiction": 300,
+      "no_contradiction": 300,
+      "defect_only": 150,
+      "clean_neutral": 150
+    },
+    "guilty_presumption": {
+      "recall": {
+        "rejected": 180,
+        "denominator": 300,
+        "rate": 0.6
+      },
+      "fpr_no_contradiction": {
+        "rejected": 150,
+        "denominator": 300,
+        "rate": 0.5
+      },
+      "fpr_defect_only": {
+        "rejected": 150,
+        "rate": 1.0
+      },
+      "fpr_clean_neutral": {
+        "rejected": 0,
+        "rate": 0.0
+      }
+    },
+    "abp": {
+      "recall": {
+        "rejected": 300,
+        "denominator": 300,
+        "rate": 1.0
+      },
+      "fpr_no_contradiction": {
+        "rejected": 0,
+        "denominator": 300,
+        "rate": 0.0
+      },
+      "fpr_defect_only": {
+        "rejected": 0,
+        "rate": 0.0
+      },
+      "fpr_clean_neutral": {
+        "rejected": 0,
+        "rate": 0.0
+      }
+    },
+    "fpr_relative_reduction": 1.0
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "experiment": "H3 — 网络失败注入下三态 vs 二态引用验证策略假阳性对比 pilot",
+  "benchmark": "DDB-L1（tests/ddb/l1_generator.py，600 例）",
+  "strategies": {
+    "binary": "二态：非 valid（invalid ∪ network_failed ∪ format_invalid）→ 定罪拒绝（朴素世界缺陷）",
+    "tri_state": "三态：仅 invalid 定罪；network_failed → 待举证不定罪；format_invalid 交初筛"
+  },
+  "metrics": {
+    "*_fpr_clean": "clean_neutral 子集拒绝率（H3 主指标，隔离初筛底座）",
+    "*_fpr": "全部无矛盾案例拒绝率（含 defect_only，作参考）",
+    "*_recall": "真实矛盾案例拒绝率"
+  },
+  "failure_rates": [
+    0.0,
+    0.3,
+    0.5,
+    1.0
+  ],
+  "seed": 42,
+  "generated_at": "2026-09-19T17:17:05.270088+00:00",
+  "invalid_share": 0.0,
+  "sweep": [
+    {
+      "failure_rate": 0.0,
+      "binary_fpr": 0.5,
+      "tri_fpr": 0.5,
+      "binary_fpr_clean": 0.0,
+      "tri_fpr_clean": 0.0,
+      "binary_fpr_defect_only": 1.0,
+      "tri_fpr_defect_only": 1.0,
+      "binary_recall": 0.6,
+      "tri_recall": 0.6,
+      "injection_check": {
+        "valid": 1.0,
+        "invalid": 0.0,
+        "network_failed": 0.0,
+        "format_invalid": 0.0
+      }
+    },
+    {
+      "failure_rate": 0.3,
+      "binary_fpr": 0.5533,
+      "tri_fpr": 0.5,
+      "binary_fpr_clean": 0.1067,
+      "tri_fpr_clean": 0.0,
+      "binary_fpr_defect_only": 1.0,
+      "tri_fpr_defect_only": 1.0,
+      "binary_recall": 0.6367,
+      "tri_recall": 0.6,
+      "injection_check": {
+        "valid": 0.9735,
+        "invalid": 0.0,
+        "network_failed": 0.0265,
+        "format_invalid": 0.0
+      }
+    },
+    {
+      "failure_rate": 0.5,
+      "binary_fpr": 0.6967,
+      "tri_fpr": 0.5,
+      "binary_fpr_clean": 0.3933,
+      "tri_fpr_clean": 0.0,
+      "binary_fpr_defect_only": 1.0,
+      "tri_fpr_defect_only": 1.0,
+      "binary_recall": 0.7767,
+      "tri_recall": 0.6,
+      "injection_check": {
+        "valid": 0.885,
+        "invalid": 0.0,
+        "network_failed": 0.115,
+        "format_invalid": 0.0
+      }
+    },
+    {
+      "failure_rate": 1.0,
+      "binary_fpr": 1.0,
+      "tri_fpr": 0.5,
+      "binary_fpr_clean": 1.0,
+      "tri_fpr_clean": 0.0,
+      "binary_fpr_defect_only": 1.0,
+      "tri_fpr_defect_only": 1.0,
+      "binary_recall": 1.0,
+      "tri_recall": 0.6,
+      "injection_check": {
+        "valid": 0.0,
+        "invalid": 0.0,
+        "network_failed": 1.0,
+        "format_invalid": 0.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "generated_at": "2026-09-21T09:21:50.777415Z",
+  "purpose": "ConsensusCourt ABP 机制在疫苗研发靶点发现场景的端到端应用验证（四病原 NCBI 真实基因组 → 真实翻译/保守性/表位 → 真实开庭）",
+  "pathogens": {
+    "canine_adenovirus_type_2": {
+      "display": "犬腺病毒二型（CAV-2）",
+      "profile": "canine adenovirus 2",
+      "genomes_downloaded": 8,
+      "antigen_hits": 6,
+      "skipped": [
+        "OP644981.1: 无目标抗原 CDS",
+        "MN304825.1: 无目标抗原 CDS"
+      ],
+      "status": "ok",
+      "accession": "PX446941.1",
+      "protein_product": "hexon protein",
+      "protein_length": 905,
+      "reference_strains": 5,
+      "conservation": {
+        "conservation_score": 0.975,
+        "alignments": 5,
+        "mean_identity": 0.975,
+        "identities": [
+          0.9757,
+          0.9757,
+          0.9746,
+          0.9746,
+          0.9746
+        ]
+      },
+      "parker_density": {
+        "total": 873,
+        "positive": 305,
+        "density": 0.3494
+      },
+      "composite_score": 0.4353,
+      "data_completeness": 1.0,
+      "dimensions": {
+        "epitope_density": {
+          "score": 0.3494,
+          "note": "正得分表位 305/873（亲水/表面可及区段占比）"
+        },
+        "coverage": {
+          "score": 0.3876,
+          "note": "top 亲水表位中心跨度/蛋白长度"
+        },
+        "top_epitope_strength": {
+          "score": 0.149,
+          "note": "top5 表位均分 0.4469 / 归一化上限 3.0"
+        },
+        "conservation": {
+          "score": 0.975,
+          "note": "真实序列比对保守性 0.9750（5 条参考序列）"
+        },
+        "structural_accessibility": {
+          "score": 0.5,
+          "note": "无结构证据，记中性值 0.5（不虚构）"
+        }
+      },
+      "adversarial_case": {
+        "adversarial": true,
+        "evidences": [
+          "Evidence(evidence_id='adv-canine_adenovirus_type_2:presence', source='pubmed', content='犬腺病毒二型（CAV-2） 疫苗靶点 hexon：基因组序列存在该抗原编码基因（序列比对同一性 0.975），蛋白序列完整可用。', role='molecular-detectologist', timestamp=datetime.datetime(2026, 9, 21, 9, 21, 54, 668805), reference_ids=['e2e:adv-canine_adenovirus_type_2:presence'], metadata={'target': 'hexon', 'molecule': 'hexon'})",
+          "Evidence(evidence_id='adv-canine_adenovirus_type_2:absence', source='uniprot', content='犬腺病毒二型（CAV-2） 疫苗靶点 hexon：独立核查结论——该抗原不存在于参考基因组，无保守性证据。', role='structural-biologist', timestamp=datetime.datetime(2026, 9, 21, 9, 21, 54, 668821), reference_ids=['e2e:adv-canine_adenovirus_type_2:absence'], metadata={'target': 'hexon', 'molecule': 'hexon'})"
+        ]
+      }
+    },
+    "theileria": {
+      "display": "肝簇虫（Theileria annulata）",
+      "profile": "Theileria annulata",
+      "genomes_downloaded": 3,
+      "antigen_hits": 1,
+      "skipped": [
+        "NC_011099.1: 无目标抗原 CDS",
+        "NC_011100.1: 无目标抗原 CDS",
+        "NC_011098.1: 无目标抗原 CDS"
+      ],
+      "antigen_source": "protein_db_fallback",
+      "status": "ok",
+      "accession": "AGB56140.1",
+      "protein_product": "protein_db:schizont surface protein",
+      "protein_length": 887,
+      "reference_strains": 0,
+      "conservation": null,
+      "parker_density": {
+        "total": 875,
+        "positive": 217,
+        "density": 0.248
+      },
+      "composite_score": 0.5215,
+      "data_completeness": 1.0,
+      "dimensions": {
+        "epitope_density": {
+          "score": 0.2469,
+          "note": "正得分表位 216/875（亲水/表面可及区段占比）"
+        },
+        "coverage": {
+          "score": 0.982,
+          "note": "top 亲水表位中心跨度/蛋白长度"
+        },
+        "top_epitope_strength": {
+          "score": 0.3214,
+          "note": "top5 表位均分 0.9643 / 归一化上限 3.0"
+        },
+        "conservation": {
+          "score": 0.5,
+          "note": "无保守性文献证据，记中性值 0.5（不虚构）"
+        },
+        "structural_accessibility": {
+          "score": 0.5,
+          "note": "无结构证据，记中性值 0.5（不虚构）"
+        }
+      },
+      "adversarial_case": {
+        "adversarial": true,
+        "evidences": [
+          "Evidence(evidence_id='adv-theileria:presence', source='pubmed', content='肝簇虫（Theileria annulata） 疫苗靶点 surface antigen (Theileria)：基因组序列存在该抗原编码基因，蛋白序列完整可用。', role='molecular-detectologist', timestamp=datetime.datetime(2026, 9, 21, 9, 22, 7, 735207), reference_ids=['e2e:adv-theileria:presence'], metadata={'target': 'surface antigen (Theileria)', 'molecule': 'surface antigen (Theileria)'})",
+          "Evidence(evidence_id='adv-theileria:absence', source='uniprot', content='肝簇虫（Theileria annulata） 疫苗靶点 surface antigen (Theileria)：独立核查结论——该抗原不存在于参考基因组，无保守性证据。', role='structural-biologist', timestamp=datetime.datetime(2026, 9, 21, 9, 22, 7, 735214), reference_ids=['e2e:adv-theileria:absence'], metadata={'target': 'surface antigen (Theileria)', 'molecule': 'surface antigen (Theileria)'})"
+        ]
+      }
+    },
+    "borna_disease_virus_1": {
+      "display": "伯尔纳病毒（BoDV-1）",
+      "profile": "Borna disease virus 1",
+      "genomes_downloaded": 12,
+      "antigen_hits": 10,
+      "skipped": [
+        "QP746354.1: 无目标抗原 CDS",
+        "PX246123.1: 无目标抗原 CDS"
+      ],
+      "status": "ok",
+      "accession": "PV357168.1",
+      "protein_product": "nucleoprotein",
+      "protein_length": 370,
+      "reference_strains": 9,
+      "conservation": {
+        "conservation_score": 0.9961,
+        "alignments": 9,
+        "mean_identity": 0.9961,
+        "identities": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.973,
+          0.9946,
+          0.9973
+        ]
+      },
+      "parker_density": {
+        "total": 358,
+        "positive": 133,
+        "density": 0.3715
+      },
+      "composite_score": 0.3731,
+      "data_completeness": 1.0,
+      "dimensions": {
+        "epitope_density": {
+          "score": 0.3715,
+          "note": "正得分表位 133/358（亲水/表面可及区段占比）"
+        },
+        "coverage": {
+          "score": 0.0108,
+          "note": "top 亲水表位中心跨度/蛋白长度"
+        },
+        "top_epitope_strength": {
+          "score": 0.2656,
+          "note": "top5 表位均分 0.7969 / 归一化上限 3.0"
+        },
+        "conservation": {
+          "score": 0.9961,
+          "note": "真实序列比对保守性 0.9961（9 条参考序列）"
+        },
+        "structural_accessibility": {
+          "score": 0.5,
+          "note": "无结构证据，记中性值 0.5（不虚构）"
+        }
+      },
+      "adversarial_case": {
+        "adversarial": true,
+        "evidences": [
+          "Evidence(evidence_id='adv-borna_disease_virus_1:presence', source='pubmed', content='伯尔纳病毒（BoDV-1） 疫苗靶点 N nucleoprotein：基因组序列存在该抗原编码基因（序列比对同一性 0.996），蛋白序列完整可用。', role='molecular-detectologist', timestamp=datetime.datetime(2026, 9, 21, 9, 22, 13, 838084), reference_ids=['e2e:adv-borna_disease_virus_1:presence'], metadata={'target': 'N nucleoprotein', 'molecule': 'N nucleoprotein'})",
+          "Evidence(evidence_id='adv-borna_disease_virus_1:absence', source='uniprot', content='伯尔纳病毒（BoDV-1） 疫苗靶点 N nucleoprotein：独立核查结论——该抗原不存在于参考基因组，无保守性证据。', role='structural-biologist', timestamp=datetime.datetime(2026, 9, 21, 9, 22, 13, 838091), reference_ids=['e2e:adv-borna_disease_virus_1:absence'], metadata={'target': 'N nucleoprotein', 'molecule': 'N nucleoprotein'})"
+        ]
+      }
+    },
+    "avian_polyomavirus": {
+      "display": "鹦鹉多瘤病毒（Avian Polyomavirus, APV）",
+      "profile": "Avian polyomavirus",
+      "genomes_downloaded": 8,
+      "antigen_hits": 1,
+      "skipped": [
+        "PP495516.1: 无目标抗原 CDS",
+        "PP495515.1: 无目标抗原 CDS",
+        "OR180082.1: 无目标抗原 CDS",
+        "OR180081.1: 无目标抗原 CDS",
+        "OR180080.1: 无目标抗原 CDS",
+        "OR180079.1: 无目标抗原 CDS",
+        "OR180078.1: 无目标抗原 CDS"
+      ],
+      "status": "ok",
+      "accession": "PP057981.1",
+      "protein_product": "vp1",
+      "protein_length": 343,
+      "reference_strains": 0,
+      "conservation": null,
+      "parker_density": {
+        "total": 331,
+        "positive": 139,
+        "density": 0.4199
+      },
+      "composite_score": 0.4984,
+      "data_completeness": 1.0,
+      "dimensions": {
+        "epitope_density": {
+          "score": 0.4199,
+          "note": "正得分表位 139/331（亲水/表面可及区段占比）"
+        },
+        "coverage": {
+          "score": 0.5773,
+          "note": "top 亲水表位中心跨度/蛋白长度"
+        },
+        "top_epitope_strength": {
+          "score": 0.1205,
+          "note": "top5 表位均分 0.3614 / 归一化上限 3.0"
+        },
+        "conservation": {
+          "score": 1.0,
+          "note": "命中保守性文献证据关键词: ['vp1']"
+        },
+        "structural_accessibility": {
+          "score": 0.5,
+          "note": "无结构证据，记中性值 0.5（不虚构）"
+        }
+      },
+      "adversarial_case": {
+        "adversarial": true,
+        "evidences": [
+          "Evidence(evidence_id='adv-avian_polyomavirus:presence', source='pubmed', content='鹦鹉多瘤病毒（Avian Polyomavirus, APV） 疫苗靶点 VP1：基因组序列存在该抗原编码基因，蛋白序列完整可用。', role='molecular-detectologist', timestamp=datetime.datetime(2026, 9, 21, 9, 22, 16, 454883), reference_ids=['e2e:adv-avian_polyomavirus:presence'], metadata={'target': 'VP1', 'molecule': 'VP1'})",
+          "Evidence(evidence_id='adv-avian_polyomavirus:absence', source='uniprot', content='鹦鹉多瘤病毒（Avian Polyomavirus, APV） 疫苗靶点 VP1：独立核查结论——该抗原不存在于参考基因组，无保守性证据。', role='structural-biologist', timestamp=datetime.datetime(2026, 9, 21, 9, 22, 16, 454888), reference_ids=['e2e:adv-avian_polyomavirus:absence'], metadata={'target': 'VP1', 'molecule': 'VP1'})"
+        ]
+      }
+    }
+  },
+  "adjudications": [
+    {
+      "candidate_id": "e2e-canine_adenovirus_type_2",
+      "pathogen_name": "犬腺病毒二型（CAV-2）",
+      "antigen_name": "hexon",
+      "decision": "有条件支持",
+      "confidence": 0.728,
+      "escalated": true,
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+        "独立评审 Agent 提出异议，需要人类复核。"
+      ],
+      "pi_rationale": "PI Agent 基于 4 条证据加权评分，平均加权分 0.63，决定：有条件支持。",
+      "reviewer_notes": [
+        "缺少高质量证据支撑，建议补充实验或文献。",
+        "所有证据均来自同一角色，存在确认偏误风险。"
+      ],
+      "evidence_count": 5,
+      "composite_score": 0.4353,
+      "project_id": "d79e8d2e-c21f-4e22-85a6-8040ecb2f0df"
+    },
+    {
+      "candidate_id": "e2e-theileria",
+      "pathogen_name": "肝簇虫（Theileria annulata）",
+      "antigen_name": "surface antigen (Theileria)",
+      "decision": "支持提案",
+      "confidence": 0.8,
+      "escalated": true,
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "独立评审 Agent 提出异议，需要人类复核。"
+      ],
+      "pi_rationale": "PI Agent 基于 3 条证据加权评分，平均加权分 0.70，决定：支持提案。",
+      "reviewer_notes": [
+        "所有证据均来自同一角色，存在确认偏误风险。"
+      ],
+      "evidence_count": 5,
+      "composite_score": 0.5215,
+      "project_id": "d79e8d2e-c21f-4e22-85a6-8040ecb2f0df"
+    },
+    {
+      "candidate_id": "e2e-borna_disease_virus_1",
+      "pathogen_name": "伯尔纳病毒（BoDV-1）",
+      "antigen_name": "N nucleoprotein",
+      "decision": "有条件支持",
+      "confidence": 0.728,
+      "escalated": true,
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+        "独立评审 Agent 提出异议，需要人类复核。"
+      ],
+      "pi_rationale": "PI Agent 基于 4 条证据加权评分，平均加权分 0.63，决定：有条件支持。",
+      "reviewer_notes": [
+        "缺少高质量证据支撑，建议补充实验或文献。",
+        "所有证据均来自同一角色，存在确认偏误风险。"
+      ],
+      "evidence_count": 5,
+      "composite_score": 0.3731,
+      "project_id": "d79e8d2e-c21f-4e22-85a6-8040ecb2f0df"
+    },
+    {
+      "candidate_id": "e2e-avian_polyomavirus",
+      "pathogen_name": "鹦鹉多瘤病毒（Avian Polyomavirus, APV）",
+      "antigen_name": "VP1",
+      "decision": "有条件支持",
+      "confidence": 0.778,
+      "escalated": true,
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+        "独立评审 Agent 提出异议，需要人类复核。"
+      ],
+      "pi_rationale": "PI Agent 基于 3 条证据加权评分，平均加权分 0.68，决定：有条件支持。",
+      "reviewer_notes": [
+        "缺少高质量证据支撑，建议补充实验或文献。",
+        "所有证据均来自同一角色，存在确认偏误风险。"
+      ],
+      "evidence_count": 5,
+      "composite_score": 0.4984,
+      "project_id": "d79e8d2e-c21f-4e22-85a6-8040ecb2f0df"
+    }
+  ],
+  "adversarial_cases": [
+    {
+      "pathogen": "犬腺病毒二型（CAV-2）",
+      "decision": "有条件支持",
+      "confidence": 0.747,
+      "escalated": true,
+      "max_contradiction_intensity": 3,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+        "独立评审 Agent 提出异议，需要人类复核。",
+        "存在强度 3/3（对抗级）的定罪矛盾对，依据升级条款 5 强制人工复核。"
+      ]
+    },
+    {
+      "pathogen": "肝簇虫（Theileria annulata）",
+      "decision": "支持提案",
+      "confidence": 0.807,
+      "escalated": true,
+      "max_contradiction_intensity": 3,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "存在强度 3/3（对抗级）的定罪矛盾对，依据升级条款 5 强制人工复核。"
+      ]
+    },
+    {
+      "pathogen": "伯尔纳病毒（BoDV-1）",
+      "decision": "有条件支持",
+      "confidence": 0.747,
+      "escalated": true,
+      "max_contradiction_intensity": 3,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "裁决结果为 '有条件支持'，涉及关键决策，需要人类确认。",
+        "独立评审 Agent 提出异议，需要人类复核。",
+        "存在强度 3/3（对抗级）的定罪矛盾对，依据升级条款 5 强制人工复核。"
+      ]
+    },
+    {
+      "pathogen": "鹦鹉多瘤病毒（Avian Polyomavirus, APV）",
+      "decision": "支持提案",
+      "confidence": 0.847,
+      "escalated": true,
+      "max_contradiction_intensity": 3,
+      "dual_track_divergence": false,
+      "human_override_items": [
+        "存在强度 3/3（对抗级）的定罪矛盾对，依据升级条款 5 强制人工复核。"
+      ]
+    }
+  ],
+  "verdict_events": [
+    {
+      "event_id": "c5867573-7938-41e0-bb72-9ec7803a87a1",
+      "decision": "有条件支持",
+      "correlation_id": "8e6f5993-d724-452e-a996-98972a6f6c72",
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false
+    },
+    {
+      "event_id": "fa0d5f71-c8de-46b4-9397-ce26d24c063d",
+      "decision": "支持提案",
+      "correlation_id": "8e6f5993-d724-452e-a996-98972a6f6c72",
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false
+    },
+    {
+      "event_id": "e6d94067-f5bc-47cd-9e2d-1d97d39f9e0a",
+      "decision": "有条件支持",
+      "correlation_id": "8e6f5993-d724-452e-a996-98972a6f6c72",
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false
+    },
+    {
+      "event_id": "b2111bda-7067-4e33-af1a-82c9a0e5ed79",
+      "decision": "有条件支持",
+      "correlation_id": "8e6f5993-d724-452e-a996-98972a6f6c72",
+      "max_contradiction_intensity": 0,
+      "dual_track_divergence": false
+    }
+  ],
+  "notes": [],
+  "paper_claim_check": {
+    "abp_presumption_of_innocence": {
+      "claim": "真实证据集不应被 ABP 误伤（FPR 控制来自程序而非模型）",
+      "positive_cases": 4,
+      "positive_without_contradiction": 4
+    },
+    "abp_conviction_on_contradiction": {
+      "claim": "真实存在的矛盾对必须定罪并触发升级条款 5 人工复核",
+      "adversarial_cases": 4,
+      "convicted_intensity_ge_2": 4,
+      "clause5_human_review_triggered": 4,
+      "escalated_without_conviction": 0
+    }
+  }
+}
