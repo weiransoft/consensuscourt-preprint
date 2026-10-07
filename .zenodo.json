@@ -1,0 +1,32 @@
+{
+  "title": "ConsensusCourt: Procedural Evidence Arbitration for Scientific Claims in Multi-Agent Research Pipelines (v0.4.17)",
+  "upload_type": "software",
+  "license": "mit",
+  "access_right": "open",
+  "language": "eng",
+  "creators": [
+    {
+      "name": "Wang, Wei",
+      "affiliation": "Shanghai Hongene Biologics Tech Co., Ltd.",
+      "type": "ProjectMember"
+    }
+  ],
+  "description": "<p>Open-source companion to the preprint <i>ConsensusCourt: Procedural Evidence Arbitration for Scientific Claims in Multi-Agent Research Pipelines</i> (v0.4.17, September 21, 2026). Contains the manuscript sources and compiled PDF (<code>paper/</code>), the court/baseline/rubric implementations under test (<code>code/core/</code>), one deterministic experiment pipeline per paper table and figure (<code>code/scripts/</code>), the pytest suites and DDB benchmark generators (<code>code/tests/</code>), and every machine-readable report backing the manuscript's numbers (<code>code/data/</code>).</p><p>ConsensusCourt borrows its procedural guarantees from the courtroom rather than voting theory: an asymmetric burden of proof (claims are presumed innocent until a detected contradiction pair convicts them), a source-pedigree evidence scorer whose confidence channel is structurally decoupled from conviction, a three-state (pass/fail/unknown) citation-verification policy that holds the clean-claim false-positive rate at 0 under verification failure rates up to 100%, and an escalation layer routing unadjudicable cases to human review.</p><p>The benchmark and red-line experiments are deterministic (seed = 42) and zero-LLM; entry point: <code>run_v03_regression.sh</code>. Code, tests, and data are MIT-licensed; the manuscript under <code>paper/</code> is All Rights Reserved (arXiv perpetual non-exclusive license selected at submission).</p>",
+  "keywords": [
+    "multi-agent systems",
+    "LLM pipelines",
+    "evidence arbitration",
+    "hallucination detection",
+    "asymmetric burden of proof",
+    "reproducibility",
+    "benchmark"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/weiransoft/consensuscourt-preprint",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "version": "v0.4.17"
+}
