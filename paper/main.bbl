@@ -1,4 +1,4 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -28,9 +28,8 @@ Sandeep Kumar, Yash Kamdar, Abid Hossain, Bharti Kumari, Tanik Saikh, and Asif
   Ekbal.
 \newblock When reviews disagree: Fine-grained contradiction analysis in
   scientific peer reviews.
-\newblock \emph{Findings of the Association for Computational Linguistics: ACL
-  2026}, 2026.
-\newblock arXiv:2605.10171.
+\newblock \emph{arXiv preprint arXiv:2605.10171}, 2026.
+\newblock Accepted at ACL 2026 Findings.
 
 \bibitem[Cecil and Freedman(2026)]{cecil2026beyond}
 Joe Cecil and Marjorie Freedman.
@@ -83,14 +82,14 @@ Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Tom Griffiths, Yuan Cao, and
   (NeurIPS)}, 2023.
 \newblock arXiv:2305.10601.
 
-\bibitem[Du et~al.(2023)Du, Li, Torralba, Tenenbaum, and
+\bibitem[Du et~al.(2024)Du, Li, Torralba, Tenenbaum, and
   Mordatch]{du2023debate}
 Yilun Du, Shuang Li, Antonio Torralba, Joshua~B. Tenenbaum, and Igor Mordatch.
 \newblock Improving factuality and reasoning in language models through
   multiagent debate.
-\newblock In \emph{Proceedings of the 40th International Conference on Machine
-  Learning (ICML)}, 2023.
-\newblock arXiv:2305.14325.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning (ICML)}, pages 11733--11763, 2024.
+\newblock PMLR 235, arXiv:2305.14325.
 
 \bibitem[Wu et~al.(2023)Wu, Bansal, Zhang, Wu, Li, Zhu, Jiang, Zhang, Zhang,
   Liu, et~al.]{wu2023autogen}
@@ -102,22 +101,24 @@ Qingyun Wu, Gagan Bansal, Jieyu Zhang, Yiran Wu, Beibin Li, Erkang Zhu,
 
 \bibitem[Hong et~al.(2024)Hong, Zhuge, Chen, Zheng, Cheng, Zhang, Wang, Wang,
   Yau, Lin, et~al.]{hong2023metagpt}
-Sirui Hong, Mingchen Zhuge, Jonathan Chen, Xiawu Zheng, Yuheng Cheng, Ceyao
-  Zhang, Jinlin Wang, Zili Wang, Steven Ka~Shing Yau, Zijuan Lin, et~al.
+Sirui Hong, Mingchen Zhuge, Jiaqi Chen, Xiawu Zheng, Yuheng Cheng, Ceyao Zhang,
+  Jinlin Wang, Zili Wang, Steven Ka~Shing Yau, Zijuan Lin, et~al.
 \newblock {MetaGPT}: Meta programming for a multi-agent collaborative
   framework.
 \newblock In \emph{International Conference on Learning Representations
   (ICLR)}, 2024.
 \newblock arXiv:2308.00352.
 
-\bibitem[Gottweis et~al.(2025)]{gottweis2025coscientist}
-Juraj Gottweis et~al.
-\newblock Towards an {AI} co-scientist.
-\newblock \emph{arXiv preprint arXiv:2502.13164}, 2025.
+\bibitem[Gottweis et~al.(2026)Gottweis, Weng, Daryin, Tu, Sirkovic,
+  et~al.]{gottweis2025coscientist}
+Juraj Gottweis, Wei-Hung Weng, Alexander Daryin, Tao Tu, Petar Sirkovic, et~al.
+\newblock Accelerating scientific discovery with {Co-Scientist}.
+\newblock \emph{Nature}, 2026.
+\newblock arXiv:2502.18864.
 
-\bibitem[Kapoor et~al.(2024)Kapoor, Stroebl, Doggle, Ghosh, and
+\bibitem[Kapoor et~al.(2024)Kapoor, Stroebl, Siegel, Nadgir, and
   Narayanan]{kapoor2024agents}
-Sayash Kapoor, Benedikt Stroebl, Zachary~S. Doggle, Nitya Ghosh, and Arvind
+Sayash Kapoor, Benedikt Stroebl, Zachary~S. Siegel, Nitya Nadgir, and Arvind
   Narayanan.
 \newblock {AI} agents that matter.
 \newblock \emph{arXiv preprint arXiv:2407.01502}, 2024.
@@ -130,12 +131,14 @@ Gautama~Shastry Bulusu~Venkata, Santhosh Kakarla, Maheedhar~Omtri Mohan, and
   detection, explainable verification, and logic-aware claim reasoning.
 \newblock \emph{arXiv preprint arXiv:2604.12184}, 2026.
 
-\bibitem[Saxena et~al.(2024)Saxena, Tilwani, Mohammadi, Raff, Sheth,
+\bibitem[Tilwani et~al.(2026)Tilwani, Saxena, Mohammadi, Padia, Raff, Sheth,
   Parthasarathy, and Gaur]{saxena2024reasons}
-Yash Saxena, Deepa Tilwani, Ali Mohammadi, Edward Raff, Amit Sheth, Srinivasan
-  Parthasarathy, and Manas Gaur.
-\newblock Attribution in scientific literature: New benchmark and methods.
-\newblock \emph{arXiv preprint arXiv:2405.02228}, 2024.
+Deepa Tilwani, Yash Saxena, Seyedali Mohammadi, Ankur Padia, Edward Raff, Amit
+  Sheth, Srinivasan Parthasarathy, and Manas Gaur.
+\newblock Abstention vs. hallucination: Benchmarking {LLM} source attribution
+  for scientific citations.
+\newblock \emph{arXiv preprint arXiv:2405.02228}, 2026.
+\newblock Accepted at IEEE DSAA 2026.
 
 \bibitem[Jumper et~al.(2021)Jumper, Evans, Pritzel, Green, Figurnov,
   Ronneberger, Tunyasuvunakool, Bates, {\v{Z}}{\'i}dek, Potapenko,
@@ -179,14 +182,21 @@ Chen Qian, Yimeng Wang, Yu~Chen, Lingfei Wu, and Andreas Stathopoulos.
   citations in multi-page documents.
 \newblock \emph{arXiv preprint arXiv:2609.05802}, 2026.
 
-\bibitem[Jia et~al.(2016)Jia, Yun, Park, Ercan, Manik, Hartjoana, Guan, Liang,
-  and Janne]{jia2016eai045}
-Yun Jia, Cai-Hong Yun, Eunhee Park, Dalia Ercan, Manisha Manik, Juergen
-  Hartjoana, Rong Guan, Carla Liang, and Pasi~A. Janne.
+\bibitem[Jia et~al.(2016)Jia, Yun, Park, Ercan, Manuia, Juarez, Xu,
+  et~al.]{jia2016eai045}
+Yun Jia, Cai-Hong Yun, Eunhee Park, Dalia Ercan, M.~Manuia, J.~Juarez, C.~Xu,
+  et~al.
 \newblock Overcoming {EGFR}(t790m) and {EGFR}(c797s) resistance with
   mutant-selective allosteric inhibitors.
 \newblock \emph{Nature}, 534:\penalty0 129--132, 2016.
 \newblock PMID: 27251290.
+
+\bibitem[Wang et~al.(2017)Wang, Song, and Liu]{wang2017eai045}
+S.~Wang, Y.~Song, and D.~Liu.
+\newblock {EAI045}: The fourth-generation {EGFR} inhibitor overcoming {T790M}
+  and {C797S} resistance.
+\newblock \emph{Cancer Letters}, 385:\penalty0 51--54, 2017.
+\newblock PMID: 27840244.
 
 \bibitem[Soria et~al.(2018)Soria, Ohe, Vansteenkiste, Reungwetwattana,
   Chewaskulyong, Lee, Dechaphunkul, Imamura, Nogami, Kurata,
@@ -199,5 +209,15 @@ Jean-Charles Soria, Yuichiro Ohe, Johan Vansteenkiste, Thanyanan
 \newblock \emph{New England Journal of Medicine}, 378\penalty0 (2):\penalty0
   113--125, 2018.
 \newblock PMID: 29151359.
+
+\bibitem[Ramalingam et~al.(2020)Ramalingam, Vansteenkiste, Planchard, Cho,
+  Gray, Ohe, Zhou, Reungwetwattana, Cheng, et~al.]{ramalingam2020os}
+Suresh~S. Ramalingam, Johan Vansteenkiste, David Planchard, Byoung~Chul Cho,
+  Jhanelle~E. Gray, Yuichiro Ohe, Caicun Zhou, Thanyanan Reungwetwattana, Ying
+  Cheng, et~al.
+\newblock Overall survival with osimertinib in untreated, {EGFR}-mutated
+  advanced {NSCLC}.
+\newblock \emph{New England Journal of Medicine}, 382:\penalty0 41--50, 2020.
+\newblock PMID: 31751012.
 
 \end{thebibliography}

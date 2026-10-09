@@ -44,8 +44,11 @@ He currently leads AI architecture and applied R\&D at a leading biopharmaceutic
 company, focusing on multi-agent AI applications in biomedical R\&D.
 Correspondence: \texttt{weiransoft@126.com}. Code, benchmark generators, experiment scripts, and
 all machine-readable reports backing every number in this paper are available
-in the accompanying repository (\texttt{backend/tests/ddb/} for data,
-\texttt{backend/tests/scripts/} for the deterministic experiment pipelines).}}
+in the accompanying repository,
+\url{https://github.com/weiransoft/consensuscourt-preprint} (tag
+\texttt{v0.4.17}; DOI 10.5281/zenodo.23218391): \texttt{backend/tests/ddb/}
+for data, \texttt{backend/tests/scripts/} for the deterministic experiment
+pipelines.}}
 \date{September 21, 2026}
 
 \begin{document}
@@ -53,46 +56,36 @@ in the accompanying repository (\texttt{backend/tests/ddb/} for data,
 
 % -------------------------------------------------------------------------
 \begin{abstract}
-Multi-agent LLM research pipelines generate streams of evidence—retrieved
-literature, computational results, agent opinions—that frequently conflict.
-Existing aggregation strategies (majority vote, Elo tournaments, single-judge
-selection) either ignore conflicts entirely or resolve them by rhetorical
-weight, and both are vulnerable to two under-addressed failure modes: false
-convictions of well-formed claims built on low-quality evidence, and
-infrastructure failures (citation-verification network outages) silently
-polluting scientific verdicts. We present \court{}, an arbitration framework
-that borrows its procedural guarantees from the courtroom rather than from
-voting theory: every claim is presumed innocent until a detected
-\emph{contradiction pair} convicts it (an asymmetric burden of proof, ABP);
-evidence is weighted by an explicit source-pedigree, recency, and relevance
-scorer whose confidence channel is structurally decoupled from conviction;
-and an escalation layer routes uncertain or unadjudicable cases to human
-review instead of guessing. Three results carry the paper's evidential
-weight and do not depend on benchmark authorship: (i) a counting law that
-calibrates the court's advantage over guilty-presumption screening—the
-log-log slope of false pairs against pairwise opportunities is $0.942$
-(expected $1.0$) and the advantage-ratio slope is $-0.857$ (expected
-$-1.0$); (ii) a controlled network-failure experiment in which a three-state
-citation-verification policy holds the clean-claim false-positive rate at
-$0$ under failure rates up to $100\%$, where the common two-state policy
-convicts up to $100\%$ of innocent claims—the only variable being the
-failure-mapping policy over an otherwise identical verification stack; and
-(iii) a conviction--confidence decoupling invariant, preserved exactly
-under every scorer ablation. On the author-built synthetic layer of our
-four-layer 954-case benchmark (\ddb{}; evaluation at regression scale,
-\S8), the full court reaches $\mathrm{recall}=1.0$ with $\mathrm{FPR}=0.0$
-while majority vote, Elo calibration, and single-judge baselines fail on at
-least one side of the Pareto frontier at every threshold setting we scan. A
-per-case advantage decomposition identity holds exactly by construction,
-its empirical content carried by a pure layer attribution (residual $=0$
-on 148 negative-basis cases), and verdicts are order-invariant over
-1{,}000 evidence permutations. The main benchmark and every red-line
-experiment are deterministic and zero-LLM; two registered LLM-side ablations
-(an LLM arbiter replacing the rule-based PI arbiter, and a PROClaim/DebateCV-style
-prosecution--skeptic--judge LLM debate protocol) are executed against a
-hosted LLM and reported in \S\ref{sec:llmablation}. All deterministic
-pipelines are guarded by pre-registered red-line assertions wired into a
-regression suite.
+Multi-agent LLM research pipelines generate conflicting evidence streams;
+existing aggregation resolves them by
+rhetorical weight or ignores them, leaving two failure modes: false
+conviction of well-formed claims built on low-quality evidence, and
+verification outages silently polluting verdicts. We present
+\court{}, courtroom-style procedural arbitration: every claim is presumed
+innocent until a detected \emph{contradiction pair} or a hard-constraint
+violation convicts it (asymmetric burden of proof, ABP); evidence is
+weighted by a source-pedigree/recency/relevance scorer whose confidence
+channel is structurally decoupled from conviction; an escalation layer
+routes unadjudicable cases to humans. Three results independent of the
+benchmark's hand-adjudicated gold labels: (i) a counting law for the
+advantage over guilty-presumption screening (slopes
+$0.942$/$-0.857$ vs.\ $1.0$/$-1.0$ expected); (ii) a network-failure
+experiment where a three-state verification policy holds the clean-claim
+FPR at $0$ under failure rates up to $100\%$—abstaining (recall $0$) at
+full outage rather than fabricating—while the common two-state policy
+convicts up to $100\%$ of innocent claims, sole variable: the
+failure-mapping policy; and (iii) conviction--confidence decoupling
+preserved exactly under scorer ablation. On the author-built synthetic
+layer of our 954-case benchmark (\ddb{}, regression-scale,
+\S\ref{sec:limits}) the court alone reaches recall $1.0$ at FPR $0.0$;
+majority vote, Elo, and single-judge baselines fail on at least one Pareto
+side at every scanned threshold. A per-case advantage decomposition closes
+by construction with pure layer attribution (residual $=0$ on 148
+negatives); verdicts are order-invariant over 1{,}000 permutations. The
+benchmark and every deterministic red-line experiment are zero-LLM; two
+registered LLM-side ablations run against a hosted LLM
+(\S\ref{sec:llmablation}); all pipelines carry pre-registered red lines
+in CI.
 \end{abstract}
 
 % -------------------------------------------------------------------------
@@ -144,8 +137,10 @@ with a registered weight table for 13 agent roles.
 conviction requires a detected \emph{contradiction pair}---two evidence
 items taking
 opposing stances on the same aspect—conditioned by aspect matching, an
-object-validity gate, and graded intensity; evidence is otherwise presumed
-innocent, and scoring is structurally decoupled from conviction.
+object-validity gate, and graded intensity (the court's only other
+conviction path is a hard-constraint violation, item~(iii)); evidence is
+otherwise presumed innocent, and scoring is structurally decoupled from
+conviction.
 \item \textbf{A seven-step court procedure} (\S\ref{sec:court}): symmetric
 pre-screening (hard constraints only), scoring, ABP adjudication, PI
 arbitration, independent review, human-BOSS override, and escalation, with
@@ -160,7 +155,7 @@ Our evaluation rests on \ddb{}, a four-layer Dispute Benchmark
 (\S\ref{sec:ddb}) spanning 954 cases: 600 synthetic L1 cases, 88 curated
 pseudo-conflict negatives (L1.5), 10 real literature disputes with verified
 PubMed identifiers (L2), and 256 intensity-graded cases (L4). The main
-benchmark and every red-line experiment are deterministic, zero-LLM
+benchmark and every deterministic red-line experiment are zero-LLM
 pipelines with pre-registered red-line assertions executed by a CI-wired
 regression suite; two registered LLM-side ablations additionally invoke a
 hosted LLM (\S\ref{sec:llmablation}). Every number in this paper is
@@ -214,7 +209,7 @@ final aggregation is either voting, tournament ranking, or a single judge.
 Section~\ref{sec:main} shows all three aggregation families fail on at
 least one side of the recall/FPR frontier on \ddb{}, and
 \citet{kapoor2024agents} independently argue that agent evaluations are
-dominated by cost- and rigor-insensitive methodology—our red-line-guarded
+dominated by cost- and rigour-insensitive methodology—our red-line-guarded
 deterministic harness is a direct response.
 
 \textbf{Machine-side courtroom and debate-based claim verification.}
@@ -282,16 +277,19 @@ but a first-order scientific-validity property.
 Three principles, each falsifiable in our experiments:
 
 \textbf{P1 (Presumption of innocence).} A claim is rejected only when a
-detected contradiction pair convicts it. Absence of contradictions acquits,
-regardless of evidence quality. This inverts the guilty-presumption
-pre-screening common in retrieval firewalls, which we show costs $0.5$ FPR
-on clean claims (\S\ref{sec:h2a}).
+detected contradiction pair---or a hard-constraint violation---convicts it.
+Absence of conviction grounds yields no conviction, regardless of evidence
+quality; a case with insufficient adjudicable evidence is escalated rather
+than acquitted (P3 below; Appendix~\ref{app:clauses}). This inverts the
+guilty-presumption pre-screening common in retrieval firewalls, which we
+show costs $0.5$ FPR on the no-contradiction basis (\S\ref{sec:h2a}).
 
 \textbf{P2 (Conviction--confidence decoupling).} The scoring channel
 computes a \emph{confidence} for acquittal semantics; the conviction channel
 is driven solely by detected contradiction structure. Any ablation of the
-scorer therefore cannot change recall/FPR—only calibrated confidence—an
-invariant we assert as a red line (\S\ref{sec:scorerabl}).
+scorer that leaves source identity and pair formation untouched therefore
+cannot change recall/FPR—only calibrated confidence—an invariant we assert
+as a red line (\S\ref{sec:scorerabl}).
 
 \textbf{P3 (Escalation over error).} When the court cannot adjudicate—
 because evidence was filtered, confidence is low, or tracks diverge—it
@@ -401,19 +399,21 @@ measured in Section~\ref{sec:decomp}, not the closure itself.
 \begin{theorem}[Counting bound on the FPR ratio]\label{thm:counting}
 Under a null case with $m$ evidence items, single-claim defect rate $p_0$,
 per-pair pseudo-mismatch rate $q_K$, and pairwise dependency $\kappa$
-(Section~\ref{sec:decomp} for the measured estimator), the expected FPRs
-satisfy
+(Section~\ref{sec:decomp} for the measured estimator), where $K$ counts
+joint pseudo-mismatch events (two false pairs co-occurring),
+$\mathbb{E}[K]\sim \kappa\, q_K^2 \binom{m}{2}$, the expected FPRs satisfy
 \[
 \frac{\mathrm{FPR}_{\text{guilty}}}{\mathrm{FPR}_{\text{ABP}}}
 \;\approx\;
 \frac{1-(1-p_0)^m}{q_K\,\kappa\,\binom{m}{2}} ,
-\qquad
-q_K \text{ through } K\sim \kappa\, q_K^2 \binom{m}{2}\text{ joint events},
 \]
-and the Bonferroni-consistent bound $\mathrm{FPR}$ ratio $\geq
-1/(\kappa\binom{m}{2}\cdot \frac{q_K}{p_0})$ tightens as $m$ grows: the
-ABP advantage widens with case size, with crossover $m^\ast$ where the
-counting-based budgets of the two mechanisms intersect.
+and in budget form the ratio is $\rho(m)=2p_0/(\kappa q_K (m-1))$ with the
+guilty-screen defect budget in the numerator and the ABP false-pair budget
+in the denominator. The Bonferroni-consistent budget ratio therefore
+\emph{decays} as $m$ grows ($\rho\propto 1/(m-1)$): the ABP counting
+advantage is largest on small cases and erodes with case size, with
+crossover $m^\ast$ where the counting-based budgets of the two mechanisms
+intersect.
 \end{theorem}
 
 \begin{proposition}[Order invariance]\label{prop:order}
@@ -428,8 +428,8 @@ guarantee (Section~\ref{sec:robust}).
 % -------------------------------------------------------------------------
 \section{The Dispute Benchmark (\ddb{})}\label{sec:ddb}
 
-\Ddb{} has four layers, all generated or curated deterministically from a
-single seed (42):
+\Ddb{} has four layers (Table~\ref{tab:ddb}), all generated or curated
+deterministically from a single seed (42):
 
 \begin{table}[t]
 \centering\small
@@ -443,7 +443,7 @@ Layer & Size & Construction and target channel \\
 \midrule
 L1 (synthetic disputes) & 600 &
 Balanced with/without-contradiction cases from controlled templates
-(300 defect-only, 150 clean-neutral within the negative half); measures ABP
+(150 defect-only, 150 clean-neutral within the negative half); measures ABP
 recall and FPR on synthetic ground truth. \\
 L1.5 (pseudo-conflict negatives) & 88 &
 Three curated negative families: cross-aspect (40), ambiguous-reference
@@ -456,7 +456,9 @@ gold contradiction pairs recorded; measures source-generalisation of ABP
 recall (H2b). \\
 L4 (intensity-graded) & 256 &
 $16$ templates $\times$ 4 rounds $\times$ 2 $\Delta$-buckets $\times$ 2 gate
-buckets with intensity gold labels from the S1--S5 decision table; measures
+buckets with intensity gold labels from the S1--S5 decision table, where
+$\Delta$ is the source-pedigree weight gap between the opposed pair's
+sources (buckets $|\Delta| \ge 0.30$ vs.\ $< 0.30$); measures
 grading fidelity. \\
 \bottomrule
 \end{tabular}
@@ -487,7 +489,7 @@ low, following \citealp{cecil2026beyond}) is specified but not yet executed
 
 \subsection{Evaluation discipline}\label{sec:discipline}
 
-All red-line experiments are \textbf{deterministic and zero-LLM}: evidence
+All deterministic red-line experiments are \textbf{zero-LLM}: evidence
 scoring, pair detection, arbitration, and escalation are pure code; no LLM
 is invoked in any of these pipelines (the production platform's LLM
 stack—vLLM-served Qwen \citep{kwon2023vllm}—is outside the scope of these
@@ -598,8 +600,9 @@ court. The empirical answer is unambiguous: \textbf{no baseline threshold
 point reaches the court profile} (recall $=1.0$ at FPR $=0.0$). At FPR
 $\le 0.034$ no baseline attains positive recall at all; the first
 positive-recall frontier point already costs FPR $\ge 0.43$ (majority
-$0.432$ at recall $0.033$), and recall at or above $0.467$ (elo) is only
-reachable at FPR $\ge 0.946$. The court's advantage
+$0.432$ at recall $0.033$), and recall at or above $0.467$ (the Elo
+arbiter's highest frontier recall below $1.0$) is only reachable at FPR
+$\ge 0.946$. The court's advantage
 is thus a property of its contradiction-channel architecture, not of a
 threshold choice made on the baselines' behalf.
 
@@ -607,11 +610,15 @@ threshold choice made on the baselines' behalf.
 \centering
 \begin{tikzpicture}
 \begin{axis}[
+    name=paretoplot,
     width=0.62\textwidth, height=0.5\textwidth,
     xlabel={FPR}, ylabel={Recall},
     xmin=-0.03, xmax=1.05, ymin=-0.03, ymax=1.05,
     grid=both, grid style={gray!20},
-    legend pos=south east, legend style={font=\scriptsize},
+    legend to name=paretoleg,
+    legend style={font=\scriptsize, draw=gray!40, row sep=-1pt,
+      cells={anchor=west}},
+    legend cell align=left,
     tick label style={font=\scriptsize}, label style={font=\small}]
 \addplot[mark=*, mark size=1.4pt, color=orange] coordinates {
     (0.027,0.000) (0.432,0.033) (0.446,0.083) (0.534,0.100)
@@ -627,6 +634,10 @@ threshold choice made on the baselines' behalf.
 \addplot[only marks, mark=star, mark size=4pt, color=red] coordinates {(0,1)};
 \addlegendentry{Full court (reference)}
 \end{axis}
+% 图例遮挡修复（与 fig:net 同法）：三条基线前沿贯穿整个绘图区
+% （原点→(1,1)），任何轴内图例位置都会压住散点，故用 legend to
+% name 生成图例后经 \node 放到轴框正上方；数据坐标零改动。
+\node[anchor=south, yshift=4pt] at (paretoplot.north) {\pgfplotslegendfromname{paretoleg}};
 \end{tikzpicture}
 \caption{Pareto frontiers of the three aggregation baselines over the
 $7\times7$ threshold grid ($t_{\mathrm{sup}}, t_{\mathrm{rej}} \in
@@ -643,8 +654,9 @@ recall $=1.0$ at FPR $=0.0$. Data:
 On the full 600-case L1 layer, the guilty-presumption pre-screen (any
 formal defect $\Rightarrow$ case rejection, the standard retrieval-firewall
 policy) achieves recall $0.6$ at FPR $0.5$ overall—convicting 100\% of
-defect-only negatives (by design) but also 50\% of clean-neutral negatives
-via collateral pollution. ABP holds recall $1.0$ / FPR $0.0$ on the same
+defect-only negatives (by design) and none of the clean-neutral negatives
+($0/150$), so the entire $0.5$ FPR mass sits on the defect-only half. ABP
+holds recall $1.0$ / FPR $0.0$ on the same
 cases. This is the empirical form of Proposition~\ref{prop:decomp}: the guilty
 screen's $P(\dd)=0.203$ on the 148-case negative basis is entirely
 defect-only ($S$), all of which ABP spares ($P(\mm)=0$).
@@ -687,7 +699,7 @@ Proposition~\ref{prop:decomp}) is \emph{routed to human review} rather than
 auto-rejected. This is the intended semantics—escalation is the court's
 abstention channel, and measuring precision@escalation is how the routing
 budget is tuned (\S\ref{sec:casestudy} shows the complementary escalation-
-type case where abstention is provably correct).
+type case where abstention is correct by construction).
 
 \subsection{Scorer-level ablations}\label{sec:scorerabl}
 
@@ -734,8 +746,10 @@ configurations: \textbf{0} divergent verdict signatures
 \textbf{Streaming ablation.} A rule-based streamed variant that terminates
 on first contradiction (k=1) or first k-strong-streak (k=2) diverges from
 the canonical court in $70/1000=0.070$ permutations (k=1; 10/60 cases
-affected; permuted recall $0.924$ vs.\ canonical $0.95$, court canonical
-$1.0$) and $2/1000=0.002$ (k=2, recall $0.998$). Order sensitivity is real
+affected; permuted recall aggregated over all case--permutation
+evaluations $0.924$ vs.\ the same variant's canonical-order recall $0.95$
+on the 60 positives, court canonical $1.0$) and $2/1000=0.002$ (k=2,
+recall $0.998$). Order sensitivity is real
 for early-termination designs and decays as the termination threshold
 tightens—supporting the design choice of full deliberation before
 disposition.
@@ -744,11 +758,18 @@ disposition.
 controlled null cases ($p_0=0.30$ designed defect injection, unique-source
 construction so that all $\binom{m}{2}$ pairs are live, 300 trials per
 $m\in\{3,5,10,20\}$): the log-log slope of false pairs against
-$\binom{m}{2}$ is $0.942$ (expected $1.0$), the advantage-ratio slope
-against $(m-1)$ is $-0.857$ (expected $-1.0$), and the empirical
-ratio meets the Bonferroni bound pointwise at every grid point; the
-crossover is $m^\ast\!\approx\!18.5$. The court's advantage widens with
-case size exactly as the counting law predicts.
+$\binom{m}{2}$ is $0.942$ (expected $1.0$), and the advantage ratio
+$\rho(m)=\bar D/\bar K$—guilty-screen defect budget $\bar D$ over ABP
+false-pair budget $\bar K$—decays against $(m-1)$ with log-log slope
+$-0.857$ (expected $-1.0$), matching the counting law's $1/(m-1)$
+scaling; the empirical ratio coincides with the Bonferroni form at every
+grid point (ratio/bound $=1.0$), and the budgets intersect at crossover
+$m^\ast\!\approx\!18.5$. The court's counting advantage is therefore
+concentrated in small-to-moderate cases and erodes with case size, exactly
+as the counting law predicts (the crossover figure is for the ungated
+baseline rubric; the gates cut $q_K$ $6$--$13\times$
+(\S\ref{sec:decomp}), pushing the full court's crossover well beyond the
+scanned range).
 
 \textbf{Source-label noise ($\pm 20\%$).} A corruption pass re-labels
 exactly $\max(1, \lfloor 0.2m \rceil)$ sources per case (50 replicates per
@@ -806,12 +827,15 @@ recall'' is purchased entirely with clean-claim false positives.}
 \centering
 \begin{tikzpicture}
 \begin{axis}[
-  width=0.62\textwidth, height=5.2cm,
-  xlabel={transport failure rate $p$},
-  ylabel={FPR on clean claims},
-  xmin=-0.02, xmax=1.02, ymin=-0.02, ymax=1.1,
-  xtick={0,0.3,0.5,1.0}, ytick={0,0.25,0.5,0.75,1.0},
-  legend pos=north west, legend cell align=left,
+  width=0.58\textwidth, height=5.2cm,
+    xlabel={transport failure rate $p$},
+    ylabel={FPR on clean claims},
+    xmin=-0.02, xmax=1.02, ymin=-0.02, ymax=1.1,
+    xtick={0,0.3,0.5,1.0}, ytick={0,0.25,0.5,0.75,1.0},
+    legend style={at={(rel axis cs:0.02,0.98)}, anchor=north west,
+      font=\scriptsize, draw=gray!40, row sep=-1pt,
+      cells={anchor=west}},
+  legend cell align=left,
   grid=both, grid style={gray!20},
 ]
 \addplot[color=red!70!black, thick, mark=square*] coordinates {(0,0) (0.3,0.6667) (0.5,0.8333) (1.0,1.0)};
@@ -824,7 +848,7 @@ recall'' is purchased entirely with clean-claim false positives.}
 failures. The two-state policy's FPR is monotone in $p$ and reaches $1.0$ at
 full outage; the three-state policy is structurally flat at $0$ (network
 failures cannot enter the conviction channel). Data: Table~\ref{tab:network};
-source report \texttt{tests/ddb/network\_failure\_report.json}.}
+source report \texttt{backend/tests/ddb/network\_failure\_report.json}.}
 \label{fig:net}
 \end{figure}
 
@@ -847,7 +871,8 @@ transport failure rate.
 
 \subsection{Advantage-decomposition calibration}\label{sec:decomp}
 
-On the 148-case negative basis ($\cset=\emptyset$; 60 L1 negatives of which
+On the 148-case negative basis (Table~\ref{tab:decomp}; $\cset=\emptyset$;
+60 L1 negatives of which
 30 defect-only, plus 88 L1.5 pseudo-conflicts), with the real pre-screen as
 the $\dd$ labeler and the real ABP rubric as the $\mm$ labeler:
 
@@ -872,7 +897,7 @@ a set-algebra proposition, not an empirical finding); the empirical content
 is the pure layer attribution: all $S$ cases
 (30/30) come from L1 defect-only; all $M{\setminus}\dd$ (88/88 under
 baseline switches) come from L1.5 pseudo-conflicts—each benchmark family
-provably measures exactly the channel it was built for.
+measures exactly the channel it was built for.
 
 \textbf{Dependency calibration.} On controlled null cases ($m=20$, 300
 trials, 57{,}000 pair opportunities per configuration): baseline
@@ -894,8 +919,10 @@ on pi-agent/drug-researcher/report-expert—proving the pipeline is live),
 and decision flip rate $\leq0.05$ at $\pm20\%$.
 
 Observed maximum flip rate: $4/208=0.0192$ (data-specialist at
-$\times0.8$, identical for both arbiters), with flips occurring only in
-the down-weight direction and far below the $0.05$ line. Verdicts are
+$\times0.8$, identical for both arbiters)—the maximum occurs in the
+down-weight direction, while up-weight perturbations also flip a small
+number of decisions (at most $2/208$ per role at $\times1.2$, identical
+for both arbiters); every rate is far below the $0.05$ line. Verdicts are
 driven by contradiction structure, not by weight tuning: the role table is
 a calibration surface, not a decision surface.
 
@@ -907,8 +934,9 @@ per-evidence scores, filtered-evidence audit, verdict chain):
 
 \textbf{Deadlock type (DDB-L2-0001): EGFR triple-mutation inhibition.}
 Both sides carry top-venue evidence (allosteric route: Nature 2016
-\citep{jia2016eai045} / Cancer Lett 2017; ATP-covalent route: NEJM
-FLAURA/OS \citep{soria2018osimertinib}). Zero evidence is filtered;
+\citep{jia2016eai045} / Cancer Lett 2017 \citep{wang2017eai045};
+ATP-covalent route: NEJM FLAURA/OS
+\citep{soria2018osimertinib,ramalingam2020os}). Zero evidence is filtered;
 ABP detects the gold contradiction pair (L2-01-EV-02 $\times$ L2-01-EV-03,
 intensity 3), the case is convicted, and the PI arbitrates \emph{conditional
 support} at confidence $0.528$; four escalation clauses fire (low
@@ -1136,6 +1164,20 @@ splits, prompts (where applicable), and operating points; divergence
 between author-built and third-party results will be analysed and reported
 regardless of direction. This arm is designed but not yet executed, and no
 third-party numbers appear in this paper.
+\item \textbf{Negative-set composition bias.} The L1 negative half is
+composed of defect-bearing (150 defect-only) and clean-neutral (150) cases
+by construction. This composition structurally favours the court on the
+defect-sensitivity axis measured by the guilty-presumption pilot
+(\S\ref{sec:h2a}) and biases score-driven baselines that reward evidence
+quality; the baseline gaps reported here should be read as measuring this
+design axis, not as a universal baseline deficit, pending the third-party
+cross-validation arm above.
+\item \textbf{Protection relies on cross-source disagreement.} The ABP
+pair channel convicts only on cross-source contradiction pairs: same-source
+pairs are skipped by the gate, so a contradiction internal to a single
+source is outside the pair channel's scope and falls to the hard-constraint
+channel or to escalation. Domains where opposing evidence routinely shares
+a single source therefore retain less of the court's protective margin.
 \item \textbf{Smoke-scale statistics.} Reported experiments run at
 regression scale (60--300 cases per cell) for determinism and CI cost; the
 pre-registered main experiment (600$\times$2 full-combinatorial ablations
@@ -1155,11 +1197,13 @@ procedural arbitration: presume innocence, convict only on detected
 contradiction structure, score for calibrated confidence, escalate what
 cannot be judged, and never let infrastructure failures impersonate
 scientific findings. Three results carry the evidential weight and do not
-depend on benchmark authorship: the counting law's calibrated advantage
-(slopes $0.942$/$-0.857$ against expected $1.0$/$-1.0$, with the empirical
-ratio meeting the Bonferroni bound at every grid point), the three-state
-verification policy's zero network-failure false positives under matched
-injection, and the conviction--confidence decoupling invariant preserved
+depend on the benchmark's hand-adjudicated gold labels: the counting law's
+calibrated advantage profile (slopes $0.942$/$-0.857$ against expected
+$1.0$/$-1.0$, with the empirical ratio coinciding with the Bonferroni form
+at every grid point and the advantage concentrated in small-to-moderate
+cases), the three-state verification policy's zero network-failure false
+positives under matched injection---abstaining at full outage rather than
+fabricating---and the conviction--confidence decoupling invariant preserved
 under every scorer ablation. On the author-built synthetic layer of the
 954-case benchmark (evaluation at regression scale, \S\ref{sec:limits}),
 the full court is the only system that holds recall $1.0$ / FPR $0.0$
@@ -1273,7 +1317,7 @@ Decomposition & \texttt{run\_advantage\_decomposition.py} &
 Role calibration & \texttt{run\_role\_weight\_calibration.py} & \texttt{role\_weight\_calibration.json} \\
 Network failure & \texttt{run\_network\_failure\_experiment.py} & \texttt{network\_failure\_report.json} \\
 Case studies & \texttt{run\_case\_study.py} & \texttt{case\_study\_report.json} \\
-H2a pilot & \texttt{pilot scripts (tests/ddb)} & \texttt{pilot\_h2a\_report.json} \\
+H2a pilot & \texttt{pilot scripts (backend/tests/scripts)} & \texttt{pilot\_h2a\_report.json} \\
 LLM arbiter ablation & \texttt{run\_llm\_arbiter\_experiment.py} & \texttt{llm\_arbiter\_report.json} \\
 LLM debate (protocol-level) & \texttt{run\_llm\_debate\_experiment.py} & \texttt{llm\_debate\_report.json} \\
 \bottomrule
@@ -1284,7 +1328,7 @@ The last two rows require network access to a hosted LLM (config via
 \texttt{LLM\_EXPERIMENT\_*} environment variables; model \texttt{qwen-flash},
 temperature 0) and are excluded from the zero-LLM regression.
 
-\Ddb{} layer files: \texttt{tests/ddb/\{l1,l15,l2,l4\}\_cases.json}, each
+\Ddb{} layer files: \texttt{backend/tests/ddb/\{l1,l15,l2,l4\}\_cases.json}, each
 locked to its generator by deep-equality consistency tests.
 
 \end{document}

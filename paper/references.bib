@@ -1,7 +1,6 @@
 % references.bib — ConsensusCourt preprint bibliography
-% Note on citation integrity: entries marked [verified-in-repo] carry identifiers
-% cross-checked against the project's deep-research/outline documents; all other
-% entries are well-established published works.
+% Citation integrity: all identifiers/author lists cross-checked against
+% authoritative sources (arXiv API / NCBI PubMed / PMLR) on 2026-10-09.
 
 @article{cecil2026beyond,
   author  = {Cecil, Joe and Freedman, Marjorie},
@@ -14,24 +13,26 @@
 @article{kumar2026when,
   author  = {Kumar, Sandeep and Kamdar, Yash and Hossain, Abid and Kumari, Bharti and Saikh, Tanik and Ekbal, Asif},
   title   = {When Reviews Disagree: Fine-Grained Contradiction Analysis in Scientific Peer Reviews},
-  journal = {Findings of the Association for Computational Linguistics: ACL 2026},
-  note    = {arXiv:2605.10171},
+  journal = {arXiv preprint arXiv:2605.10171},
+  note    = {Accepted at ACL 2026 Findings},
   year    = {2026}
 }
 
 @article{gottweis2025coscientist,
-  author  = {Gottweis, Juraj and others},
-  title   = {Towards an {AI} Co-Scientist},
-  journal = {arXiv preprint arXiv:2502.13164},
-  year    = {2025}
+  author  = {Gottweis, Juraj and Weng, Wei-Hung and Daryin, Alexander and Tu, Tao and Sirkovic, Petar and others},
+  title   = {Accelerating scientific discovery with {Co-Scientist}},
+  journal = {Nature},
+  note    = {arXiv:2502.18864},
+  year    = {2026}
 }
 
 @inproceedings{du2023debate,
   author    = {Du, Yilun and Li, Shuang and Torralba, Antonio and Tenenbaum, Joshua B. and Mordatch, Igor},
   title     = {Improving Factuality and Reasoning in Language Models through Multiagent Debate},
-  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML)},
-  note      = {arXiv:2305.14325},
-  year      = {2023}
+  booktitle = {Proceedings of the 41st International Conference on Machine Learning (ICML)},
+  pages     = {11733--11763},
+  note      = {PMLR 235, arXiv:2305.14325},
+  year      = {2024}
 }
 
 @article{wu2023autogen,
@@ -42,7 +43,7 @@
 }
 
 @inproceedings{hong2023metagpt,
-  author    = {Hong, Sirui and Zhuge, Mingchen and Chen, Jonathan and Zheng, Xiawu and Cheng, Yuheng and Zhang, Ceyao and Wang, Jinlin and Wang, Zili and Yau, Steven Ka Shing and Lin, Zijuan and others},
+  author    = {Hong, Sirui and Zhuge, Mingchen and Chen, Jiaqi and Zheng, Xiawu and Cheng, Yuheng and Zhang, Ceyao and Wang, Jinlin and Wang, Zili and Yau, Steven Ka Shing and Lin, Zijuan and others},
   title     = {{MetaGPT}: Meta Programming for a Multi-Agent Collaborative Framework},
   booktitle = {International Conference on Learning Representations (ICLR)},
   note      = {arXiv:2308.00352},
@@ -113,13 +114,33 @@
 }
 
 @article{jia2016eai045,
-  author  = {Jia, Yun and Yun, Cai-Hong and Park, Eunhee and Ercan, Dalia and Manik, Manisha and Hartjoana, Juergen and Guan, Rong and Liang, Carla and Janne, Pasi A.},
+  author  = {Jia, Yun and Yun, Cai-Hong and Park, Eunhee and Ercan, Dalia and Manuia, M. and Juarez, J. and Xu, C. and others},
   title   = {Overcoming {EGFR}(T790M) and {EGFR}(C797S) resistance with mutant-selective allosteric inhibitors},
   journal = {Nature},
   volume  = {534},
   pages   = {129--132},
   note    = {PMID: 27251290},
   year    = {2016}
+}
+
+@article{wang2017eai045,
+  author  = {Wang, S. and Song, Y. and Liu, D.},
+  title   = {{EAI045}: The fourth-generation {EGFR} inhibitor overcoming {T790M} and {C797S} resistance},
+  journal = {Cancer Letters},
+  volume  = {385},
+  pages   = {51--54},
+  note    = {PMID: 27840244},
+  year    = {2017}
+}
+
+@article{ramalingam2020os,
+  author  = {Ramalingam, Suresh S. and Vansteenkiste, Johan and Planchard, David and Cho, Byoung Chul and Gray, Jhanelle E. and Ohe, Yuichiro and Zhou, Caicun and Reungwetwattana, Thanyanan and Cheng, Ying and others},
+  title   = {Overall Survival with Osimertinib in Untreated, {EGFR}-Mutated Advanced {NSCLC}},
+  journal = {New England Journal of Medicine},
+  volume  = {382},
+  pages   = {41--50},
+  note    = {PMID: 31751012},
+  year    = {2020}
 }
 
 @inproceedings{kwon2023vllm,
@@ -130,7 +151,7 @@
 }
 
 @article{kapoor2024agents,
-  author  = {Kapoor, Sayash and Stroebl, Benedikt and Doggle, Zachary S. and Ghosh, Nitya and Narayanan, Arvind},
+  author  = {Kapoor, Sayash and Stroebl, Benedikt and Siegel, Zachary S. and Nadgir, Nitya and Narayanan, Arvind},
   title   = {{AI} Agents That Matter},
   journal = {arXiv preprint arXiv:2407.01502},
   year    = {2024}
@@ -164,10 +185,11 @@
 }
 
 @article{saxena2024reasons,
-  author  = {Saxena, Yash and Tilwani, Deepa and Mohammadi, Ali and Raff, Edward and Sheth, Amit and Parthasarathy, Srinivasan and Gaur, Manas},
-  title   = {Attribution in Scientific Literature: New Benchmark and Methods},
+  author  = {Tilwani, Deepa and Saxena, Yash and Mohammadi, Seyedali and Padia, Ankur and Raff, Edward and Sheth, Amit and Parthasarathy, Srinivasan and Gaur, Manas},
+  title   = {Abstention vs. Hallucination: Benchmarking {LLM} Source Attribution for Scientific Citations},
   journal = {arXiv preprint arXiv:2405.02228},
-  year    = {2024}
+  note    = {Accepted at IEEE DSAA 2026},
+  year    = {2026}
 }
 
 @article{qian2026atomcite,

@@ -1,0 +1,13 @@
+{
+  "source_pdf": "/Users/wangwei/Documents/VG/homesite/bio/paper/main.pdf",
+  "method": "fitz_page_text",
+  "quality": "local_text_layer",
+  "markdown_output": "/Users/wangwei/Documents/VG/homesite/bio/paper/subprojects/thesis_audit_2026_10_09/work/pdf_fallback/extracted_text.md",
+  "page_text_output": "/Users/wangwei/Documents/VG/homesite/bio/paper/subprojects/thesis_audit_2026_10_09/work/pdf_fallback/page_text.json",
+  "page_count": 20,
+  "non_empty_pages": 20,
+  "warnings": [
+    "pymupdf4llm_unavailable: No module named 'pymupdf4llm'"
+  ],
+  "audit_note": "Local fallback is usable for text-layer PDFs. For scanned PDFs, formulas, complex tables, multi-column layout, headers/footers, or reference lists split across pages, verify against the original PDF with an appropriate viewer/parser or mark the area as blocked/residual risk."
+}
